@@ -1,0 +1,480 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 2.5rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    .settings {
+      padding-top: 113px;
+      color: $white;
+      text-align: left;
+      @include font-6xl-neuropolitical-normal;
+      font-size: 76px;
+      line-height: 110%;
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .container {
+    .settingsContainer {
+      .settings {
+        padding-top: 108px;
+        font-size: 32px;
+        line-height: 110%;
+      }
+    }
+  }
+}
+.valtrTabTwoHed {
+  h1 {
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    color: #ffffff;
+    margin: 15px 0 35px 0;
+    text-align: start;
+  }
+}
+.CustomGridContainer {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
+}
+.bgPernt {
+  background: rgba(145, 165, 166, 0.1);
+  // padding: 26px 32px;
+}
+.leftContMian {
+  margin-left: 32px;
+  width: 100%;
+}
+.flexImgpernt {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 26px 32px 0 32px;
+}
+.Imgpernt {
+}
+.ImgperntLeftCont {
+  .SpaceBtwnBx {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      border: none;
+      box-shadow: none;
+      background: transparent;
+      outline: none;
+    }
+  }
+  h2 {
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    color: #ffffff;
+    margin: 0 0 12px 0;
+    text-align: start;
+  }
+}
+.smallImg {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 17px;
+  p {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: #ffffff;
+    margin: 0 0 0 10px;
+  }
+}
+.flexPernt {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .currentBit {
+    text-align: start;
+    h5 {
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      color: #ffffff;
+      margin: 0 0 5px 0;
+    }
+    .txtimgFlex {
+      display: flex;
+      align-items: center;
+      p {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        color: #ffffff;
+        margin: 0 0 0 12px;
+      }
+    }
+  }
+  .endingIn {
+    p {
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      margin: 0 0 12px 0;
+      color: #ffffff;
+    }
+    h3 {
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 140%;
+      color: #ffffff;
+      margin: 0;
+    }
+  }
+}
+.lastpp {
+  p {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: #ffffff;
+    max-width: 320px;
+    margin: 15px 0 0 0;
+    text-align: start;
+  }
+}
+.datepkrflx {
+  display: flex;
+  align-items: center;
+  // margin-top: 23px;
+  padding: 23px 32px 0 32px;
+}
+.graficBox {
+  border-bottom: 1px solid rgba(145, 165, 166, 0.1);
+  padding: 14px 32px 27px 32px;
+  span {
+    width: 100% !important;
+  }
+  p {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: #ffffff;
+    max-width: 516px;
+    margin: 24px 0 0 0;
+    text-align: start;
+  }
+}
+.downContentmain {
+  // margin-top: 32px;
+  padding: 32px 32px 23px 32px;
+}
+.innrTextimg {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .onlyText {
+    margin-left: 10px;
+    h6 {
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 140%;
+      color: #ffffff;
+      margin: 0 0 1px 0;
+    }
+    .starImg {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      p {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        color: #ffffff;
+        margin: 0 0 0 2px;
+      }
+    }
+  }
+}
+.butonPernt {
+  button {
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110%;
+    text-align: center;
+    color: #16e6ef;
+    background: transparent;
+    height: auto;
+    border: 1px solid #16e6ef;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    padding: 12px 24px;
+    transition: all 0.3s ease-out;
+    &:hover {
+      background: #16e6ef;
+      color: #000;
+    }
+  }
+}
+.innrFirst {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ProjectAndnftbox {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 28px;
+}
+.Projectbox {
+  display: flex;
+  align-items: flex-start;
+
+  h3 {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: #ffffff;
+    text-align: start;
+    margin: 0;
+  }
+  p {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: #91a5a6;
+    margin: 0;
+    text-align: start;
+  }
+  h6 {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: #ffffff;
+    margin: 0;
+    text-align: start;
+  }
+}
+.flexDiv {
+  display: flex;
+  align-items: center;
+  h6 {
+    margin-left: 2px;
+  }
+}
+// .rspsivTow{
+//   display: flex;
+//   align-items: center;
+// }
+// .marginPernt{
+//   margin-right: 31px;
+//   margin-left: 31px;
+// }
+.bordrBttm {
+  text-decoration-line: underline;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  &:hover {
+    color: #16e6ef;
+  }
+}
+.ProjectAndnftbox {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  .Projectbox {
+    margin-bottom: 23px;
+    width: 100%;
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+.nftText {
+  margin-right: 18px !important;
+}
+// .flexBsis01{
+//   display: flex;
+//   flex-basis: 20%;
+// }
+.marginPernt {
+  flex-basis: 20%;
+}
+.flexBsis02 {
+  flex-basis: 14%;
+}
+.diplyNone {
+  display: none;
+}
+.butndblck {
+  display: none;
+}
+.valtrGrdContmain {
+  overflow-y: auto;
+  height: 730px;
+}
+@media screen and (max-width: 1200px) {
+  .CustomGridContainer {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(1, minmax(0px, 1fr));
+  }
+}
+@media screen and (max-width: 736px) {
+  .valtrTabTwoHed {
+    h1 {
+      font-size: 18px;
+      line-height: 110%;
+      margin: 0 0 31px 0;
+    }
+  }
+  .flexImgpernt {
+    padding: 18px 20px 0 20px;
+  }
+  .diplyBlock {
+    display: none;
+  }
+  .diplyNone {
+    display: block;
+    padding: 27px 20px 0 20px;
+  }
+  .lastpp {
+    p {
+      max-width: 100%;
+    }
+  }
+  .flexPernt {
+    .currentBit {
+      flex-basis: 50%;
+    }
+    .txtimgFlex {
+      flex-basis: 50%;
+      justify-content: flex-start;
+    }
+  }
+  .leftContMian {
+    margin-left: 20px;
+  }
+  .datepkrflx {
+    padding: 23px 20px 0 20px;
+  }
+  .graficBox {
+    padding: 26px 20px 27px 20px;
+    p {
+      margin: 12px 0 0 0;
+    }
+  }
+  .butndblck {
+    display: block !important;
+    margin-top: 26px;
+    button {
+      width: 100%;
+    }
+  }
+  .butndnon {
+    display: none;
+  }
+  .Projectbox {
+    flex-wrap: wrap !important;
+  }
+  .downContentmain {
+    padding: 32px 20px 23px 20px;
+  }
+  .flexBsis02 {
+    flex-basis: 24%;
+  }
+  .marginPernt {
+    flex-basis: 30%;
+  }
+  // .rsomrGin{
+  //   margin: 0 auto;
+  // }
+  .rsomrGin {
+    padding-top: 23px;
+    margin-left: 24%;
+  }
+  .rsomrleft {
+    margin-right: 69px;
+    padding-top: 23px;
+  }
+}
+@media screen and (max-width: 520px) {
+  .flexBsis02 {
+    flex-basis: 18%;
+  }
+  .rsomrGin {
+    margin-left: 18%;
+  }
+  .marginPernt {
+    flex-basis: 29%;
+  }
+}
+
+.AddNftSft {
+  background: transparent;
+  border: 1px solid #91a5a626;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  button {
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+  h2 {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .AddNftSft {
+    padding: 32px 0;
+  }
+}

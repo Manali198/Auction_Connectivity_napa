@@ -1,0 +1,15 @@
+version: "2.2"
+
+services: 
+ napa-app-website:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: napasociety-website
+    ports:
+      - '5001:5001'
+    volumes:
+      - ./src/pages:/napa/pages
+      - ./public:/napa/public
+      - ./styles:/napa/styles
+

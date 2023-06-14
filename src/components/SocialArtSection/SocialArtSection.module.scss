@@ -1,0 +1,658 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+@font-face {
+  font-family: Neuropolitical;
+  src: url('/assets/fonts/Neuropolitical/Neuropolitical-Regular.ttf');
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url('/assets/fonts/Avenir/Avenir-Regular.ttf');
+}
+.circles {
+  cursor: pointer;
+}
+.backgroundImage {
+  background-image: url('/assets/images/npg2.webp');
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .socialArtContainer {
+    height: 100%;
+    @media only screen and (max-width: 736px) {
+      padding: 0 20px;
+    }
+  }
+  .socialArtContainerBody {
+    height: 92%;
+    @include flex-row-between;
+    .noPost {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 100%;
+    }
+  }
+  .socialText {
+    @include font-7xl-neuropolitical-normal;
+    color: transparent;
+    -webkit-text-stroke: 2px $white;
+    animation: glow 1s ease-in-out infinite alternate;
+    margin-bottom: 0;
+    font-size: 90px !important;
+  }
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 20px #fff, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px,
+        0 0 70px, 0 0 10px;
+    }
+    to {
+      text-shadow: 0 0 1px #fff, 0 0 20px #ffffff, 0 0 30px, 0 0 40px, 0 0 50px,
+        0 0 60px, 0 0 100px;
+    }
+  }
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 20px #fff, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px,
+        0 0 70px, 0 0 10px;
+    }
+    to {
+      text-shadow: 0 0 1px #fff, 0 0 20px #ffffff, 0 0 30px, 0 0 40px, 0 0 50px,
+        0 0 60px, 0 0 100px;
+    }
+  }
+  .societyLeftDescription {
+    color: $white;
+    text-align: left;
+    padding-right: 20rem;
+    padding-left: 0.5rem;
+    @include font-md-avenir-medium;
+  }
+  .sliderText {
+    @include flex-row-center;
+    @include align-center;
+  }
+  .sliderText1 {
+    @include font-lg-avenir-medium;
+    padding-right: 0.5rem;
+    color: $white;
+    margin-bottom: 0;
+  }
+  .sliderText2 {
+    @include font-sm-avenir-medium;
+    padding-right: 0.5rem;
+    color: $white;
+    margin-bottom: 0;
+  }
+  .sliderContainer {
+    padding-bottom: 3rem;
+    @include flex-row-between;
+  }
+  .carouselImage {
+    height: 72vh;
+    width: 52%;
+    left: 5px;
+    position: absolute;
+    bottom: 0;
+    top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (min-width: 1537px) {
+      left: -2%;
+    }
+    @media screen and (max-width: 1440px) {
+      height: 68vh;
+      top: 18%;
+    }
+    @media screen and (max-width: 1200px) {
+      left: 47px;
+    }
+    @media screen and (max-width: 1024px) {
+      left: 0px;
+    }
+    @media screen and (max-width: 1199px) and (min-width: 1025px) {
+      width: 45%;
+    }
+    .image {
+      width: 62%;
+      object-fit: cover;
+      height: 100% !important;
+    }
+    :after {
+      background: linear-gradient(
+        180deg,
+        rgba(0, 32, 47, 0) 0%,
+        rgb(0 19 47 / 15%) 100%
+      );
+      position: absolute;
+      content: '';
+      width: 62.1%;
+      height: 500px;
+      z-index: -1;
+      transform: translate(-50%, 0);
+      left: 50%;
+      bottom: 0;
+    }
+
+    .slideBtn {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding-bottom: 2.5rem;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      span {
+        margin-right: 0.5rem;
+      }
+    }
+
+    .carouselBottom {
+      @include flex-column-center;
+      margin-left: 6rem;
+      animation-name: example;
+      animation-duration: 4s;
+      animation-fill-mode: forwards;
+      width: 100%;
+      padding-bottom: 2rem;
+      .avatar {
+        width: 4.5rem;
+        height: 4.5rem;
+        object-fit: contain;
+        padding-bottom: 0.5rem;
+        border-radius: 50%;
+      }
+      .carouselBottomText {
+        font-size: 1.5rem;
+        line-height: 2.1rem;
+        color: $white;
+        font-family: $text-avenir;
+        font-weight: 500;
+        @media (max-width: 600px) {
+          font-size: 1.2rem;
+        }
+      }
+      @keyframes example {
+        0% {
+          margin-left: 6rem;
+        }
+        100% {
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+  .artText {
+    @include font-6xl-neuropolitical-normal;
+    color: $white;
+    margin-bottom: 0;
+    font-size: 90px !important;
+  }
+
+  .innerSocietyContainerRightSide {
+    width: 45%;
+    position: absolute;
+    right: 7.5vw;
+    top: 88px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @media screen and (max-width: 1920px) and (min-width: 1500px) {
+      top: 126px;
+    }
+    .innerSocietyContainerwt {
+      max-width: 544px;
+      @media screen and (max-width: 1024px) {
+        max-width: 100%;
+      }
+    }
+    .description {
+      color: $white;
+      padding-top: 1rem;
+      @include font-base-avenir-medium;
+      font-size: 18px;
+      @media only screen and (max-width: 736px) {
+        font-size: 16px;
+      }
+    }
+    .socialHeading {
+      display: flex;
+      flex-direction: column;
+      margin-top: 3.6em;
+    }
+  }
+  .viewFeedBtn {
+    @include font-lg-neuropolitical-normal;
+    color: $light-blue;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-right: 1.5rem;
+  }
+  .mousePointer {
+    display: flex;
+    justify-content: center;
+    display: none;
+    img {
+      cursor: pointer;
+      z-index: 2;
+    }
+  }
+
+  @media only screen and (max-width: 1536px) {
+    .carouselImage {
+      .image {
+        width: 70%;
+      }
+      :after {
+        width: 70%;
+        height: 100%;
+      }
+    }
+  }
+  .socialImages {
+    margin-top: 50px;
+    > span:first-child {
+      margin-right: 30px !important;
+    }
+
+    > span {
+      img {
+        width: 200px !important;
+        @media only screen and (max-width: 1440px) {
+          width: 100px !important;
+        }
+      }
+    }
+  }
+  .Dawnldnapabtn {
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 110%;
+    font-style: normal;
+    font-family: 'Neuropolitical';
+    color: #16e6ef;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-top: 40px;
+    transition: all 0.3s ease-out;
+    &:hover {
+      color: #fff;
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    .socialImages {
+      display: none;
+    }
+    .Dawnldnapabtn {
+      display: none;
+    }
+  }
+  @media only screen and (max-width: 736px) {
+    .carouselImage {
+      .image {
+        width: 200px !important;
+      }
+      :after {
+        width: 200px !important;
+      }
+
+      .carouselBottom {
+        @include flex-column-center;
+        margin-left: 6rem;
+        animation-name: example;
+        animation-duration: 4s;
+        animation-fill-mode: forwards;
+        width: 100%;
+        padding-bottom: 2rem;
+        .avatar {
+          width: 3rem;
+          height: 3rem;
+          object-fit: contain;
+          padding-bottom: 0.5rem;
+        }
+        .carouselBottomText {
+          font-size: 1rem;
+          line-height: 2.1rem;
+          color: $white;
+          font-family: $text-avenir;
+          font-weight: 500;
+          @media (max-width: 600px) {
+            font-size: 1.2rem;
+          }
+        }
+        @keyframes example {
+          0% {
+            margin-left: 6rem;
+          }
+          100% {
+            margin-left: 0px;
+          }
+        }
+      }
+      .slideBtn {
+        span {
+          margin-right: 0 !important;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 736px) {
+    .socialImages {
+      margin-top: 20px;
+      > span {
+        img {
+          width: 80px !important;
+        }
+      }
+    }
+    .Dawnldnapabtn {
+      font-size: 18px;
+      margin-top: 20px;
+    }
+  }
+  @media only screen and (max-width: 1200px) {
+    .carouselImage {
+      .image {
+        width: 85%;
+      }
+      :after {
+        width: 85%;
+      }
+    }
+  }
+  @media only screen and (max-width: 1024px) {
+    background-image: url('/assets/images/npg2.webp');
+
+    .carouselImage {
+      left: auto;
+      right: auto;
+      bottom: 0%;
+      .image {
+        width: 330px;
+      }
+      :after {
+        width: 330px;
+      }
+    }
+    .societyContainer {
+      @include flex-center-column;
+      width: 100%;
+    }
+    .mousePointer {
+      display: none;
+    }
+    .socialArtContainerBody {
+      @include flex-center-column;
+      height: 50%;
+    }
+    .innerSocietyContainerRightSide {
+      width: 100%;
+      position: relative;
+      left: 2.5vw;
+      right: 2.5vw;
+      top: 90px;
+      .description {
+        @include font-sm-avenir-regular;
+        width: 100%;
+      }
+
+      .socialHeading {
+        @include flex-row-center;
+        .socialText {
+          margin-bottom: 0;
+          @include font-5xl-neuropolitical-normal;
+        }
+
+        .artText {
+          padding-left: 40px;
+          margin-bottom: 0;
+          @include font-5xl-neuropolitical-normal;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .innerSocietyContainerRightSide {
+      width: 100%;
+      position: relative;
+      left: 0px;
+      right: 0px;
+      top: 80px;
+      .socialHeading {
+        margin-top: 0rem;
+      }
+    }
+    .innerSocietyContainerRightSide {
+      width: 100%;
+      position: relative;
+      margin-top: 44px;
+      top: 0;
+      .description {
+        width: 100%;
+      }
+
+      .viewFeedContainer {
+        .viewFeedBtn {
+          @include font-base-neuropolitical-normal;
+        }
+      }
+
+      .socialHeading {
+        padding-left: 0rem;
+        display: flex;
+        .socialText {
+          @include font-3xl-neuropolitical-normal;
+          margin-bottom: 0;
+          width: auto;
+          margin-right: 1rem;
+          @include flex-column-start;
+        }
+
+        .artText {
+          @include font-3xl-neuropolitical-normal;
+          width: 100%;
+          margin-bottom: 0;
+          padding-left: 40px;
+          @include flex-column-start;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 576px) {
+    background-image: url('/assets/images/socialmedia-background-mobile.png');
+    .carouselImage {
+      left: 10%;
+      width: 80%;
+
+      .slideBtn {
+        padding-bottom: 1rem;
+        span {
+          margin-right: 0;
+        }
+        .carouselBottom {
+          padding-bottom: 1rem;
+          .avatar {
+            width: 4rem;
+            height: 4rem;
+            object-fit: contain;
+            padding-bottom: 0.5rem;
+          }
+          .carouselBottomText {
+            @include font-base-avenir-medium;
+          }
+          @keyframes example {
+            0% {
+              margin-left: 6rem;
+            }
+            100% {
+              margin-left: 0px;
+            }
+          }
+        }
+      }
+    }
+    .innerSocietyContainerRightSide {
+      width: 100%;
+      position: relative;
+
+      .description {
+        width: 100%;
+      }
+
+      .viewFeedContainer {
+        .viewFeedBtn {
+          @include font-base-neuropolitical-normal;
+        }
+      }
+
+      .socialHeading {
+        @include flex-col;
+        padding-left: 0;
+
+        .socialText {
+          @include font-3xl-neuropolitical-normal;
+          margin-bottom: 0;
+          width: 100%;
+          @include flex-column-start;
+        }
+
+        .artText {
+          @include font-3xl-neuropolitical-normal;
+          width: 100%;
+          margin-bottom: 0;
+          padding-left: 0;
+          @include flex-column-start;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 580px) {
+    background-image: url('/assets/images/socialmedia-background-mobile.png');
+    .carouselImage {
+      bottom: 0%;
+      left: 5%;
+      width: 90%;
+      .image {
+        width: 300px;
+        height: 340px;
+      }
+      :after {
+        width: 300px;
+      }
+    }
+    .innerSocietyContainerRightSide {
+      padding-top: 0rem;
+      width: 100%;
+      position: relative;
+    }
+  }
+
+  @media only screen and (max-width: 380px) {
+    background-image: url('/assets/images/socialmedia-background-mobile.png');
+    .carouselImage {
+      bottom: 0%;
+      left: 5%;
+      width: 90%;
+    }
+    .innerSocietyContainerRightSide {
+      padding-top: 0rem;
+      width: 100%;
+      position: relative;
+
+      .socialHeading {
+        @include flex-col;
+        padding-left: 0rem;
+
+        .socialText {
+          @include font-3xl-neuropolitical-normal;
+          margin-bottom: 0;
+          width: 100%;
+          @include flex-column-start;
+        }
+
+        .artText {
+          @include font-3xl-neuropolitical-normal;
+          width: 100%;
+          margin-bottom: 0;
+          padding-left: 0;
+          @include flex-column-start;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    background-image: url('/assets/images/socialmedia-background-mobile.png');
+    .carouselImage {
+      bottom: 0%;
+      left: 0%;
+      width: 100%;
+      .image {
+        width: 100%;
+      }
+    }
+    .innerSocietyContainerRightSide {
+      padding-top: 8rem;
+      width: 100%;
+      position: relative;
+    }
+  }
+}
+@media only screen and (max-width: 736px) {
+  .innerSocietyContainerRightSide {
+    .socialHeading {
+      flex-direction: row !important;
+      margin-top: 1rem !important;
+    }
+  }
+  .innerSocietyContainerRightSide {
+    width: 100%;
+    position: relative;
+    margin-top: 54px;
+    .description {
+      font-size: 14px;
+      padding-top: 16px !important;
+    }
+
+    .viewFeedContainer {
+      .viewFeedBtn {
+        @include font-base-neuropolitical-normal;
+      }
+    }
+
+    .socialHeading {
+      padding-left: 0rem;
+      display: flex;
+      .socialText {
+        font-size: 42px !important;
+      }
+      .artText {
+        padding-left: 0px !important;
+        font-size: 42px !important;
+      }
+    }
+  }
+  .innerSocietyContainerRightSide {
+    top: 0px;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .innerSocietyContainerRightSide {
+    .socialHeading {
+      flex-direction: column !important;
+    }
+  }
+}

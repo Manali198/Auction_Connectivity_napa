@@ -1,0 +1,226 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 2.5rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    .settings {
+      padding-top: 113px;
+      color: $white;
+      text-align: left;
+      @include font-6xl-neuropolitical-normal;
+      font-size: 76px;
+      line-height: 110%;
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .container {
+    .settingsContainer {
+      .settings {
+        padding-top: 108px;
+        font-size: 32px;
+        line-height: 110%;
+      }
+    }
+  }
+}
+.CreateProject {
+  .CustomGridContainer {
+    display: grid;
+    grid-gap: 120px;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+  }
+  h4 {
+    @include font-xl-neuropolitical-normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+
+  .CreateGrner {
+    // margin-top: 42px;
+
+    .FrstInput input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      margin-bottom: 35px;
+      border-bottom: 2px solid #ffffff;
+      padding: 16px 12px 0 20px !important;
+    }
+    .FrstInput {
+      width: 100%;
+      position: relative;
+      button {
+        position: absolute;
+        top: 14px;
+        right: -40px;
+        background: transparent;
+        border: none;
+      }
+      > div {
+        margin: 0 !important;
+      }
+    }
+    .FrstInput {
+      position: relative;
+      .Btnone {
+        position: absolute;
+        top: 25px;
+        right: 18px;
+        background: transparent;
+        border: none;
+      }
+    }
+
+    .FrstInput input {
+      @include font-xs-avenir-regular;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 140%;
+      color: #ffffff;
+      padding-bottom: 0px;
+    }
+    .FrstInput input::placeholder {
+      color: #fff;
+    }
+    .FrstInput label {
+      @include font-xs-avenir-regular;
+      padding: 0 0 0px 20px;
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #91a5a6;
+    }
+  }
+  // .CreateGrner button, .CreateGrner a{
+  //   @include font-xl-neuropolitical-normal;
+  //   font-weight: 400;
+  //   font-size: 24px;
+  //   line-height: 110%;
+  //   color: #16E6EF;
+  //   align-items: flex-start;
+  //   display: flex;
+  //   background: none;
+  //   border: none;
+  //   transition: all 0.2s ease-out;
+  //   padding-left: 15px;
+  //   text-decoration: none;
+  //   max-width: inherit;
+  //   &:hover{
+  //     color: #fff;
+  //   }
+  // }
+  .linkPrnt {
+    a {
+      @include font-xl-neuropolitical-normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 110%;
+      color: #16e6ef;
+      align-items: flex-start;
+      display: flex;
+      background: none;
+      border: none;
+      transition: all 0.2s ease-out;
+      padding-left: 15px;
+      text-decoration: none;
+      max-width: 102px;
+      margin-top: 20px;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  .CreateGrner h5 {
+    @include font-xl-neuropolitical-normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 24px;
+    margin-top: 52px;
+  }
+  .AddMoreBtn {
+    margin-bottom: 55px;
+    button {
+      @include font-xs-avenir-regular;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 140%;
+      color: #ffffff;
+      box-shadow: none;
+      border: none;
+      outline: none;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      text-align: left;
+      transition: all 0.3s ease-out;
+      &:hover {
+        color: #16e6ef;
+      }
+      > span {
+        margin-right: 12px !important;
+      }
+    }
+  }
+  .TextArea p {
+    @include font-xs-avenir-regular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #91a5a6;
+    margin-bottom: 14px;
+    text-align: left;
+    padding-left: 20px;
+  }
+  .TextArea textarea {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    border: 2px solid #ffffff;
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    color: #fff;
+    margin-bottom: 35px;
+  }
+}
+.CreateGrnerSecand {
+  // margin-top: 78px !important;
+}
+.FrstInputThrdaj {
+  p {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #91a5a6;
+    margin: 0 0 5px 20px;
+    text-align: start;
+  }
+}

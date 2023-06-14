@@ -1,0 +1,34 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    .settings {
+      padding-top: 113px;
+      color: $white;
+      text-align: left;
+      @include font-6xl-neuropolitical-normal;
+      font-size: 76px;
+      line-height: 110%;
+    }
+  }
+}
+.CreateNewnftTowW {
+  background: transparent;
+}
+
+
+
+
+
+
+

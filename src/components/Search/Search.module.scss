@@ -1,0 +1,272 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  background-color: rgba(16, 35, 36, 0.4);
+  backdrop-filter: blur(50px);
+  position: fixed;
+  z-index: 9999;
+  height: 100vh;
+  width: 100%;
+  .search {
+    cursor: pointer;
+    position: absolute;
+    right: 10%;
+    top: 5%;
+  }
+  .input {
+    margin-top: 114px;
+    background-color: transparent;
+    width: 100%;
+    height: 8rem;
+    margin-bottom: 0;
+    @include font-5xl-neuropolitical-normal;
+    text-indent: 10px;
+    color: $white;
+    border: none;
+    &:focus-visible {
+      outline: none;
+    }
+    &::placeholder {
+      @include font-5xl-neuropolitical-normal;
+    }
+  }
+}
+
+
+// .OverLayEvent {
+//   position: relative;
+//   &::before {
+//     content: "";
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     pointer-events: none;
+//     background: linear-gradient(180deg, rgba(16, 35, 36, 0) 80%, #102324 100%);
+//     z-index: 1;
+//   }
+// }
+.SearchInMain {
+  margin-top: 46px;
+  height: 940px;
+  overflow-y: auto;
+  @media screen and (max-width: 1440px) {
+    height: 625px;
+  }
+  .TutorialBtn {
+    button {
+      background: rgba(255, 255, 255, 0.1);
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #FFFFFF;
+      max-width: 92px;
+      width: 100%;
+      min-height: 32px;
+      border: none;
+      transition: all 0.3s ease-out;
+      &:hover {
+        color: #efeaea;
+      }
+    }
+  }
+  .SearchInBx {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    margin-top: 34px;
+    border-bottom: 1px solid rgb(255 255 255 / 30%);
+    padding-bottom: 40px;
+    .SearchFrst {
+      display: flex;
+      align-items: center;
+      .SearchRightBx {
+        margin-left: 24px;
+        h1 {
+          font-family: 'Neuropolitical';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 24px;
+          line-height: 110%;
+          color: #FFFFFF;
+          margin-bottom: 16px;
+          max-width: 376px;
+          span {
+            color: rgba(22, 230, 239, 1);
+          }
+        }
+        p {
+          font-family: 'Avenir';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 140%;
+          color: #FFFFFF;
+          max-width:  416px;
+          margin-bottom: 0;
+          span {
+            color: rgba(22, 230, 239, 1);
+          }
+        }
+      }
+    }
+  }
+}
+
+.EventSc {
+  margin-top: 42px;
+  .EventInBx {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(3, minmax(0px, 1fr));
+    margin-top: 34px;
+    .SearchFrst {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+      >span {
+        width: 100% !important;
+        height: auto !important;
+      }
+      h1 {
+        font-family: 'Neuropolitical';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 110%;
+        color: #FFFFFF;
+        margin-top: 20px;
+        margin-bottom: 14px;
+        max-width: 373px;
+        span {
+          color: rgba(22, 230, 239, 1);
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 1280px) {
+  .SearchInBx {
+    .SearchFrst {
+      flex-direction: column;
+      div>span {
+        width: 100% !important;
+        height: 100% !important;
+        max-width: 100% !important;
+      }
+      .SearchBlockImg {
+        width: 100%;
+        img {
+          object-fit: cover;
+        }
+      }
+      .SearchRightBx {
+        margin-left: 0 !important;
+        margin-top: 20px;
+        .DfltP {
+          font-size: 16px !important;
+        }
+      }
+    }
+    padding-bottom: 34px;
+  }
+
+  .EventSc {
+    .EventInBx {
+      grid-gap: 24px;
+      grid-template-columns: repeat(2, minmax(0px, 1fr));
+      margin-top: 24px;
+      .SearchFrst {
+        align-items: flex-start;
+        justify-content: flex-start;
+        img {
+          object-fit: cover;
+        }
+        h1 {
+          max-width: 100%;
+          span {
+            color: rgba(22, 230, 239, 1);
+          }
+        }
+      }
+    }
+  }
+  .container {
+    .input {
+      font-weight: 400;
+      font-size: 44px;
+      line-height: 110%;
+      &:focus-visible {
+        outline: none;
+      }
+      &::placeholder {
+        font-weight: 400;
+        font-size: 44px;
+        line-height: 110%;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 736px) {
+  .SearchInMain {
+    margin-top: 0;
+    height: 720px;
+  }
+  .SearchInBx {
+    margin-top: 20px;
+    padding-bottom: 26px !important;
+    grid-template-columns: repeat(1, minmax(0px, 1fr)) !important;
+    .SearchFrst {
+      flex-direction: inherit;
+      align-items: flex-start !important;
+      div>span {
+        width: 80px !important;
+        height: 80px !important;
+      }
+      .SearchBlockImg {
+        width: 80px !important;
+      }
+      .SearchRightBx {
+        margin-left: 20px !important;
+        margin-top: 0 !important;
+        h1 {
+          font-size: 18px !important;
+          line-height: 110% !important;
+          margin-bottom: 9px !important;
+          max-width: 100% !important;
+        }
+      }
+    }
+  }
+
+  .EventSc {
+    .EventInBx {
+      grid-template-columns: repeat(1, minmax(0px, 1fr));
+      .SearchFrst {
+       h1 {
+        font-size: 18px;
+       }
+      }
+    }
+  }
+  .container {
+    .input {
+      margin-top: 66px;
+      font-size: 24px;
+      line-height: 110%;
+      &::placeholder {
+        font-size: 24px;
+        line-height: 110%;
+      }
+    }
+  }
+}

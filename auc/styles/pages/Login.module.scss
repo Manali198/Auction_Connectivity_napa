@@ -1,0 +1,82 @@
+@import '../abstracts/variable.module';
+@import '../abstracts/mixins.module';
+
+.loginContainer {
+  height: 100vh;
+  @include flex-column-center;
+  background-color: $light-gray;
+  overflow: hidden;
+
+  .innerLoginContainer {
+    border-radius: 0.5rem;
+    background-color: $white;
+    padding: 2.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+
+    .loginText {
+      @include font-4xl-neuropolitical-normal;
+      color: $black;
+    }
+
+    .inputContainer {
+      padding-bottom: 0.5rem;
+      width: 100%;
+      color: $black;
+
+      .inputField {
+        border: 1px solid $black;
+        border-radius: 0.25rem;
+        padding: 0.5rem;
+        margin-bottom: 0.75rem;
+        height: 3rem;
+        width: 100%;
+      }
+    }
+    .btnContainer {
+      @include flex-row-center;
+      margin-top: 1.25rem;
+
+      .btn {
+        border-radius: 0.25rem;
+        background-color: $secondary-blue;
+        cursor: pointer;
+        color: $white;
+        @include font-base-avenir-regular;
+        border: none;
+        padding: 0.75rem 0;
+        width: 100%;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+      :hover {
+        background-color: $black;
+        transition: ease-in-out all 0.5s;
+      }
+    }
+  }
+  @media only screen and (min-width: 319px) {
+    .innerLoginContainer {
+      width: 90%;
+    }
+  }
+  @media only screen and (min-width: 575px) {
+    .innerLoginContainer {
+      width: 60%;
+    }
+  }
+  @media only screen and (min-width: 767px) {
+    .innerLoginContainer {
+      width: 40%;
+    }
+  }
+  @media only screen and (min-width: 1339px) {
+    .innerLoginContainer {
+      width: 30%;
+    }
+  }
+  @media only screen and (min-width: 1919px) {
+    .innerLoginContainer {
+      width: 20%;
+    }
+  }
+}

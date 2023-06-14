@@ -1,0 +1,402 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.cardContainer {
+  display: flex;
+  height: 330px !important;
+  justify-content: flex-end;
+  @media screen and (max-width: 1199px) {
+    height: 303px; 
+  }
+  .leftSide {
+    width: 100% !important;
+    max-width: 240px;
+    background-image: url('/assets/images/co_batching_box_03.png');
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 2.5rem;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, transparent 51%,rgba(12, 27, 34, 0.9) 100%);
+      
+      pointer-events: none;
+    }
+    .innerContainer {
+      display: flex;
+      align-items: center;
+      position: relative;
+      img {
+        margin-right: 0.5rem;
+      }
+      p {
+        margin: 0;
+        @include font-md-avenir-medium;
+        padding-left: 10px;
+        color: $white;
+        font-size: 18px;
+        line-height: 140%;
+      }
+    }
+  }
+  .rightSide {
+    display: flex;
+    flex-direction: column;
+    padding: 32px !important;
+    width: 18rem;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 20px 70px rgba(16, 35, 36, 0.2);
+    backdrop-filter: blur(60px);
+    color: white;
+    width: 100% !important;
+    // max-width: 380px !important;
+    .title {
+      @include font-lg-neuropolitical-normal;
+      text-align: left;
+      font-size: 24px !important;
+      line-height: 110% !important;
+      margin-bottom: 0;
+      max-width: 213px;
+    }
+    .timeContainer {
+      display: flex;
+      align-items: center;
+      margin: 15px 0 !important;
+      img {
+        margin-right: 0.5rem;
+      }
+      span {
+        padding-left: 10px;
+        font-size: 12px !important;
+        line-height: 140% !important;
+      }
+    }
+    .amountContainer {
+      .amountTitle {
+        @include font-xs-avenir-regular;
+        text-align: start;
+        opacity: 0.5;
+      }
+      .amountInnerContainer {
+        display: flex;
+        align-items: center;
+        >span {
+          img {
+            margin-right: 10px;
+            filter: invert(1%) sepia(0%) saturate(0%) hue-rotate(230deg) brightness(200%) contrast(100%);
+          }
+        }
+        .amount {
+          @include font-sm-avenir-medium;
+          padding-left: 0.5rem;
+          font-size: 14px;
+          line-height: 140%;
+        }
+      }
+    }
+    .users {
+      display: flex;
+      margin: 15px 0 28px 0 !important;
+      @media screen and (max-width: 1199px) {
+        margin: 15px 0 15px 0 !important;
+      }
+      img {
+        width: 2rem;
+      }
+    }
+    .progressContainer {
+      display: flex;
+      flex-direction: column;
+      .innerProgressParentContainer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .innerProgressContainer {
+          display: flex;
+          align-items: center;
+          >span {
+            margin-right: 8px !important;
+            img {
+              margin-right: 10px;
+              filter: invert(1%) sepia(0%) saturate(0%) hue-rotate(230deg) brightness(200%) contrast(100%);
+            }          
+          }
+          span {
+            // margin-right: 8px !important;
+            font-size: 14px !important;
+            line-height: 140% !important;            
+          }
+        }
+      }
+      .progressBarContainer {
+        margin-top: 0.5rem;
+        .progressBarParent {
+          background-color: gray;
+          height: 0.3rem;
+          .progressBarChild {
+            background-color: $light-blue;
+            height: 0.3rem;
+            width: 65%;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1280px) {
+    height: 20rem;
+    .leftSide {
+      width: 14rem;
+    }
+    .rightSide {
+      padding: 2rem;
+      width: 14rem;
+      .title {
+        @include font-md-neuropolitical-normal;
+      }
+      .timeContainer {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+  @media (min-width: 1536px) {
+    height: 24rem;
+    .leftSide {
+      width: 18rem;
+    }
+    .rightSide {
+      padding: 1.5rem;
+      width: 18rem;
+      .title {
+        @include font-lg-neuropolitical-normal;
+      }
+      .timeContainer {
+        margin: 1.5rem 0;
+      }
+    }
+  }
+  @media (min-width: 2560px) {
+    height: 28rem;
+    .leftSide {
+      width: 24rem;
+    }
+    .rightSide {
+      .title {
+        @include font-xl-neuropolitical-normal;
+      }
+      .timeContainer {
+        span {
+          @include font-md-neuropolitical-normal;
+        }
+      }
+      .amountContainer {
+        .amountTitle {
+          @include font-md-avenir-medium;
+        }
+        .amountInnerContainer {
+          .amount {
+            @include font-md-avenir-medium;
+          }
+        }
+      }
+      width: 24rem;
+    }
+  }
+}
+@media screen and (min-width: 737px) {
+  .MobileCard {display: none;}
+}
+@media screen and (max-width: 736px) {
+  .DesktopcardContainer {display: none !important;}
+  .MobileCard {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 20px 70px rgba(16, 35, 36, 0.2);
+    backdrop-filter: blur(30px);
+    padding: 32px;
+    .MobileCardTop {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+      .leftSide {
+        background-image: url('/assets/images/co-batching.png');
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding: 12px;
+        min-width: 90px;
+        height: 130px;
+        .innerContainer {
+          display: flex;
+          align-items: center;
+          img {
+            margin-right: 0.5rem;
+          }
+          p {
+            margin: 0;
+            @include font-md-avenir-medium;
+            padding-left: 10px;
+            color: $white;
+            font-size: 16px;
+            line-height: 140%;
+          }
+        }
+      }
+      .rightSide {
+        display: flex;
+        flex-direction: column;
+        padding: 0px 0 0 20px !important;
+        color: white;
+        .title {
+          @include font-lg-neuropolitical-normal;
+          text-align: left;
+          font-size: 18px !important;
+          line-height: 110% !important;
+          margin-bottom: 0;
+        }
+        .timeContainer {
+          display: flex;
+          align-items: center;
+          margin: 10px 0 !important;
+          img {
+            margin-right: 0.5rem;
+          }
+          span {
+            padding-left: 10px;
+            font-size: 12px !important;
+            line-height: 140% !important;
+          }
+        }
+        .amountContainer {
+          .amountTitle {
+            @include font-xs-avenir-regular;
+            text-align: start;
+            opacity: 0.5;
+          }
+          .amountInnerContainer {
+            display: flex;
+            align-items: center;
+            >span {
+              img {
+                margin-right: 10px;
+                filter: invert(1%) sepia(0%) saturate(0%) hue-rotate(230deg) brightness(200%) contrast(100%);
+              }
+            }
+            .amount {
+              @include font-sm-avenir-medium;
+              padding-left: 0.5rem;
+              font-size: 14px;
+              line-height: 140%;
+            }
+          }
+        }
+        .users {
+          display: flex;
+          margin: 15px 0 15px 0 !important;
+          img {
+            width: 2rem;
+          }
+        }
+        .progressContainer {
+          display: flex;
+          flex-direction: column;
+          .innerProgressParentContainer {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            .innerProgressContainer {
+              display: flex;
+              align-items: center;
+              >span {
+                margin-right: 8px !important;
+                img {
+                  margin-right: 10px;
+                  filter: invert(1%) sepia(0%) saturate(0%) hue-rotate(230deg) brightness(200%) contrast(100%);
+                }          
+              }
+              span {
+                // margin-right: 8px !important;
+                font-size: 14px !important;
+                line-height: 140% !important;            
+              }
+            }
+          }
+          .progressBarContainer {
+            margin-top: 0.5rem;
+            .progressBarParent {
+              background-color: gray;
+              height: 0.3rem;
+              .progressBarChild {
+                background-color: $light-blue;
+                height: 0.3rem;
+                width: 65%;
+              }
+            }
+          }
+        }
+      }
+
+    }
+    .MobileCardbottom {
+      .users {
+        display: flex;
+        margin: 15px 0 28px 0 !important;
+        @media screen and (max-width: 1199px) {
+          margin: 15px 0 15px 0 !important;
+        }
+        img {
+          width: 2rem;
+        }
+      }
+      .progressContainer {
+        display: flex;
+        flex-direction: column;
+        .innerProgressParentContainer {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          .innerProgressContainer {
+            display: flex;
+            align-items: center;
+            >span {
+              margin-right: 8px !important;
+              img {
+                margin-right: 10px;
+                filter: invert(1%) sepia(0%) saturate(0%) hue-rotate(230deg) brightness(200%) contrast(100%);
+              }          
+            }
+            span {
+              // margin-right: 8px !important;
+              font-size: 14px !important;
+              line-height: 140% !important;    
+              color: #fff;        
+            }
+          }
+        }
+        .progressBarContainer {
+          margin-top: 0.5rem;
+          .progressBarParent {
+            background-color: gray;
+            height: 0.3rem;
+            .progressBarChild {
+              background-color: $light-blue;
+              height: 0.3rem;
+              width: 65%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.SpaceBtwnBx {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}

@@ -1,0 +1,271 @@
+@import '../../../styles/abstracts/variable.module';
+@import '../../../styles/abstracts/mixins.module';
+
+.overlay {
+  height: 100%;
+  position: fixed;
+  z-index: 1;
+  width: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(16, 35, 36, 0.4);
+  background-color: rgba(16, 35, 36, 0.4);
+  backdrop-filter: blur(50px);
+  overflow-x: hidden;
+  z-index: 9999;
+  transition: 1.3s;
+  mask-origin: 0.8s;
+  .overlayContentContainer {
+    height: 100%;
+    .overlayContent {
+      .link {
+        cursor: pointer;
+      }
+      position: relative;
+      text-align: left;
+      padding-left: 9.7rem;
+      padding-right: 9.7rem;
+    }
+    .closebtn {
+      position: absolute;
+      top: 3rem;
+      left: 9rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.Sidebar_buttonsContainer___jXMk button {
+  max-width: 570px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {
+    a {
+      font-size: 1.25rem;
+    }
+    .closebtn {
+      font-size: 2.5rem;
+      top: 0.938rem;
+      right: 2.188rem;
+    }
+  }
+}
+@media screen and (min-width: 280px) {
+  .overlay {
+    .closebtn {
+      position: absolute;
+      top: 3rem;
+      left: 1.5rem;
+      img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+}
+.buttonsContainer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 2.5rem;
+
+  padding-top: 11rem;
+}
+@media screen and (min-width: 320px) {
+  .overlay {
+    .closebtn {
+      top: 3rem;
+      left: 1.5rem;
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+      cursor: pointer;
+    }
+  }
+}
+.buttonsContainer {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 375px) {
+  .overlay {
+    .closebtn {
+      position: absolute;
+      top: 3rem;
+      left: 1.5rem;
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+}
+.buttonsContainer {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 600px) {
+  .overlay {
+    .closebtn {
+      position: absolute;
+      top: 3rem;
+      left: 1.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .overlay {
+    .closebtn {
+      position: absolute;
+      top: 3rem;
+      left: 1.5rem;
+    }
+  }
+}
+.buttonsContainer {
+  @include flex-row-center;
+  margin-bottom: 4rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+@media screen and (min-width: 1024px) {
+  .overlay {
+    .closebtn {
+      cursor: pointer;
+      left: 9.7rem;
+      top: 1.7rem;
+    }
+  }
+}
+.buttonsContainer {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.overlay {
+  .closebtn {
+    z-index: 9;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .overlay {
+    .closebtn {
+      position: absolute;
+      img {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+}
+.buttonsContainer {
+  padding-left: 10rem;
+  padding-right: 5rem;
+  margin-bottom: 2rem;
+
+  padding-top: 11rem;
+}
+@media screen and (min-width: 1400px) {
+  .overlay {
+    .overlayContentContainer {
+      .overlayContent {
+        padding-left: 9.7rem;
+        padding-right: 9.7rem;
+        top: 15%;
+      }
+    }
+  }
+}
+.buttonsContainer {
+  padding-top: 13rem;
+  max-width: 72%;
+}
+.NewMenu {
+  display: grid;
+  grid-gap: 23px;
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
+  padding-top: 100px;
+  a {
+    @include font-8xl-neuropolitical-normal;
+    font-size: 44px;
+    line-height: 110%;
+    text-decoration: none;
+    color: transparent;
+    -webkit-text-stroke: 2px $white;
+    display: block;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover,
+    &.active {
+      color: #ffffff;
+    }
+  }
+}
+.conctWlltSet {
+  position: relative;
+  z-index: 9;
+  .buttonsContainerStylAj {
+    position: absolute;
+    right: 9.7rem;
+    top: 2rem;
+    button {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+      background: transparent;
+      border: none;
+      font-family: 'Neuropolitical';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 110%;
+      text-align: center;
+      color: #16e6ef;
+      margin-top: 0 !important;
+      img {
+        margin-top: 0 !important;
+        padding-right: 5px !important;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .NewMenu {
+    display: grid;
+    grid-gap: 23px;
+    grid-template-columns: repeat(1, minmax(0px, 1fr));
+    padding-top: 120px;
+    a {
+      font-size: 24px;
+    }
+  }
+}
+@media screen and (max-width: 1023px) {
+  .overlay {
+    .overlayContentContainer {
+      .overlayContent {
+        padding-left: 1.7rem;
+        padding-right: 1.7rem;
+      }
+    }
+  }
+  .conctWlltSet {
+    .buttonsContainerStylAj {
+      right: 1.7rem;
+      top: 3rem;
+    }
+  }
+}
+@media screen and (max-width: 370px) {
+  .conctWlltSet {
+    .buttonsContainerStylAj {
+      button {
+        font-size: 18px;
+      }
+    }
+  }
+}

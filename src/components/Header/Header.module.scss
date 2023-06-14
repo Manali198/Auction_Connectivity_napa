@@ -1,0 +1,199 @@
+@import '../../../styles/abstracts/variable.module';
+@import '../../../styles/abstracts/mixins.module';
+
+.logoutIconContainer {
+  margin-left: 2rem;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.innerContainer {
+  @include flex-between;
+  @include align-center;
+  padding-top: 30px !important;
+  position: relative;
+  z-index: 1;
+  .wallet {
+    position: relative;
+  }
+
+  .search {
+    padding-right: 16px;
+    img {
+      cursor: pointer;
+    }
+  }
+  .burgerMenuIcon {
+    cursor: pointer;
+  }
+
+  .svgWrapper {
+    display: block;
+    position: fixed;
+    margin-left: -3.5rem;
+    margin-top: -0.5rem;
+    cursor: pointer;
+    left: 50%;
+  }
+
+  .napaLogoWhite {
+    fill: #fff;
+    opacity: 0;
+    animation: fadeIn 2s ease-in;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+  .napaLogo {
+    stroke: rgba(255, 255, 255, 0.5);
+    stroke-width: 1.25px;
+    animation: fadeOut 1s ease;
+    animation-delay: 2.75s;
+    animation-fill-mode: forwards;
+  }
+
+  .rightSide {
+    padding-left: 8rem;
+    justify-content: space-evenly;
+  }
+  .walletIcon {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  .userIconContainer{
+    margin-right: 1.7rem; 
+    display: flex; 
+    align-items: center; 
+    width: 2vw;
+  }
+}
+@media screen and (min-width: 280px) {
+  .innerContainer {
+    .burgerMenuIcon {
+      width: 1.5rem;
+    }
+    .walletIcon {
+      width: 1.5rem;
+    }
+    .svgWrapper {
+      margin-top: -1rem;
+      margin-left: -5.3rem;
+    }
+  }
+ 
+}
+@media screen and (max-width: 300px) {
+  .innerContainer div span {
+    width: 40px !important;
+  }
+}
+@media screen and (max-width: 300px) {
+  .innerContainer {
+    .svgWrapper {
+      margin-left: -5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .innerContainer {
+    .burgerMenuIcon {
+      width: 1.5rem;
+    }
+  }
+}
+@media screen and (min-width: 375px) {
+  .innerContainer {
+    .burgerMenuIcon {
+      width: 2rem;
+    }
+  }
+}
+@media screen and (min-width: 600px) {
+  .innerContainer {
+    .burgerMenuIcon {
+      width: 2rem;
+    }
+    .walletIcon {
+      width: 2rem;
+    }
+  }
+}
+@media screen and (min-width: 768px) {
+  .innerContainer {
+    .svgWrapper {
+      margin-left: -5rem;
+    }
+    .svgWrapper {
+      margin-left: -5rem;
+    }
+  }
+}
+@media (max-width: 1024px) {
+  .innerContainer .search {
+    padding-right: 0rem;
+    width: 28px;
+  }
+  svg#napa-logo-white {
+    width: 105px;
+  }
+  .innerContainer__ctqEr .svgWrapper {
+    margin-left: -47px;
+    margin-top: -15px;
+  }
+  .innerContainer {
+    .wallet {
+      position: relative;
+      display: none;
+    }
+  }
+}
+@media screen and (min-width: 1280px) {
+  .innerContainer {
+    .burgerMenuIcon {
+      width: auto;
+    }
+    .walletIcon {
+      width: 2.25rem;
+    }
+  }
+}
+@media screen and (min-width: 1536px) {
+  .innerContainer {
+    .burgerMenuIcon {
+      width: 4rem;
+    }
+  }
+}
+@media screen and (min-width: 2560px) {
+  .innerContainer {
+    .burgerMenuIcon {
+      width: 5rem;
+    }
+  }
+}
+@media screen and (min-width: 3340px) {
+  .innerContainer {
+    .burgerMenuIcon {
+      width: 7rem;
+    }
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    display: block;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}

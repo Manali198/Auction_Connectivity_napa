@@ -1,0 +1,50 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 2rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 1rem;
+    }
+    @media screen and (max-width: 736px) {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    padding-bottom: 10px;
+    .settings {
+      padding-top: 113px;
+      color: $white;
+      text-align: left;
+      @include font-6xl-neuropolitical-normal;
+      font-size: 76px;
+      line-height: 110%;
+    }
+  }
+}
+.tabsContainer {
+  padding-top: 15px;
+  @media screen and (max-width: 991px) {
+    padding-top: 42px;
+    margin: 0 -40px;
+  }
+}
+@media screen and (max-width: 736px) {
+  .tabsContainer {
+    margin: 0 -20px;
+    padding-top: 27px;
+  }
+  .container {
+    .settingsContainer {
+      .settings {
+        padding-top: 108px;
+        font-size: 32px;
+        line-height: 110%;
+      }
+    }
+  }
+}

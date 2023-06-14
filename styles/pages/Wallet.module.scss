@@ -1,0 +1,96 @@
+@import '../abstracts/variable.module';
+@import '../abstracts/mixins.module';
+
+.backgroundImage {
+  background-image: url('/assets/images/earbg.webp');
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+
+  .innerMainContainer {
+    height: 100vh;
+
+    .svgWrapper {
+      display: block;
+      position: fixed;
+      top: 48%;
+
+      cursor: pointer;
+
+    }
+    .napaLogoWhite {
+      fill: $light-blue;
+      opacity: 0;
+      animation: fadeIn 2s ease;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
+    }
+    .napaLogo {
+      stroke: $light-blue;
+      stroke-width: 1.25px;
+      animation: fadeOut 1s ease;
+      animation-delay: 2.75s;
+      animation-fill-mode: forwards;
+    }
+    .walletText {
+      @include font-4xl-neuropolitical-normal;
+      color: $white;
+    }
+    .descriptionText {
+      @include font-xs-avenir-regular;
+      color: $gray;
+
+      .termsPrivacyText a{
+        color: $white;
+        text-decoration: none;
+      }
+    }
+    .btnContainer {
+      padding-top: 0.725rem;
+      position: relative;
+      .walletBtn {
+        margin: 0.5rem 0rem;
+        width: 100%;
+        border: 2px solid #f5841f;
+        background: transparent;
+        height: 4.5rem;
+        @include flex-align-center;
+        justify-content: center;
+        color: $white;
+        @include font-md-neuropolitical-normal;
+        .btnIcon {
+          padding-right: 1.5rem !important;
+        }
+      }
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+      display: block;
+    }
+    to {
+      opacity: 0;
+      display: none;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .innerMainContainer {
+      .svgWrapper {
+        top: 10%;
+      }
+    }
+  }
+}

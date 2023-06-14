@@ -1,0 +1,73 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+
+  .settingsContainer {
+    height: 100%;
+    .backBtn {
+      display: flex;
+      align-items: center;
+      @include font-sm-avenir-regular;
+      color: $gray;
+      padding-top: 113px;
+      cursor: pointer;
+      img {
+        margin-right: 0.5rem;
+      }
+    }
+    .settings {
+      padding-top: 0.5rem;
+      color: $white;
+      text-align: left;
+      @include font-8xl-neuropolitical-normal;
+      // font-size: 76px;
+      line-height: 110%;
+      h1 {
+        font-size: 76px;
+      }
+    }
+  }
+  .qrContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    .SelectPrntNftSell {
+      width: 500px;
+      .ClctionTxt {
+        margin-bottom: -5px;
+        margin-top: 1px;
+      }
+    }
+    .qrSection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $white;
+      width: 525px;
+      padding: 1rem;
+      background-color: #151d1d;
+      border-radius: 2rem;
+      height: 44vh;
+      margin-top: -34px;
+      p {
+        @include font-base-avenir-regular;
+        margin: 1rem;
+      }
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+}

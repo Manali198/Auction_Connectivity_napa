@@ -1,0 +1,437 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.backgroundImage {
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  transition: 1s ease;
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 1279px) {
+    height: auto;
+    min-height: auto;
+  }
+  .napaLoungeContainer {
+    height: 100%;
+    padding-right: 0;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    @media (max-width: 1279px) {
+      padding-bottom: 15rem;
+      padding-top: 2rem;
+    }
+    h1 {
+      text-align: left;
+      @media screen and (max-width: 1280px) {
+        padding-top: 130px !important;
+      }
+      @media screen and (max-width: 1199px) {
+        padding-top: 30px !important;
+      }
+      @media screen and (max-width: 736px) {
+        padding-top: 60px !important;
+      }
+      @media screen and (max-width: 300px) {
+        padding-top: 60px !important;
+      }
+    }
+    .napa {
+      @include font-6xl-neuropolitical-normal;
+      text-align: left;
+      -webkit-text-stroke: 2px $white;
+      font-size: 90px !important;
+      color: transparent;
+      @media (max-width: 1200px) {
+        font-size: 76px !important;
+      }
+      @media screen and (max-width: 1199px) {
+        font-size: 56px !important;
+      }
+      @media screen and (max-width: 736px) {
+        font-size: 36px !important;
+      }
+      @media (max-width: 600px) {
+        font-size: $text-3xl;
+      }
+    }
+    .lounge {
+      @include font-6xl-neuropolitical-normal;
+      color: $white;
+      font-size: 90px !important;
+      @media (max-width: 1200px) {
+        font-size: 76px !important;
+      }
+      @media screen and (max-width: 1199px) {
+        font-size: 56px !important;
+      }
+      @media screen and (max-width: 736px) {
+        font-size: 36px !important;
+      }
+      @media (max-width: 600px) {
+        font-size: $text-3xl;
+      }
+    }
+    .leftSideContainer {
+      --bs-gutter-x: .5rem;
+      padding-top: 2rem;
+      @media (max-width: 600px) {
+        padding-top: 1rem;
+      }
+      @media (max-width: 300px) {
+        padding-top: 0.80rem;
+      }
+      .boxes {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        cursor: pointer;
+        text-align: left;
+        padding: 2rem;
+        padding-top: 8rem;
+
+        @media (max-width: 600px) {
+          padding-top: 2rem;
+        }
+        .description {
+          color: $white;
+          @include font-lg-neuropolitical-normal;
+          @media (max-width: 1200px) {
+            font-size: 18px !important;
+          }
+          @media screen and (max-width: 736px) {
+            font-size: 14px !important;
+          }
+          @media (max-width: 600px) {
+            font-size: 1.2rem;
+          }
+        }
+        @media screen and (max-width: 1280px) {
+          min-height: 97px !important;
+        }
+      }
+      .active {
+        background-color: $light-blue;
+        border: 1px solid transparent;
+        .description {
+          color: $black;
+          // font-size: 18px !important;
+          // line-height: 110% !important;
+        }
+      }
+    }
+  }
+
+  .rightSideContainer {
+    .arrowContainer {
+      @media (max-width: 1199px) {
+        margin: 15px 0;
+      }
+    }
+  }
+
+  .footerContainer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+
+  @media (min-width: 1280px) {
+    .napaLoungeContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1 {
+        margin-bottom: 0;
+      }
+      .napa {
+        @include font-4xl-neuropolitical-normal;
+        font-size: 3.5rem;
+      }
+      .lounge {
+        @include font-4xl-neuropolitical-normal;
+        font-size: 3.5rem;
+      }
+      .leftSideContainer {
+        padding-top: 1rem;
+        .boxes {
+          padding: 1.5rem;
+          height: 100%;
+          justify-content: flex-end;
+          display: flex;
+          flex-direction: column;
+          // min-height: 8rem;
+          .description {
+            @include font-md-neuropolitical-normal;
+          }
+        }
+      }
+      .rightSideContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .buttonContainer {
+          display: flex;
+          justify-content: flex-end;
+          // padding-right: 0 !important;
+          padding-right: 6vw !important;
+        }
+        .arrowContainer {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          span {
+            padding-right: 8rem !important;
+            span {
+              padding-right: 0 !important;
+            }
+            &:last-child {
+              padding-right: 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .arrowContainer {
+    // padding-right: 0 !important;
+    padding-right: 6vw !important;
+    @media screen and (max-width: 1199px) {
+      padding-right: 0 !important;
+    }
+  }
+  @media (min-width: 1440px) {
+    .napaLoungeContainer {
+      .napa {
+        @include font-5xl-neuropolitical-normal;
+      }
+      .lounge {
+        @include font-5xl-neuropolitical-normal;
+      }
+      .leftSideContainer {
+        padding-top: 2rem;
+        .boxes {
+          padding-top: 7.8rem;
+          height: auto;
+          .description {
+            @include font-lg-neuropolitical-normal;
+          }
+        }
+      }
+      .rightSideContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        .sliderContainer {
+          width: 100%;
+        }
+        .projectCardContainer {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 2.5rem;
+        }
+        .carouselContainer {
+          background-color: red;
+          height: 50%;
+          width: 50%;
+        }
+        .buttonContainer {
+          padding-right: 1rem;
+          padding-bottom: 2rem;
+        }
+        .arrowContainer {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding-right: 1rem;
+          .rightIcon {
+            cursor: pointer;
+            margin-left: 5rem;
+          }
+          .leftIcon {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1536px) {
+    .napaLoungeContainer {
+      padding-top: 0;
+      padding-bottom: 6rem;
+      .napa {
+        @include font-6xl-neuropolitical-normal;
+      }
+      .lounge {
+        @include font-6xl-neuropolitical-normal;
+      }
+      .leftSideContainer {
+        padding-top: 2rem;
+        .boxes {
+          padding-top: 4rem;
+          .description {
+            @include font-lg-neuropolitical-normal;
+          }
+        }
+      }
+      .rightSideContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        .sliderContainer {
+          width: 100%;
+          padding-left: 4rem;
+        }
+        .projectCardContainer {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 2.5rem;
+        }
+        .carouselContainer {
+          height: 50%;
+          width: 50%;
+        }
+        .buttonContainer {
+          padding-right: 5.5rem;
+        }
+        .arrowContainer {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding-right: 8.5rem;
+          .rightIcon {
+            cursor: pointer;
+            margin-left: 5rem;
+          }
+          .leftIcon {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 2560px) {
+    .napaLoungeContainer {
+      padding-top: 4rem;
+      .napa {
+        @include font-8xl-neuropolitical-normal;
+      }
+      .lounge {
+        @include font-8xl-neuropolitical-normal;
+      }
+      .leftSideContainer {
+        padding-top: 3rem;
+        .boxes {
+          padding-top: 13rem;
+          .description {
+            @include font-2xl-neuropolitical-normal;
+          }
+        }
+      }
+      .rightSideContainer {
+        .buttonContainer {
+          padding-right: 12rem;
+        }
+        .arrowContainer {
+          padding-right: 12rem;
+          .rightIcon {
+            cursor: pointer;
+            margin-left: 8rem;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1280px) {
+    .napaLoungeContainer {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h1 {
+        margin-bottom: 0em;
+      }
+      .napa {
+        @include font-4xl-neuropolitical-normal;
+        font-size: 3.5rem;
+        @media screen and (max-width: 300px) {
+          font-size: 26px !important;
+        }
+      }
+      .lounge {
+        @include font-4xl-neuropolitical-normal;
+        font-size: 3.5rem;
+        @media screen and (max-width: 300px) {
+          font-size: 26px !important;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1199px) {
+  .buttonContainer {
+    margin-top: 30px;
+    margin-bottom: 0px;
+   
+  }
+  .rightSideContainer {
+    position: relative;
+    margin-top: 30px;
+    .arrowContainer {
+      position: absolute;
+      right: 8px;
+      bottom: -13px;
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .rightSideContainer {
+    .arrowContainer {
+      bottom: -20px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .backgroundImage {
+    .napaLoungeContainer {
+      .napaLoungeBody {
+        order: 0;
+        width: 100vw;
+        .leftSideContainer {
+          overflow: scroll;
+          flex-wrap: nowrap;
+          min-width: calc(100vw - 48px);
+          .boxes {
+            white-space: nowrap;
+            width: fit-content;
+            border: none;
+            min-height: 20px !important;
+            line-height: 110%;
+            opacity: 0.5;
+            &.active {
+              opacity: 1;
+              background-color: transparent;
+              .description {
+                font-size: 18px !important;
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+  
+@media screen and (max-width: 740px) {
+  .buttonContainer {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .buttonContainer {
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,115 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  height: 22rem;
+  position: absolute;
+  margin-top: auto;
+  margin-bottom: auto;
+  top: 0;
+  bottom: 0;
+  .topText {
+    display: none;
+    position: absolute;
+    left: 3.5rem;
+    top: -3rem;
+    color: $white;
+    @include font-base-avenir-medium;
+  }
+  .bottomText {
+    display: none;
+    position: absolute;
+    bottom: -5rem;
+    left: 3.5rem;
+    color: $white;
+  }
+  .steper {
+    display: none;
+    width: 2px;
+    height: 24rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    left: 4rem;
+    .stepActive {
+      position: absolute;
+      width: 1px;
+      height: 6rem;
+      background-color: $white;
+      z-index: 1;
+      margin-left: -1px;
+    }
+  }
+  @media screen and (min-width: 1280px) {
+    .steper {
+      display: block;
+    }
+    .topText {
+      display: block;
+    }
+    .bottomText {
+      display: block;
+    }
+  }
+  @media screen and (min-width: 2560px) {
+    height: 28rem;
+    .topText {
+      top: -5rem;
+      left: 5rem;
+      @include font-base-avenir-medium;
+      font-size: 1.5rem;
+      color: $white;
+    }
+    .bottomText {
+      left: 5rem;
+      position: absolute;
+      @include font-base-avenir-medium;
+      font-size: 1.5rem;
+      bottom: -10rem;
+      color: $white;
+    }
+    .steper {
+      width: 4px;
+      height: 34rem;
+      left: 6rem;
+
+      .stepActive {
+        position: absolute;
+        width: 2px;
+        height: 10rem;
+        background-color: white;
+        z-index: 1;
+      }
+    }
+  }
+  @media screen and (min-width: 3340px) {
+    height: 38rem;
+    .topText {
+      top: -5rem;
+      left: 7rem;
+      @include font-base-avenir-medium;
+      font-size: 2rem;
+      color: $white;
+    }
+    .bottomText {
+      left: 7rem;
+      position: absolute;
+      @include font-base-avenir-medium;
+      font-size: 2rem;
+      bottom: -7rem;
+      color: $white;
+    }
+    .steper {
+      width: 4px;
+      height: 40rem;
+      left: 8rem;
+
+      .stepActive {
+        position: absolute;
+        width: 2px;
+        height: 10rem;
+        background-color: white;
+        z-index: 1;
+      }
+    }
+  }
+}

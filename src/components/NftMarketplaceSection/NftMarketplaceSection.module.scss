@@ -1,0 +1,329 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  h3 {
+    @include font-md-neuropolitical-normal;
+    color: $gray;
+  }
+}
+
+.backgroundImage {
+  background-image: url('/assets/images/npg.png');
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  @include flex-column-between;
+  // @media (max-width: 1279px) {
+  //   height: auto;
+  // }
+  .nft {
+    padding-top: 110px;
+    text-align: left;
+    -webkit-text-stroke: 2px white;
+    animation: glow 1s ease-in-out infinite alternate;
+    @include font-lg-neuropolitical-normal;
+    color: transparent;
+    margin-bottom: 0;
+    font-size: 112px !important;
+    line-height: 110% !important;
+    @media screen and (max-width: 1060px) {
+      font-size: 76px !important;
+    }
+    @media screen and (max-width: 736px) {
+      font-size: 36px !important;
+    }
+  }
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 20px #fff, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px,
+        0 0 70px, 0 0 10px;
+    }
+    to {
+      text-shadow: 0 0 1px #fff, 0 0 20px #ffffff, 0 0 30px, 0 0 40px, 0 0 50px,
+        0 0 60px, 0 0 100px;
+    }
+  }
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 20px #fff, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px,
+        0 0 70px, 0 0 10px;
+    }
+    to {
+      text-shadow: 0 0 1px #fff, 0 0 20px #ffffff, 0 0 30px, 0 0 40px, 0 0 50px,
+        0 0 60px, 0 0 100px;
+    }
+  }
+
+  .nftContainer {
+    .projectCardContainer {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 2.5rem;
+    }
+    .btnContainer {
+      position: relative !important;
+      .btn {
+        position: absolute;
+        top: -0.5rem;
+        right: 0;
+      }
+    }
+  }
+  .description {
+    color: $white;
+    text-align: left;
+    padding-top: 17px !important;
+    @include font-xs-avenir-regular;
+    margin-bottom: 0;
+    font-size: 18px !important;
+    @media screen and (max-width: 736px) {
+      font-size: 16px !important;
+      margin-bottom: 0 !important;
+    }
+  }
+  .carouselContainer {
+    display: flex;
+  }
+
+  .tabsContainer {
+    @include flex-column-start;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    padding-top: 26px !important;
+    @media screen and (max-width: 1023px) {
+      margin-bottom: 45px !important;
+    }
+    .tabsInnerContainer {
+      @include flex-row-center;
+      .tab {
+        display: flex;
+        flex-wrap: nowrap;
+        border-bottom: 0;
+        padding-left: 0;
+        list-style-type: none;
+        margin-bottom: 0;
+        margin-top: 0.5rem;
+      }
+    }
+    .viewFeedContainer {
+      @include align-center;
+      .viewFeedBtn {
+        @include font-base-neuropolitical-normal;
+        color: $light-blue;
+        background-color: transparent;
+        border: 1px solid transparent;
+        margin-right: 1rem;
+      }
+      .arrowIcon {
+        width: 1.5rem;
+      }
+    }
+  }
+
+  @media (min-width: 280px) {
+    .nftContainer {
+      padding-top: 1rem;
+      .projectCardContainer {
+        padding-top: 1rem;
+        padding-left: 0.2rem;
+        padding-right: 0.2rem;
+      }
+    }
+
+    .nft {
+      padding-top: 4.2rem;
+      @include font-base-neuropolitical-normal;
+    }
+  }
+
+  @media (min-width: 320px) {
+    .nftContainer {
+      padding-top: 1rem;
+    }
+    .nft {
+      @include font-lg-neuropolitical-normal;
+      font-size: 2rem;
+      max-width: 100px;
+    }
+  }
+
+  @media (min-width: 400px) {
+    .nftContainer {
+      padding-top: 1rem;
+    }
+    .nft {
+      @include font-2xl-neuropolitical-normal;
+      max-width: 100px;
+    }
+  }
+
+  @media (min-width: 520px) {
+    .nftContainer {
+      padding-top: 1rem;
+    }
+    .nft {
+      @include font-3xl-neuropolitical-normal;
+
+      padding-top: 6.5rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    background-image: url('/assets/images/npg.png');
+    .nft {
+      text-align: left;
+      padding-top: 5rem;
+      max-width: 100px;
+      @include font-3xl-neuropolitical-normal;
+    }
+    .nftContainer {
+      padding-top: 1rem;
+      .projectCardContainer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+    }
+    .description {
+      padding-top: 1rem;
+      @include font-sm-avenir-regular;
+    }
+    .tabsContainer {
+      @include flex-column-start;
+      .tabsInnerContainer {
+        @include flex-row-center;
+        .tab {
+          flex-wrap: nowrap;
+        }
+      }
+      .viewFeedContainer {
+        .viewFeedBtn {
+          margin-right: 1.5rem;
+        }
+        .arrowIcon {
+          width: 3rem;
+        }
+      }
+    }
+
+    ul.NftMarketplaceSection_tab__wy7PM button {
+      font-size: 18px;
+    }
+  }
+  @media (min-width: 1024px) {
+    padding-top: 2rem;
+    .nft {
+      @include font-3xl-neuropolitical-normal;
+      padding-top: 2.5rem;
+    }
+    .description {
+      @include font-md-avenir-regular;
+      padding-top: 1rem;
+      max-width: 530px;
+    }
+    .tabsContainer {
+      @include flex-row-between;
+      @include flex-align-center;
+      margin-bottom: 2rem;
+      .viewFeedContainer {
+        .viewFeedBtn {
+          @include font-md-neuropolitical-normal;
+          margin-right: 1.5rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    div#nft-marketplace {
+      padding-top: 70px;
+    }
+    .description {
+      @include font-base-avenir-regular;
+      max-width: 530px;
+      margin-bottom: 20px;
+    }
+    .tabsContainer {
+      .tabsInnerContainer {
+        .tab {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .Footer_footerIconItem__5eJ33 {
+      width: 62px;
+    }
+    #nft-marketplace .slick-list {
+      margin-top: 30px;
+    }
+  }
+  @media only screen and (max-width: 736px) {
+    .nft {
+      padding-top: 3rem;
+    }
+  }
+  @media (max-width: 767px) {
+    .tabsContainer {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    background-image: url('/assets/images/npg.png');
+    .nft {
+      padding-top: 2.3rem;
+      max-width: 100%;
+      @include font-5xl-neuropolitical-normal;
+    }
+    .description {
+      @include font-base-avenir-regular;
+      padding-top: 1rem;
+      max-width: 530px;
+    }
+    .tabsContainer {
+      padding-top: 1rem;
+    }
+    .nftContainer {
+      padding-top: 1rem;
+      .projectCardContainer {
+        padding-top: 1.5rem;
+      }
+    }
+    .tabsContainer {
+      .viewFeedContainer {
+        .viewFeedBtn {
+          @include font-lg-neuropolitical-normal;
+        }
+      }
+    }
+  }
+  @media (min-width: 1536px) {
+    .nft {
+      padding-top: 6.5rem;
+      max-width: 100%;
+      @include font-6xl-neuropolitical-normal;
+    }
+
+    .description {
+      padding-top: 1rem;
+      @include font-md-avenir-regular;
+      max-width: 530px;
+    }
+    .tabsContainer {
+      padding-top: 2rem;
+      margin-bottom: 0;
+    }
+    .nftContainer {
+      .projectCardContainer {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 2.5rem;
+      }
+    }
+  }
+}

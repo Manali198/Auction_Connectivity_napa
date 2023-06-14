@@ -1,0 +1,66 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.joinSociety {
+  transition: 0.5s ease-in-out;
+  display: flex;
+  align-items: center;
+  > span {
+    position: relative !important;
+    right: 0;
+    animation: slide1 2.5s ease-in-out infinite;
+  }
+  .joinSocietyBtn {
+    font-size: 1.5rem;
+    transition: 0.5s ease-in-out;
+    color: #16e6ef !important;
+    font-size: 19px !important;
+    @media screen and (max-width: 736px) {
+      font-size: 18px !important;
+      margin-right: 12px !important;
+    }
+    @media screen and (max-width: 300px) {
+      font-size: 14px !important;
+    }
+  }
+  a {
+    text-decoration: none;
+  }
+  img {
+    width: 2.5rem;
+    transition: 0.5s ease-in-out;
+    position: relative;
+    @media screen and (max-width: 736px) {
+      width: 28px !important;
+      height: 18px !important;
+    }
+  }
+}
+.joinSocietyBtn {
+  cursor: pointer;
+  @include font-lg-neuropolitical-normal;
+  color: $light-blue;
+  background-color: transparent;
+  border: 1px solid transparent;
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 1440px) {
+  .joinSociety {
+    .joinSocietyBtn {
+      @include font-md-neuropolitical-normal;
+      font-size: 1.125rem;
+    }
+  }
+}
+
+@keyframes slide1 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(10px, 0);
+  }
+}

@@ -1,0 +1,80 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.chatWindowContainer {
+  height: 405px;
+  position: relative;
+  overflow: auto;
+  @media screen and (min-width: 1600px) {
+    height: 650px !important;
+  }
+
+  @media (min-width: 1336px) OR (min-height: 625px) {
+    height: 19rem;
+  }
+  @media (min-width: 1336px) OR (min-height: 768px) {
+    height: 28rem;
+  }
+  @media (min-width: 1440px) {
+    height: 30rem;
+  }
+  @media (min-width: 1920px) {
+    height: 40rem;
+  }
+
+  @media (min-width: 2560px) {
+    height: 50rem;
+  }
+}
+@media screen and (min-width: 1356px) {
+  .chatWindowContainer {
+    height: calc(100vh - 400px);
+  }
+}
+.chatInputContainer {
+  width: 100%;
+  @include flex-row-between;
+  position: relative;
+  .input {
+    width: 100%;
+    padding-left: 1.5rem;
+    padding-right: 5.25rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    height: 3rem;
+    border: transparent;
+    @include font-base-avenir-medium;
+    color: $white;
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.5);
+      @include font-sm-avenir-medium;
+    }
+    &:focus {
+      border: none;
+      outline: none;
+    }
+    &:focus-visible {
+      border: none;
+    }
+  }
+  .send {
+    position: absolute;
+    right: 1.5rem;
+    background-color: transparent;
+    color: $white;
+    @include font-sm-neuropolitical-normal;
+    border: none;
+  }
+  @media (min-width: 2560px) {
+    .input {
+      height: 4rem;
+      @include font-md-avenir-medium;
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+        @include font-md-avenir-medium;
+      }
+    }
+    .send {
+      @include font-md-neuropolitical-normal;
+    }
+  }
+}

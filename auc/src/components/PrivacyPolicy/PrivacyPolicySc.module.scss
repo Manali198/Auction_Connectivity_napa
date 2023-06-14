@@ -1,0 +1,90 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+
+.MainContact {
+  min-height: 85vh;
+  padding-top: 112px;
+}
+.WidthFull {
+  width: 100%;
+}
+.MainTextHelp h1 {
+  font-family: 'Neuropolitical';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 74px;
+  line-height: 110%;
+  text-align: start;
+  color: #FFFFFF;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 736px) {
+  .MainContact {
+    padding-top: 108px;
+  }
+  .MainTextHelp h1 {
+    font-size: 32px;
+    line-height: 110%;
+    margin-bottom: 24px;
+  }
+}
+.Privecy{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  h4{
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    color: #91A5A6;
+    margin-bottom: 30px;
+  }
+  span{
+    color: #FFF !important;
+  }
+  .PrivecyHeder{
+    margin-top: 20px
+  }
+  p{
+    @include font-xs-avenir-regular;
+    max-width: 840px;
+    font-size: 18px;
+    line-height: 140%;
+    color: #91A5A6;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .Privecy{
+    h4{
+      text-align: left;
+    }
+    p {
+      max-width: 100%;
+    }
+  }
+}
+@media screen and (max-width: 736px) {
+  .Privecy{
+    h4{
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 110%;
+      margin-bottom: 21px;
+    }
+    .PrivecyHeder{
+      margin-top: 20px
+    }
+    p{
+      @include font-xs-avenir-regular;
+      max-width: 335px;
+      font-size: 16px;
+      line-height: 140%;
+      margin-bottom: 16px;
+    }
+  }
+}

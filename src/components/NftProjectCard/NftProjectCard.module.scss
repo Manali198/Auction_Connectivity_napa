@@ -1,0 +1,356 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  background-image: url(/assets/images/nftprojectcard.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    min-height: 199px;
+    background: linear-gradient(
+      180deg,
+      rgba(12, 27, 34, 0) 0%,
+      rgba(12, 27, 34, 0.7) 100%
+    );
+    z-index: 1;
+    width: 100%;
+    left: 0;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    min-height: 199px;
+    background: linear-gradient(
+      180deg,
+      rgba(12, 27, 34, 0.6) 0%,
+      rgba(12, 27, 34, 0) 40%
+    );
+    z-index: 1;
+    width: 100%;
+  }
+  @media screen and (max-width: 736px) {
+    height: 380px;
+  }
+  .avatarContainer {
+    display: flex;
+    z-index: 99 !important;
+    align-items: center;
+    .username {
+      @include font-xs-avenir-regular;
+      padding-left: 0.7rem;
+      color: $white;
+      font-size: 14px !important;
+    }
+    .avatar {
+      width: 2rem;
+      border-radius: 50%;
+    }
+  }
+  .cardInfoContainer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 8rem;
+    max-width: 95%;
+    padding-bottom: 1rem;
+    width: 100% !important;
+    z-index: 99 !important;
+    .title {
+      @include font-md-neuropolitical-normal;
+      color: $white;
+      text-align: left;
+      margin-bottom: 1.5rem;
+      padding: 0 !important;
+      font-size: 32px !important;
+      height: 70px;
+      line-height: 110% !important;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      @media screen and (max-width: 1023px) {
+        font-size: 28px !important;
+      }
+    }
+
+    .description {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .bitContainer {
+        @include flex-column-start;
+        color: $white;
+        .bitContainerLeftSide {
+          .bitContainerLeftSideText {
+            @include font-xs-avenir-regular;
+            padding-left: 0.75rem;
+          }
+        }
+        .bitContainerRightSide {
+          .bitContainerRightSideText {
+            @include font-xs-avenir-regular;
+          }
+        }
+        div {
+          display: flex;
+          align-items: center;
+        }
+        img {
+          width: 1.5rem;
+          height: 1.5rem;
+          margin-right: 0.75rem;
+        }
+        .bit {
+          padding-bottom: 0.5rem;
+          @include font-xs-avenir-regular;
+        }
+      }
+    }
+  }
+  @media (min-width: 280px) {
+    padding: 0.5rem;
+    .avatarContainer {
+      .avatar {
+        display: none;
+      }
+      .username {
+        padding-left: 0;
+        @include font-xs-avenir-regular;
+      }
+    }
+    .cardInfoContainer {
+      padding-top: 3rem;
+      .title {
+        @include font-sm-neuropolitical-normal;
+        padding-bottom: 0.5rem;
+      }
+      .description {
+        // @include flex-column-start;
+        .bitContainer {
+          .bit {
+            @include font-xxs-avenir-regular;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 320px) {
+    padding: 0.5rem;
+    .cardInfoContainer {
+      padding-top: 1rem;
+      padding-bottom: 0;
+
+      .title {
+        @include font-md-neuropolitical-normal;
+        color: $white;
+        text-align: left;
+        padding-bottom: 1.5rem;
+      }
+      .description {
+        // @include flex-row-between;
+        // @include flex-row;
+        .bitContainer {
+          .bit {
+            @include font-xs-avenir-regular;
+          }
+        }
+      }
+    }
+    .avatarContainer {
+      .username {
+        @include font-sm-avenir-regular;
+      }
+      .avatar {
+        display: none;
+      }
+    }
+  }
+  @media (min-width: 376px) {
+    padding: 1rem;
+    .cardInfoContainer {
+      .title {
+        @include font-md-neuropolitical-normal;
+        color: $white;
+        text-align: left;
+        padding-bottom: 1.5rem;
+      }
+      .description {
+        @include flex-row-between;
+        @include flex-row;
+        .bitContainer {
+          .bit {
+            @include font-xs-avenir-regular;
+          }
+          &:last-child {
+            padding-top: 0rem;
+          }
+        }
+      }
+    }
+    .avatarContainer {
+      .username {
+        @include font-sm-avenir-regular;
+        padding-left: 0.5rem;
+      }
+      .img {
+        display: block;
+        width: 30px !important;
+        height: 30px !important;
+        min-width: none !important;
+        min-height: none !important;
+        max-width: unset !important;
+        max-height: unset !important;
+      }
+    }
+  }
+  @media (min-width: 576px) {
+    padding: 1rem;
+    .cardInfoContainer {
+      padding-top: 2rem;
+      padding-bottom: 0;
+
+      .title {
+        @include font-md-neuropolitical-normal;
+        color: $white;
+        text-align: left;
+        padding-bottom: 1.5rem;
+      }
+      .description {
+        @include flex-row-between;
+        @include flex-row;
+        .bitContainer {
+          .bit {
+            @include font-xs-avenir-regular;
+          }
+        }
+      }
+    }
+    .avatarContainer {
+      .username {
+        @include font-sm-avenir-regular;
+        padding-left: 0.5rem;
+      }
+      img {
+        display: block;
+        width: 40px !important;
+        height: 40px !important;
+        min-width: none !important;
+        min-height: none !important;
+        max-width: unset !important;
+        max-height: unset !important;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 2rem;
+    .avatarContainer {
+      .username {
+        @include font-sm-avenir-regular;
+        padding-left: 0.5rem;
+      }
+      .avatar {
+        display: block;
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+    .cardInfoContainer {
+      padding-bottom: 0;
+      padding-top: 3rem;
+
+      .title {
+        @include font-md-neuropolitical-normal;
+        color: $white;
+        text-align: left;
+        padding-bottom: 1.5rem;
+      }
+      .description {
+        @include flex-row-between;
+        @include flex-row;
+        .bitContainer {
+          .bit {
+            @include font-xs-avenir-regular;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    .avatarContainer {
+      .avatar {
+        width: 2.5rem;
+        height: 2.5rem;
+      }
+    }
+    .cardInfoContainer {
+      padding-top: 6rem;
+      .title {
+        @include font-md-neuropolitical-normal;
+        color: $white;
+        text-align: left;
+        padding-bottom: 1.5rem;
+      }
+      .description {
+        .bitContainer {
+          .bitContainerRightSide {
+            .bitContainerRightSideText {
+              @include font-sm-avenir-regular;
+            }
+          }
+          .bitContainerLeftSide {
+            .bitContainerLeftSideText {
+              @include font-sm-avenir-regular;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 1280px) {
+    .avatarContainer {
+      .avatar {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+    .cardInfoContainer {
+      padding-top: 3rem;
+      .title {
+        @include font-lg-neuropolitical-normal;
+        color: $white;
+        text-align: left;
+        padding-bottom: 1.5rem;
+      }
+    }
+  }
+  @media (min-width: 1400px) {
+    .cardInfoContainer {
+      padding-top: 3rem;
+      max-width: 95%;
+    }
+  }
+  @media (min-width: 1536px) {
+    .cardInfoContainer {
+      padding-top: 8rem;
+      .title {
+        @include font-xl-neuropolitical-normal;
+        color: $white;
+        text-align: left;
+        padding-bottom: 1.5rem;
+      }
+    }
+  }
+}

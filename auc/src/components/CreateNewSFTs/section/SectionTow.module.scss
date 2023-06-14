@@ -1,0 +1,102 @@
+@import '../../../../styles/abstracts/mixins.module';
+@import '../../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    // .settings {
+    //   padding-top: 113px;
+    //   color: $white;
+    //   text-align: left;
+    //   @include font-6xl-neuropolitical-normal;
+    //   font-size: 76px;
+    //   line-height: 110%;
+    // }
+  }
+}
+.SectionTow{
+  padding-top: 74px;
+}
+.CustomGridContainer {
+  display: grid;
+  grid-gap: 120px;
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
+}
+.DetailsCont{
+  h1{
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    color: #FFFFFF;
+    margin: 0 0 26px 0;
+    text-align: start;
+  }
+}
+.flexPrntSc02{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  h6{
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #91A5A6;
+    margin: 0;
+  }
+  p{
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: right;
+    color: #FFFFFF;
+    margin: 0;
+  }
+}
+.flexNapa{
+  display: flex;
+  align-items: center;
+  p{
+    margin-left: 8px;
+  }
+}
+
+.PriceHistoryCont{
+  h1{
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    color: #FFFFFF;
+    margin: 0 0 23px 0;
+    text-align: start;
+  }
+  >span{
+    width: 100% !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .SectionTow{
+    padding-top: 30px;
+  }
+  .CustomGridContainer {
+    grid-gap: 30px;
+    grid-template-columns: repeat(1, minmax(0px, 1fr));
+  }
+  }

@@ -1,0 +1,59 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.tabBtn {
+  margin-right: 1.5rem;
+  background-color: transparent;
+  @include font-sm-avenir-regular;
+  text-align: left;
+  color: $white;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;
+  transition: all 0.3s ease-out;
+  &:hover {
+    border-bottom-width: 2rem;
+    &::after {
+      content: '';
+      border-bottom: 1px solid $white;
+      width: 2rem;
+      display: block;
+      padding-top: 0.5rem;
+    }
+  }
+}
+
+.active {
+  border-bottom-width: 4rem;
+  &::after {
+    content: '';
+    border-bottom: 1px solid $white;
+    width: 8rem;
+    display: block;
+    padding-top: 0.5rem;
+  }
+}
+@media (min-width: 280px) {
+  .tabBtn {
+    @include font-xs-avenir-regular;
+  }
+}
+
+@media (min-width: 768px) {
+  .tabBtn {
+    @include font-base-avenir-regular;
+    margin-right: 3rem;
+  }
+  .active {
+    &::after {
+      width: 4rem;
+    }
+  }
+}
+
+@media (min-width: 2560px) {
+  .tabBtn {
+    @include font-base-avenir-medium;
+    font-size: $text-xl;
+  }
+}

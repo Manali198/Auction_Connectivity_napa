@@ -1,0 +1,25 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+
+.actionBtn {
+    width: 173px;
+    height: 92px;
+    left: 120px;
+    top: 267px;
+    background: #192020;
+    color: $gray;
+    border-radius: 16px;
+    outline: none;
+    border: none;
+    font-family: 'Neuropolitical';
+    &:hover {
+        background-color: $hover-links;
+        color: $black;
+    }
+}
+
+.active {
+    background-color: $hover-links;
+    color: $black;
+}

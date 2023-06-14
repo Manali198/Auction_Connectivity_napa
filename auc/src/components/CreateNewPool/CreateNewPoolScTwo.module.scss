@@ -1,0 +1,111 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+  .settingsContainer {
+    .settings {
+      // padding-top: 113px;
+      padding-top: 8px;
+      color: $white;
+      text-align: left;
+      @include font-6xl-neuropolitical-normal;
+      font-size: 76px;
+      line-height: 110%;
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .container {
+    .settingsContainer {
+      .settings {
+        padding-top: 108px;
+        font-size: 32px;
+        line-height: 110%;
+      }
+    }
+  }
+}
+.ourlyPerntAj{
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    min-height: 286px;
+    background: linear-gradient(180deg, rgba(16, 35, 36, 0) 0%, #102324 100%);
+    z-index: 2;
+    width: 100%;
+  }
+}
+.StaylinkFrst{
+  padding-top: 108px !important;
+  display: flex;
+  text-align: start;
+  a{
+    font-size: 14px;
+    line-height: 140%;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    &:hover {
+      color: #16E6EF;
+      >span {
+        img {filter: invert(1%) sepia(162%) saturate(1057%) hue-rotate(143deg) brightness(100%) contrast(85%)}
+      }
+    }
+    >span {
+      margin-right: 7px !important;
+    }
+  }
+}
+.threeLinkMain{
+  padding-top: 24px;
+  padding-bottom: 40px;
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0;
+    li{
+      list-style: none;
+      font-family: 'Neuropolitical';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 110%;
+      color: #91A5A6;
+      border-bottom: 4px solid rgba(145, 165, 166, 0.1);
+      margin-right: 4px;
+      width: 33.33%;
+      text-align: start;
+      padding-bottom: 14px;
+      &:last-child{
+        margin-right: 0;
+      }
+      a{
+        text-decoration: none;
+        color: #91A5A6;
+      }
+    }
+    .active {
+      border-bottom: 4px solid #16E6EF;
+      a{
+        color: #ffffff;
+      }
+    }
+  }
+}

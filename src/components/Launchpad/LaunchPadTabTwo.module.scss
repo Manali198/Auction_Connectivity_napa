@@ -1,0 +1,307 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    .settings {
+      padding-top: 220px;
+      color: $white;
+      text-align: left;
+      @include font-6xl-neuropolitical-normal;
+      font-size: 76px;
+      line-height: 110%;
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .container {
+    .settingsContainer {
+      .settings {
+        padding-top: 108px;
+        font-size: 32px;
+        line-height: 110%;
+      }
+    }
+  }
+}
+.AnyObjects {
+  display: none;
+  margin-right: 48px;
+  .FilterButton {
+    @include font-md-avenir-regular;
+    font-size: 18px;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin-bottom: 0;
+    background: transparent !important;
+    border: none !important;
+    padding: 0;
+  }
+}
+
+.LaunchPadMain {
+  padding-top: 110px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-bottom: 230px;
+  .LeftLaunchPad {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: start;
+    flex-basis: 50%;
+    z-index: 9;
+  }
+  .LaunchPadDeflt {
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 76px;
+    line-height: 110%;
+    color: #FFFFFF;
+    margin-bottom: 22px;
+    text-align: start;
+  }
+  p {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin-bottom: 36px;
+    max-width: 660px;
+    text-align: start;
+  }
+}
+.FrstBtn {
+  font-family: 'Neuropolitical';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 110%;
+  color: #16E6EF;
+  background: transparent;
+  display: flex;
+  border: none;
+  align-items: center;
+  >span {
+    margin-left: 24px !important;
+    position: relative;
+    left: 0;
+    transition: all 0.3s ease-out;
+  }
+  &:hover {
+    >span {
+      left: 8px;
+    }
+  }
+}
+.RightPlayBtn {
+  position: relative;
+  right: -250px;
+  top: 0;
+  z-index: 9;
+}
+
+
+.tipandtotolmain{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+.buttonperntAj{
+  display: flex;
+  align-items: center;
+  button{
+    background: transparent;
+    border: none;
+    padding: 0;
+    height: auto;
+    position: relative;
+    top: 0;
+    transition: all 0.3s ease-out;
+    &:hover {
+      top: -5px;
+    }
+  }
+  .marginPrnt{
+    margin: 0 23px 0 60px;
+  }
+}
+.scrollPernt{
+  overflow-y: auto;
+  height: 768px;
+}
+.CustomGridContainer {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(4, minmax(0px, 1fr));
+  a {
+    cursor: pointer;
+  }
+}
+.CustomGridContainer {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(4, minmax(0px, 1fr));
+}
+
+.TipsTulsOverlay {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    min-height: 255px;
+    background: linear-gradient(180deg, rgba(12, 27, 34, 0) 0%, rgba(12, 27, 34, 0.9) 100%);
+    z-index: 1;
+    width: 100%;
+    pointer-events: none;
+  }
+  // &::after{
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
+  //   top: 0;
+  //   min-height: 117px;
+  //   background: linear-gradient(180deg, rgba(12, 27, 34, 0) 0%, rgba(12, 27, 34, 0.9) 100%);
+  //   transform: matrix(1, 0, 0, -1, 0, 0);
+  //   // z-index: 1;
+  //   width: 100%;
+  // }
+}
+
+.boxinnrcont{
+  position: relative;
+  .apernt{
+    text-decoration: none;
+    display: flex;
+    width: 100% !important;
+    height: 372px;
+    >span{
+      width: 100% !important;
+    }
+    img{
+      width: 100% !important;
+      object-fit: cover;
+    }
+  }
+}
+.upCont{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  z-index: 1;
+  p{
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    color: #FFFFFF;
+    margin: 0 0 0 10px;
+  }
+}
+.downCont{
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  right: 32px;
+  z-index: 1;
+  h3{
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    color: #FFFFFF;
+    text-align: start;
+    max-width: 210px;
+    margin: 0 0 13px 0;
+  }
+  .flexPernt{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .currentBit{
+      text-align: start;
+      h5{
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        color: #FFFFFF;
+        margin: 0 0 12px 0;
+      }
+      .txtimgFlex{
+        display: flex;
+        align-items: center;
+        p{
+          font-family: 'Avenir';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 140%;
+          color: #FFFFFF;
+          text-align: start;
+        }
+      }
+    }
+    .endingIn{
+      p{
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        margin: 0 0 12px 0;
+        color: #FFFFFF;
+      }
+      h3{
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        color: #FFFFFF;
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+.OverLayIn {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    min-height: 255px;
+    background: linear-gradient(180deg, rgba(12, 27, 34, 0) 0%, rgba(12, 27, 34, 0.9) 100%);
+    z-index: 2;
+    width: 100%;
+    pointer-events: none;
+  }
+}

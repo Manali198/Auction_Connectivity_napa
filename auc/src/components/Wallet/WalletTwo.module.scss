@@ -1,0 +1,341 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+
+  .settingsContainer {
+    height: 100%;
+
+    .settings {
+      padding-top: 113px;
+      color: $white;
+      text-align: left;
+      @include font-6xl-neuropolitical-normal;
+      font-size: 76px;
+      line-height: 110%;
+      padding-right: 1px;
+
+      .headerSection {
+        display: flex;
+        justify-content: space-between;
+
+        .walletHeading {
+          font-size: 76px
+        }
+
+        span {
+          @include font-md-avenir-medium;
+          padding-left: 10px;
+        }
+
+        .settingsLabel {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.accountContainer {
+  display: flex;
+  border: 1px solid #212C2C;
+  margin-top: 2rem;
+  width: 100%;
+  text-align: left;
+  padding: 30px;
+
+  .accountLeftContainer {
+    flex-basis: 50%;
+
+    .accountText {
+      @include font-lg-neuropolitical-normal;
+      color: white;
+
+    }
+
+    .accountTextContainer {
+      display: flex;
+
+      .accountNumber {
+        @include font-4xl-neuropolitical-normal;
+        color: white;
+      }
+
+      .acccountDropdown {
+        display: flex;
+        align-items: flex-end;
+        @include font-lg-neuropolitical-normal;
+        padding-left: 32px;
+      }
+    }
+  }
+
+  .accountRightContainer {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-end;
+
+
+    .depositBtn {
+      @include font-md-neuropolitical-normal;
+
+      padding: 2rem;
+      padding-right: 8rem;
+      border: none;
+      border-radius: 16px;
+      background: #192020;
+      color: #16E6EF;
+    }
+
+    .withdrawalBtn {
+      @include font-md-neuropolitical-normal;
+
+      border: none;
+      padding: 2rem;
+      padding-right: 6rem;
+      margin-left: 16px;
+      border-radius: 16px;
+      background: #192020;
+      color: #FF4E51;
+
+
+    }
+
+  }
+
+}
+
+.walletTableContainer {
+  margin-bottom: 3rem;
+  display: flex;
+  margin-top: 24px;
+  width: 100%;
+
+  .walletTokensContainer {
+    border: 1px solid #212C2C;
+    padding-top: 2rem;
+    width: 50%;
+
+    .tabsContainer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left: 2rem;
+      padding-right: 2rem;
+
+      .tabOne {
+        font-size: 1.625rem;
+        color: white;
+        font-family: 'Neuropolitical';
+        font-style: normal;
+        font-weight: 400;
+        line-height: 110%;
+      }
+
+      .tab {
+        @include font-sm-neuropolitical-normal;
+        color: #91A5A6;
+
+      }
+    }
+  }
+
+  .textIconContainer {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 27px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 10px;
+
+    .textContainer {
+      color: #15CCD3;
+      cursor: pointer;
+      font-family: 'Neuropolitical';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 110%
+    }
+  }
+
+  .walletTransactionContainer {
+    border: 1px solid #212C2C;
+    // padding: 2rem;
+    margin-left: 24px;
+    width: 50%;
+
+    .tableData {
+      height: 77px;
+      color: white;
+      border-bottom: 1px solid #212C2C;
+      // height: 3rem;
+    }
+
+  }
+
+}
+
+.tokenDiv {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-bottom: 1px solid #212C2C;
+  padding-bottom: 27px;
+
+}
+
+.tokenDivLeft {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.tokenDivLeft {
+  width: 35%;
+
+}
+
+.tokenDivRight {
+  display: flex;
+  justify-content: space-between;
+  width: 35%;
+}
+
+.bitcoinText {
+  @include font-md-avenir-regular;
+  color: white;
+}
+
+.bitcoinText1 {
+  @include font-md-avenir-regular;
+  color: #677778;
+}
+
+.transactionContainer {
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  @include font-lg-neuropolitical-normal;
+  color: white;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+}
+
+.tablehead {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #91A5A6;
+}
+
+.tableBody {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+}
+
+.walletDropdownContainer {
+  font-family: Avenir;
+  font-style: Medium;
+  font-size: 18px;
+  line-height: 25px;
+  line-height: 140%;
+  text-align: left;
+  vertical-align: top;
+  fill: solid;
+  color: #FFFFFF;
+}
+
+.settingDropdownContainer {
+  display: flex;
+  align-items: center;
+}
+
+.optionContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  >span {
+    margin-right: 12px !important;
+  }
+}
+
+
+@media screen and (max-width: 736px) {
+  .container {
+    .settingsContainer {
+      .settings {
+        padding-top: 108px;
+        font-size: 32px;
+        line-height: 110%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .walletTableContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .walletTokensContainer {
+    width: 100% !important;
+  }
+
+  .walletTransactionContainer {
+    width: 100% !important;
+    margin-left: 0px !important;
+    margin-top: 20px;
+  }
+
+  .accountContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .accountRightContainer {
+    display: flex;
+    justify-content: flex-start !important;
+    padding-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .accountNumber {
+    font-size: 3rem !important;
+  }
+
+  .accountRightContainer {
+    display: flex;
+  }
+
+  .withdrawalBtn {
+    padding-right: 2rem !important;
+  }
+
+  .depositBtn {
+    padding-right: 4rem !important;
+  }
+}

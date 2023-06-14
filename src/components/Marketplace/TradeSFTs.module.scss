@@ -1,0 +1,499 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    .settings {
+      padding-top: 113px;
+      color: $white;
+      text-align: left;
+      @include font-6xl-neuropolitical-normal;
+      font-size: 76px;
+      line-height: 110%;  
+    }
+  }
+}
+.dateStart{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: 100px;
+  cursor: pointer;
+  color: white;
+  
+}
+.dateStart::placeholder{
+  color: white;
+}
+.datepickerBox{
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+@media screen and (max-width: 736px) {
+  .container {
+    .settingsContainer {
+      .settings {
+        padding-top: 108px;
+        font-size: 32px;
+        line-height: 110%;
+      }
+    }
+  }
+}
+.AnyObjects {
+  display: none;
+  margin-right: 48px;
+  .FilterButton {
+    @include font-md-avenir-regular;
+    font-size: 18px;
+    line-height: 140%;
+    color: #ffffff;
+    margin-bottom: 0;
+    background: transparent !important;
+    border: none !important;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .AnyObjects {
+    display: block;
+  }
+}
+.FilterBox {
+  position: fixed;
+  bottom: -390px;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 30px;
+  background: #1d3031;
+  @include flex-start;
+  align-items: self-start;
+  height: 390px;
+  box-shadow: 0 0 50px 0 rgb(0 0 0 / 0%);
+  transition: all 0.2s ease-out;
+  &.active {
+    bottom: 0;
+    box-shadow: 0 0 50px 0 rgb(0 0 0 / 47%);
+  }
+  .MobileDatpcker {
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+    padding-left: 0;
+    justify-content: center;
+    width: 100%;
+  }
+  .RangePrnt {
+    margin-top: 35px;
+    span {
+      min-width: 125px;
+    }
+  }
+  .ExitButton {
+    background: transparent;
+    border: none;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+.tipandtotolmain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+.buttonperntAj {
+  display: flex;
+  align-items: center;
+  position: relative;
+  button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    height: auto;
+  }
+  .marginPrnt {
+    margin: 0 23px 0 60px;
+  }
+}
+.CustomGridContainer {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(4, minmax(0px, 1fr));
+}
+.boxinnrcont {
+  position: relative;
+  overflow: hidden;
+  .apernt {
+    text-decoration: none;
+    display: flex;
+    width: 100% !important;
+    height: 372px;
+    > span {
+      width: 100% !important;
+    }
+    img {
+      width: 100% !important;
+      object-fit: cover;
+    }
+  }
+}
+.upCont {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  z-index: 1;
+  p {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #ffffff;
+    margin: 0 0 0 10px;
+  }
+}
+.downCont {
+  position: absolute;
+  bottom: 32px;
+  left: 32px;
+  right: 32px;
+  z-index: 1;
+  h3 {
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    color: #ffffff;
+    text-align: start;
+    max-width: 218px;
+    margin: 0 0 26px 0;
+  }
+  .flexPernt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .currentBit {
+      text-align: start;
+      h5 {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        color: #ffffff;
+        margin: 0 0 12px 0;
+      }
+      .txtimgFlex {
+        display: flex;
+        align-items: center;
+        p {
+          font-family: 'Avenir';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 140%;
+          color: #ffffff;
+          margin: 0 0 0 12px;
+        }
+      }
+    }
+    .endingIn {
+      p {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        margin: 0 0 12px 0;
+        color: #ffffff;
+      }
+      h3 {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        color: #ffffff;
+        margin: 0;
+      }
+    }
+  }
+}
+.TipsTulsOverlay {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    min-height: 255px;
+    background: linear-gradient(
+      180deg,
+      rgba(12, 27, 34, 0) 0%,
+      rgba(12, 27, 34, 0.9) 100%
+    );
+    z-index: 1;
+    width: 100%;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    min-height: 117px;
+    background: linear-gradient(
+      180deg,
+      rgba(12, 27, 34, 0) 0%,
+      rgba(12, 27, 34, 0.9) 100%
+    );
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    // z-index: 1;
+    width: 100%;
+  }
+  cursor: pointer;
+}
+.scrollPernt {
+  overflow-y: auto;
+  height: 768px;
+  .loaderContainer {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .messageContainer {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h3 {
+      @include font-md-neuropolitical-normal;
+      color: $gray;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .AnyObjects {
+    display: block;
+  }
+  .select_main {
+    display: none !important;
+  }
+  .CustomGridContainer {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+  }
+  .downCont {
+    right: 10px;
+  }
+  .buttonperntAj {
+    .marginPrnt {
+      margin: 0 23px 0 48px;
+    }
+  }
+}
+@media screen and (max-width: 736px) {
+  .tipandtotolmain {
+    padding-bottom: 32px !important;
+  }
+  .CustomGridContainer {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1, minmax(0px, 1fr));
+  }
+}
+// select_mainas
+
+.buttonperntAj {
+  .PstnBtnEnter {
+    margin-right: 40px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease-out;
+    &.Active {
+      opacity: 1;
+      pointer-events: visible;
+      border: 1px solid #354647b5;
+      border-radius: 4px;
+      padding: 2px 0px 2px 4px;
+    }
+  }
+  input {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #ffffff80;
+    text-decoration: none;
+    width: 100%;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
+    margin-right: 80px;
+  }
+}
+.ScrollPstn {
+  height: 320px;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 9;
+  top: 45px;
+  left: 0;
+  max-width: 342px;
+  width: 100%;
+  opacity: 0;
+  &.Active {
+    opacity: 1;
+  }
+}
+.PositionProject {
+  // position: relative;
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
+  //   bottom: 0px;
+  //   min-height: 286px;
+  //   background: linear-gradient(180deg, rgba(16, 35, 36, 0) 80%, #102324 100%);
+  //   z-index: 2;
+  //   width: 100%;
+  //   pointer-events: none;
+  // }
+  .ProjectPsnIn {
+    background: rgba(29, 48, 49, 0.7);
+    backdrop-filter: blur(20px);
+    padding: 00px 24px 0 24px;
+    .UpScPstn {
+      p {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: #ffffff80;
+        text-align: start;
+        margin-bottom: 0;
+        padding-top: 20px;
+      }
+    }
+  }
+  .FuturisticFierceBx {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 12px;
+    .FuturisticFsrst {
+      display: flex;
+      align-items: center;
+      .FuturisticText {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        text-align: start;
+        margin-left: 12px;
+        h6 {
+          font-family: 'Avenir';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 110%;
+          color: #ffffff;
+          span {
+            color: #ffffff80;
+            margin-left: 5px;
+          }
+          margin-bottom: 5px;
+          text-align: start;
+        }
+        p {
+          font-family: 'Avenir';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 140%;
+          color: #ffffff80;
+          text-align: start;
+          margin-bottom: 0;
+        }
+      }
+    }
+    .Last24Text {
+      display: flex;
+      align-items: flex-start;
+      h5 {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        color: #ffffff;
+        margin-left: 12px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1280px) {
+  .buttonperntAj {
+    .PstnBtnEnter {
+      margin-right: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .AnyObjects {
+    margin-right: 12px;
+  }
+  .buttonperntAj {
+    .PstnBtnEnter {
+      margin-right: 12px;
+    }
+    input {
+      font-size: 12px;
+      margin-right: 20px;
+    }
+  }
+  .buttonperntAj {
+    .marginPrnt {
+      margin: 0 14px 0 14px;
+    }
+  }
+  .ScrollPstn {
+    right: 1%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .arrowIcon{
+    margin-left: -16px;
+  }
+}

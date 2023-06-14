@@ -1,0 +1,206 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    .settings {
+      padding-top: 113px;
+      color: $white;
+      text-align: left;
+      @include font-6xl-neuropolitical-normal;
+      font-size: 76px;
+      line-height: 110%;
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .container {
+    .settingsContainer {
+      .settings {
+        padding-top: 108px;
+        font-size: 32px;
+        line-height: 110%;
+      }
+    }
+  }
+}
+
+
+.DefultPoolh5 {
+  font-family: 'Neuropolitical';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 110%;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+  text-align: left;
+}
+.CreatePoolTwo {
+  display: grid;
+  grid-gap: 120px;
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
+  padding-top: 15px;
+ 
+     .FrstInput input {
+      width: 100%;
+      background: transparent;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      margin-bottom: 56px;
+      border-bottom: 2px solid #FFFFFF;
+      padding: 16px 12px 0 20px !important;
+    }
+    .FrstInput {
+      width: 100%;
+      >div {
+        margin: 0 !important;
+      }
+    }
+    .FrstInput input {
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 140%;
+      color: #ffffff;
+      padding-bottom: 0px;
+    }
+    .FrstInput input::placeholder {
+      color: #fff;
+    }
+    .FrstInput label {
+      padding: 0 0 0px 20px;
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #91A5A6;
+    }
+
+  .MixInputPool {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    align-items: center;
+    margin-bottom: 21px;
+  }
+}
+.MixInputPool {
+  .FrstInput {
+    .Input_inputField {
+      margin: 0 !important;
+    }
+  }
+}
+
+.BottmDateExprstio {
+  .secondFrstInput {
+    margin-top: 27px;
+  }
+  .DateTxtP {
+    p {
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #91A5A6;
+      margin-bottom: 48px;
+      max-width: 350px;
+      padding-left: 20px;
+      text-align: start;
+    }
+  }
+  .ContinueBtn {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 52px;
+    button, a {
+      font-family: 'Neuropolitical';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 110%;
+      color: #16E6EF;
+      background: transparent;
+      box-shadow: none;
+      outline: none;
+      border: none;
+      text-align: start;
+      align-items: flex-start;
+      transition: all 0.2s ease-out;
+      text-decoration: none;
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+.DefualtRightH4 {
+  font-family: 'Neuropolitical';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 110%;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  max-width: 490px;
+  text-align: start;
+}
+
+.ExitConditionsPool {
+  .RightScndRadio {
+    margin-top: 55px;
+    h4 {
+      margin-top: 55px;
+    }
+  }
+  .RightRadioP {
+    margin-top: 20px;
+    p {
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #91A5A6;
+      max-width: 520px;
+      text-align: start;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  .LastSWitchBx {
+    .FrstInput {
+      input {
+        margin-top: 30px;
+        margin-bottom: 0;
+      }
+      
+    }
+    p {
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #91A5A6;
+      margin-top: 20px;
+      text-align: left;
+      margin-left: 20px;
+    }
+  }
+}

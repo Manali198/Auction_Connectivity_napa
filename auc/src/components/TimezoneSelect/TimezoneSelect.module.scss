@@ -1,0 +1,44 @@
+@import '../../../styles/abstracts/variable.module';
+@import '../../../styles/abstracts/mixins.module';
+
+.selectWrapper > div > div {
+  background-color: $black;
+  border: none;
+  border-bottom: 1px solid $white;
+  border-radius: 0;
+  box-shadow: none;
+  &:hover {
+    border-color: $white;
+  }
+}
+
+.selectWrapper {
+  position: relative;
+  color: $white;
+  margin-bottom: 2rem;
+  z-index: 3;
+  .title {
+    text-align: left;
+    @include font-sm-avenir-regular;
+    color: $gray;
+    padding-left: 1rem;
+  }
+  div > div > div {
+    &:first-child {
+      color: $white;
+    }
+  }
+  .svg {
+    background-color: $black;
+    position: absolute;
+    right: 0;
+    width: 3rem;
+    text-align: right;
+    bottom: 0.2rem;
+    font-size: 1.5rem;
+    img {
+      width: 1rem;
+      margin-right: 0.8rem;
+    }
+  }
+}

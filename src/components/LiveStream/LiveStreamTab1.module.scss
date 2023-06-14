@@ -1,0 +1,88 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.streamCardContainer {
+  padding: 4rem 0;
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(4, minmax(0px, 1fr));
+  .streamCard {
+    position: relative;
+    .liveStreams {
+      width: 100%;
+      height: 15rem;
+    }
+    .streamStatusContainer {
+      position: absolute;
+      left: 10px;
+      top: 15px;
+      right: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .streamStatus {
+        @include font-sm-avenir-regular;
+        background-color: red;
+        display: inline-block;
+        padding: 0.313rem 0.75rem;
+        border-radius: 100px;
+        color: white;
+      }
+      .streamViewers {
+        @include font-sm-avenir-regular;
+        display: inline-block;
+        padding: 0.313rem 0.9rem;
+        border-radius: 100px;
+        background-color: rgba(16, 35, 36, 0.4);
+        color: white;
+        backdrop-filter: blur(2px);
+      }
+    }
+
+    .streamTitle {
+      @include font-md-neuropolitical-normal;
+      line-height: 1.6rem !important;
+      text-align: left;
+      margin: 0.825rem 0;
+      margin-bottom: 3rem;
+      color: white;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .avatarContainer {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      bottom: 0px;
+      .streamUserAvatar {
+        width: 32px;
+        border-radius: 100px;
+      }
+      .streamUserName {
+        @include font-sm-avenir-regular;
+        color: white;
+        margin: 0;
+        padding-left: 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .streamCardContainer {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+  }
+}
+@media screen and (max-width: 600px) {
+  .streamCardContainer {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: repeat(1, minmax(0px, 1fr));
+  }
+}

@@ -1,0 +1,54 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999999;
+  inset: 0;
+  backdrop-filter: blur(15px);
+  color: white;
+  .innerContainer {
+    position: relative;
+    width: 40rem;
+    background-color: #192020;
+    border-radius: 20px;
+    .header {
+      padding: 3rem;
+      h1 {
+        @include font-3xl-neuropolitical-normal;
+        text-align: left;
+        margin-bottom: 1.5rem;
+      }
+    }
+    .cross {
+      position: absolute;
+      right: 3rem;
+      top: 20px;
+      font-size: 25px;
+      color: $gray;
+      cursor: pointer;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+  .imprtbtn {
+    background-color: $hover-links;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 1.5rem;
+    @include font-md-neuropolitical-normal;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    &:hover {
+        background-color: $links;
+    }
+  }
+}

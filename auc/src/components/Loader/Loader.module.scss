@@ -1,0 +1,97 @@
+@import '../../../styles/abstracts/variable.module';
+@import '../../../styles/abstracts/mixins.module';
+
+.loaderContainer {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .svgWrapper {
+    display: block;
+    position: fixed;
+  }
+  .napaLogoWhite {
+    fill: $light-blue;
+    opacity: 0;
+    animation: fadeIn 2s ease;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+  }
+  .napaLogo {
+    stroke: $light-blue;
+    stroke-width: 1.25px;
+    animation: fadeOut 1s ease;
+    animation-delay: 2.75s;
+    animation-fill-mode: forwards;
+ 
+  }
+  .loaderText {
+    font-size: 3rem;
+    font-weight: 400;
+    font-style: normal;
+    font-family: Neuropolitical;
+    margin: 0;
+    -webkit-text-stroke: 1px $light-blue;
+    color: transparent;
+    position: relative;
+    &::before {
+      content: attr(data-text);
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: $light-blue;
+      -webkit-text-stroke: 3px $light-blue;
+      width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      animation: text-fill 2s ease-in forwards;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .loaderContainer {
+    .napaLogoWhite {
+      fill: $light-blue;
+      opacity: 0;
+      animation: fadeIn 2s ease;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
+      margin-bottom: 5.2rem !important;
+    }
+    .napaLogo {
+      stroke: $light-blue;
+      stroke-width: 1.25px;
+      animation: fadeOut 1s ease;
+      animation-delay: 2.75s;
+      animation-fill-mode: forwards;
+      margin-bottom: 5.2rem !important;
+    }
+  }
+ 
+}
+
+@keyframes text-fill {
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

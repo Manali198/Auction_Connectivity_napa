@@ -1,0 +1,458 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+@font-face {
+  font-family: Neuropolitical;
+  src: url('/assets/fonts/Neuropolitical/Neuropolitical-Regular.ttf');
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url('/assets/fonts/Avenir/Avenir-Regular.ttf');
+}
+
+.timer {
+  @include font-sm-avenir-medium;
+  font-size: 16px;
+  text-align: center;
+  padding-right: 6rem;
+  color: white;
+}
+
+.newQrCodeBtn {
+  background-color: $black;
+  color: $white;
+  @include font-sm-avenir-medium;
+  padding: 0.6rem;
+  position: absolute;
+  width: 85%;
+  cursor: pointer;
+  top: 40%;
+}
+
+.qrContainer {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 1rem;
+  background-color: white;
+  position: relative;
+  width: 220px;
+  height: 220px;
+}
+
+.backgroundImage {
+  // background-image: url('/assets/images/socialart-background.png');
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .socialContainer {
+    height: 100%;
+    z-index: 2;
+  }
+  .GooglePlayContainer {
+    margin-left: 20px;
+  }
+  .mainBtnsContainer {
+    display: flex;
+    // width: 100%;
+    // margin-left: 14px;
+  }
+  .socialContainerBody {
+    height: 100%;
+    @include flex-row-between;
+    // max-width: 1260px;
+    margin: 0 auto;
+  }
+  .socialArt {
+    @include font-7xl-neuropolitical-normal;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    animation: glow 1s ease-in-out infinite alternate;
+    margin-bottom: 0;
+    margin-top: -80px;
+    font-size: 112px;
+    @media screen and (max-width: 1200px) {
+      font-size: 90px !important;
+      margin-bottom: 0 !important;
+    }
+    @media screen and (max-width: 736px) {
+      font-size: 44px !important;
+      margin-bottom: 2px !important;
+    }
+  }
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 20px #fff, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px,
+        0 0 70px, 0 0 10px;
+    }
+    to {
+      text-shadow: 0 0 1px #fff, 0 0 20px #ffffff, 0 0 30px, 0 0 40px, 0 0 50px,
+        0 0 60px, 0 0 100px;
+    }
+  }
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 20px #fff, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px,
+        0 0 70px, 0 0 10px;
+    }
+    to {
+      text-shadow: 0 0 1px #fff, 0 0 20px #ffffff, 0 0 30px, 0 0 40px, 0 0 50px,
+        0 0 60px, 0 0 100px;
+    }
+  }
+  .innerSocialContainer {
+    width: 75%;
+    padding-top: 2.3rem;
+    padding-left: 7rem;
+    @include flex-column-start;
+  }
+  .withoutLimits {
+    @include font-6xl-neuropolitical-normal;
+    color: $white;
+    margin-bottom: 0;
+    font-size: 90px;
+    @media screen and (max-width: 1200px) {
+      font-size: 76px !important;
+    }
+    @media screen and (max-width: 736px) {
+      font-size: 36px !important;
+    }
+  }
+  .innerSocialContainerRightSide {
+    width: 324px;
+    margin-top: -75px;
+    margin-right: 7rem;
+    @include flex-column-start;
+    text-align: left;
+    .description {
+      @include font-md-avenir-medium;
+      font-size: 18px !important;
+      color: $white;
+      font-weight: 100;
+      margin-bottom: 0.2rem;
+      @media screen and (max-width: 736px) {
+        font-size: 16px !important;
+      }
+    }
+    .downloadApp {
+      text-align: center;
+      @include font-md-avenir-regular;
+      color: $white;
+    }
+  }
+
+  .HighlightButton_joinSociety__Wa4y_ {
+    margin-top: 1rem;
+  }
+
+  .joinSocietyBtn {
+    @include font-lg-neuropolitical-normal;
+    color: $light-blue;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-right: 1.5rem;
+  }
+
+  .mousePointer {
+    display: flex;
+    justify-content: center;
+    display: none;
+    img {
+      cursor: pointer;
+    }
+  }
+  @media screen and (max-width: 280px) {
+    .socialArt{
+      font-size: 24px !important;
+      margin-top: -4.5rem;
+    }
+    .withoutLimits{
+      font-size: 24px !important;
+    }
+    .innerSocialContainer{
+      padding-top: 8rem;
+    }
+    .socialContainerBody{
+      margin-top: 4rem !important;
+    }
+  }
+  @media screen and (max-width: 320px) {
+    .appStoreBtn {
+      width: 130px !important;
+    }
+    .GooglePlayContainer {
+      width: 130px !important;
+      margin-left: 16px;
+    }
+    .socialArt {
+      font-size: 32px;
+    }
+    .withoutLimits {
+      font-size: 32px;
+    }
+    .qrContainer {
+      width: 150px;
+      height: 150px;
+    }
+    .newQrCodeBtn {
+      width: 78.5%;
+      padding: 3px !important;
+      text-align: center;
+      font-size: 10px;
+      top: 45%;
+    }
+    .innerSocialContainer {
+      padding-top: 4.5rem !important;
+    }
+    .mainBtnsContainer {
+      margin-left: -8px !important;
+    }
+  }
+  @media screen and (max-width: 360px) {
+  .socialArt{
+    padding-top: 8rem;
+  }
+  }
+  @media screen and (max-width: 375px) {
+    .appStoreBtn {
+      width: 140px !important;
+    }
+    .GooglePlayContainer {
+      width: 140px !important;
+    }
+    .innerSocialContainer{
+      margin-top: 7rem;
+    }
+    .socialContainerBody{
+      padding-bottom: 3rem;
+      margin-top: 4rem;
+    }
+    .withoutLimits{
+      margin-bottom: 0.5rem;
+    }
+    .innerSocialContainerRightSide{
+      margin-bottom: 5rem;
+    }
+  }
+  @media screen and (max-width: 425px) {
+    .mainBtnsContainer {
+      // margin-left: 15px;
+      align-items: center;
+      display: flex;
+      flex-direction: column !important;
+    }
+    .GooglePlayContainer {
+      margin-left: 0px;
+    }
+    .appStoreBtn {
+      width: 200px !important;
+    }
+    .GooglePlayContainer {
+      width: 200px !important;
+      margin-top: 10px ;
+      // margin-left: 16px;
+    }
+    .mainBtnsContainer {
+      display: flex;
+      width: 100%;
+    }
+    .socialArt{
+      padding-top: 5rem;
+      margin-top: -27px;
+    }
+    .withoutLimits{
+      padding-bottom: 1.5rem;
+    }
+    .downloadApp{
+      padding-bottom: 1rem;
+    }
+  }
+  @media only screen and (min-width: 1440px) {
+    .btnContainer {
+      display: none;
+    }
+  
+  }
+
+  @media only screen and (max-width: 1440px) {
+    .innerSocialContainer {
+      padding-left: 0;
+    }
+    .btnContainer {
+      display: none;
+    }
+    .innerSocialContainerRightSide {
+      margin-right: 0rem;
+      margin-top: -130px !important;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .innerSocialContainer div {
+      display: none;
+    }
+    .btnContainer {
+      display: flex;
+      width: 100%;
+    }
+    .innerSocialContainerRightSide {
+      margin-top: 20px !important;
+    }
+  }
+
+  @media only screen and (max-width: 1536px) {
+    .innerSocialContainer {
+      padding-top: 0rem;
+    }
+    .innerSocialContainerRightSide {
+      margin-top: -45px;
+      width: 317px;
+    }
+    .socialArt {
+      margin-top: -92px;
+    }
+  }
+  // @media only screen and (max-width: 1340px) {
+  //   .socialArt {
+  //     @include font-7xl-neuropolitical-normal;
+  //   }
+  //   .withoutLimits {
+  //     @include font-5xl-neuropolitical-normal;
+  //   }
+  // }
+  // @media only screen and (max-width: 1260px) {
+  //   .socialArt {
+  //     @include font-7xl-neuropolitical-normal;
+  //   }
+  //   .withoutLimits {
+  //     @include font-5xl-neuropolitical-normal;
+  //   }
+  // }
+  // @media only screen and (max-width: 1199px) {
+  //   .socialArt {
+  //     @include font-6xl-neuropolitical-normal;
+  //   }
+  //   .withoutLimits {
+  //     @include font-4xl-neuropolitical-normal;
+  //   }
+
+  // }
+  @media only screen and (max-width: 1024px) {
+    // background-image: url('/assets/images/socialart-background-tablet.png'); r
+    .socialContainer {
+      @include flex-center-column;
+      .socialContainerBody {
+        @include flex-center-column;
+        width: 100%;
+      }
+      .innerSocialContainer {
+        width: 100%;
+
+        .socialArt {
+          margin-bottom: 0;
+          text-align: left;
+          width: 100%;
+          // @include font-6xl-neuropolitical-normal;
+        }
+        .withoutLimits {
+          margin-bottom: 0;
+          text-align: left;
+          width: 100%;
+          // @include font-5xl-neuropolitical-normal;
+        }
+      }
+      .innerSocialContainerRightSide {
+        width: 100%;
+      }
+    }
+    
+    .socialContainerBody {
+      align-items: flex-start;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .innerSocialContainerRightSide {
+      width: 100%;
+      margin-top: 23px;
+    }
+    .innerSocialContainer {
+      width: 100%;
+    }
+    .innerSocialContainerRightSide {
+      .description {
+        font-size: 1.5rem;
+        @media (max-width: 600px) {
+          font-size: 1.2rem;
+        }
+      }
+    }
+    .innerSocialContainer div {
+      display: none !important;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    // background-image: url('/assets/images/socialart-background-mobile.png');
+    .socialContainer {
+      .innerSocialContainer {
+        .socialArt {
+          // @include font-5xl-neuropolitical-normal;
+          margin-bottom: 0.5rem;
+        }
+        // .withoutLimits {
+        //   @include font-3xl-neuropolitical-normal;
+        // }
+      }
+      .innerSocialContainerRightSide {
+        .description {
+          @include font-md-avenir-regular;
+          font-weight: 100;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 576px) {
+    // background-image: url('/assets/images/socialart-background-mobile.png');
+    // .socialContainer {
+      // .innerSocialContainer {
+        // .socialArt {
+        //   @include font-4xl-neuropolitical-normal;
+        // }
+        // .withoutLimits {
+        //   @include font-3xl-neuropolitical-normal;
+        // }
+      }
+      .innerSocialContainerRightSide {
+        .description {
+          @include font-base-avenir-regular;
+
+          font-weight: 100;
+        }
+      }
+    }
+  // }
+  @media only screen and (max-width: 440px) {
+    // background-image: url('/assets/images/socialart-background-mobile.png');
+    // .socialContainer {
+    //   .innerSocialContainer {
+    //     // .socialArt {
+    //     //   @include font-3xl-neuropolitical-normal;
+    //     // }
+    //     // .withoutLimits {
+    //     //   @include font-2xl-neuropolitical-normal;
+    //     // }
+    //   }
+      .innerSocialContainerRightSide {
+        .description {
+          font-size: 1.2rem;
+
+          font-weight: 100;
+        }
+      }
+    }
+  // }
+// }
+@media screen and (max-width: 736px) {
+}

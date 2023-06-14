@@ -1,0 +1,55 @@
+@import '../../../../styles/abstracts/mixins.module';
+@import '../../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+  }
+}
+.SectionFive{
+  padding-top: 30px;
+}
+.SliderUpCont{
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h2{
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    color: #FFFFFF;font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    color: #FFFFFF;
+    margin: 0;
+  }
+  a{
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    text-align: right;
+    color: #16E6EF;
+    text-decoration: none;
+  }
+}
+.projectCardContainer{
+  margin: 0;
+}
+.NftContainer {
+  margin: 0 -7.9vw;
+}

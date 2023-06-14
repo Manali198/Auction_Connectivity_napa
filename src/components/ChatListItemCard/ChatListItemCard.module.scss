@@ -1,0 +1,56 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.chatItemContainer {
+  @include flex-column;
+  @include flex-start;
+  color: $white;
+  padding: 0.5555rem;
+  .userContainer {
+    .avatar {
+      img {
+        width: 3rem;
+        height: 3rem;
+        border-radius: 50%;
+      }
+    }
+    @include flex-row-center;
+    .userInfo {
+      @include flex-column-start;
+      margin-left: 1rem;
+      text-align: left;
+      width: calc(100% - 2rem);
+      .userNameContainer {
+        .userName {
+          @include font-sm-avenir-medium;
+          margin-right: 1rem;
+        }
+        span {
+          @include font-xs-avenir-regular;
+        }
+      }
+      .description {
+        @include font-xs-avenir-regular;
+        word-break: break-all;
+      }
+    }
+  }
+
+  @media (min-width: 2560px) {
+    .userContainer {
+      .userInfo {
+        .userNameContainer {
+          .userName {
+            @include font-lg-avenir-medium;
+          }
+          span {
+            @include font-sm-avenir-medium;
+          }
+        }
+        .description {
+          @include font-md-avenir-regular;
+        }
+      }
+    }
+  }
+}

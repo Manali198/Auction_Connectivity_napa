@@ -1,0 +1,239 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    .settings {
+      padding-top: 113px;
+      color: $white;
+      text-align: left;
+      @include font-6xl-neuropolitical-normal;
+      font-size: 76px;
+      line-height: 110%;
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .container {
+    .settingsContainer {
+      .settings {
+        padding-top: 108px;
+        font-size: 32px;
+        line-height: 110%;
+      }
+    }
+  }
+}
+.tipandtotolmain{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 40px;
+  margin-top: 0;
+}
+.buttonperntAj{
+  display: flex;
+  align-items: center;
+  .SearchBtnHad {
+    position: relative;
+    top: 0;
+    transition: all 0.2s ease-out;
+    &:hover {
+      top: -5px;
+    }
+  }
+  button, a{
+    background: transparent;
+    border: none;
+    padding: 0;
+    height: auto;
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    text-align: right;
+    color: #16E6EF;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+    &:hover {
+      color: #fff;
+    }
+  }
+  .marginPrnt{
+    margin: 0 23px 0 60px;
+  }
+  .CreateNewBtn {
+    margin: 0 0px 0 60px;
+  }
+}
+
+@media screen and (max-width:1200px) {
+  .buttonperntAj{
+    .marginPrnt{
+      margin: 0 23px 0 48px;
+    }
+  }
+ 
+}
+@media screen and (max-width:736px) {
+  .tipandtotolmain{
+    padding-bottom: 32px !important;
+  }
+
+}
+// select_mainas
+
+.marginPrnt {
+  color: #16E6EF;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 110%;
+  text-align: right;
+}
+.ExpolatinForm {
+  margin-bottom: 16px;
+  display: flex;
+  // background: rgb(145 165 163 / 10%);
+  // padding: 20px 61px 20px 20px;
+}
+.ExpolatinBg {
+  display: flex;
+  flex-basis: 40%;
+  background: rgb(145 165 163 / 10%);
+  padding: 20px;
+  margin-left: 2px;
+  position: relative;
+}
+.ExpolatinThrd {
+  margin-left: 2px;
+  background: rgb(145 165 163 / 10%);
+  padding: 20px;
+}
+.PdingLft{
+  padding-left: 45px;
+}
+.ExpolatinSecndImgAbsolat{
+  position: absolute;
+  right: -24px;
+  top: 43px;
+  z-index: 999;
+}
+.ExpolatinText{
+  text-align: start;
+  margin-left: 20px;
+  h4{
+    @include font-6xl-neuropolitical-normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    color: #FFFFFF;
+    margin-bottom: 9px
+  }
+  span{
+    @include font-md-avenir-medium;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin-left: 6px;
+  }
+}
+.ExpolatinSecndImg {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  span {
+    @include font-md-avenir-regular;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin-left: 8px;
+  }
+}
+.ExpolatinThrd {
+  flex-basis: 20%;
+  // display: flex;
+  // justify-content: space-around;
+  .ExpolatinDflx{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .ExpolatiSactionThrd {
+    display: flex;
+    align-items: center;
+    span{
+      @include font-6xl-neuropolitical-normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 110%;
+      color: #FFFFFF;
+      margin-left: 10px;
+    }
+  }
+  .ExpolatiSacsesFull {
+    display: flex;
+    align-items: center;
+    span {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      color: #16E6EF;
+      margin-left: 4px;
+    }
+  }
+ 
+}
+.ExpolationBatn {
+  button{
+    font-family: 'Neuropolitical';
+    background: none;
+    box-shadow: none;
+    border: none;
+    border: 1px solid #16E6EF;
+    padding: 12px 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110%;
+    text-align: center;
+    color: #16E6EF;
+    width: 100%;
+    margin-top: 28px;
+    transition: all 0.3s ease-out;
+    &:hover {
+      box-shadow: 0px 1px 15px 1px #16E6EF;
+    }
+  }
+}
+
+
+.SwappingMain {
+  position: relative;
+  .SwappingMainInnr {
+    overflow-y: auto;
+    height: 630px;
+  }
+}
+.SwappingMain::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  min-height: 286px;
+  background: linear-gradient(180deg, rgba(16, 35, 36, 0) 0%, #102324 100%);
+  z-index: 2;
+  width: 100%;
+}

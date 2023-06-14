@@ -1,0 +1,33 @@
+@import '../../../styles/abstracts/variable.module';
+@import '../../../styles/abstracts/mixins.module';
+
+.toast {
+  justify-content: space-between;
+  align-items: center;
+
+  .toastIcon {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 1rem;
+    border: 1px solid $gray;
+    border-radius: 50%;
+    @include flex-row-center;
+    justify-content: center;
+  }
+  .toastTitle {
+    @include font-base-avenir-regular;
+    color: $white;
+    margin: 0;
+  }
+  .toastMessage {
+    @include font-xs-avenir-regular;
+    color: $white;
+    margin: 0;
+  }
+  .toastTime {
+    @include font-sm-avenir-regular;
+    padding-left: 3rem;
+    color: $white;
+    margin: 0;
+  }
+}

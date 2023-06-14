@@ -1,0 +1,601 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.loaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 40vh;
+}
+
+.container {
+  background-image: url('/assets/images/sbg.webp');
+  color: #000000;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  min-height: 100vh;
+  @include flex-column-between;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+  }
+  .settingsContainer {
+    height: 100%;
+    .settings {
+      padding-top: 9rem;
+      color: $white;
+      @include font-3xl-neuropolitical-normal;
+    }
+    .tabsContainer {
+      @include flex-column-start;
+      margin-bottom: 0.5rem;
+      width: 100%;
+      .tabsInnerContainer {
+        @include flex-row-center;
+        .tab {
+          display: flex;
+          flex-wrap: nowrap;
+          border-bottom: 0;
+          padding-left: 0;
+          list-style-type: none;
+          margin-bottom: 0;
+          margin-top: 0.5rem;
+        }
+      }
+    }
+    .leftSideContainer {
+      margin: 0;
+      .uploadBtnContainer {
+        @include flex-row;
+        @include font-md-neuropolitical-normal;
+        .changeBtn {
+          color: $light-blue;
+          margin: 0 3rem;
+          cursor: pointer;
+        }
+        .removeBtn {
+          color: $gray;
+          cursor: pointer;
+        }
+      }
+      .uploadImageConatiner {
+        @include align-center;
+        padding-top: 2rem;
+        .banner {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          border: 2px dashed rgba(0, 0, 0, 0.2);
+          @include align-center;
+          @include justify-center;
+        }
+        .preview {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .formContainer {
+        width: 100%;
+        padding-top: 2rem;
+        .textArea {
+          @include flex-column-start;
+          padding-bottom: 2rem;
+          span {
+            color: $gray;
+            @include font-sm-avenir-regular;
+            padding: 1rem 0.75rem;
+          }
+          textarea {
+            background-color: transparent;
+            height: 8.188rem !important;
+            padding: 0.5rem;
+            width: 100%;
+            border: 2px solid $white;
+            color: $white;
+            resize: none;
+            &:focus-visible {
+              outline: none;
+            }
+          }
+        }
+        .saveChanges {
+          color: $light-blue;
+          background-color: transparent;
+          border: none;
+          margin-top: 3rem;
+          margin-bottom: 4rem;
+          @include font-lg-neuropolitical-normal;
+        }
+      }
+    }
+    .rightSideContainer {
+      display: flex;
+      flex-direction: column;
+      padding-top: 1.5rem;
+      .firstChild {
+        .accountBtn {
+          margin-top: 2rem;
+          cursor: pointer;
+          border: 2px solid $light-blue;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: row;
+          padding: 1rem;
+        }
+        .napa {
+          color: $white;
+          @include font-lg-neuropolitical-normal;
+        }
+      }
+      .secondChild {
+        padding-top: 1.5rem;
+        .social {
+          color: $white;
+          @include font-lg-neuropolitical-normal;
+        }
+        .twitterBtn {
+          margin-top: 2rem;
+          cursor: pointer;
+          border: 2px solid $teritary-blue;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: row;
+          padding: 1rem;
+        }
+        .facebookBtn {
+          margin-top: 2rem;
+          cursor: pointer;
+          border: 2px solid $blue;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: row;
+          padding: 1rem;
+        }
+      }
+    }
+    .whitelistContainer {
+      padding-top: 4rem;
+      --bs-gutter-x: 0;
+      .whitelistHeader {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        .whitelistLeftSide {
+          display: flex;
+          align-items: center;
+          .enableWhitelist {
+            @include font-md-avenir-medium;
+            color: $white;
+            padding-left: 1.5rem;
+          }
+        }
+        .whitelistRightSide {
+          display: flex;
+          align-items: center;
+          cursor: pointer !important;
+          span {
+            @include font-md-neuropolitical-normal;
+            color: $light-blue;
+            padding-left: 0.8rem;
+          }
+        }
+      }
+      .whitelistContent {
+        padding-top: 4rem;
+      }
+    }
+  }
+  @media (min-width: 1280px) {
+    .settingsContainer {
+      .settings {
+        padding-top: 7rem;
+        @include font-4xl-neuropolitical-normal;
+      }
+      .whitelistContainer {
+        padding-top: 2rem;
+        .whitelistContent {
+          padding-top: 2rem;
+        }
+      }
+      .rightSideContainer {
+        padding-left: 5rem;
+      }
+    }
+  }
+  @media (min-width: 1440px) {
+    .settingsContainer {
+      .settings {
+        padding-top: 9rem;
+        @include font-6xl-neuropolitical-normal;
+      }
+      .whitelistContainer {
+        padding-top: 4rem;
+        .whitelistContent {
+          padding-top: 4rem;
+        }
+      }
+    }
+  }
+  @media (min-width: 736px) {
+    .settings {
+      font-size: 3.625rem !important;
+    }
+  }
+  @media (max-width: 736px) {
+    .accountBtn {
+      padding: 12px;
+    }
+    .accountBtn {
+      span {
+        font-size: 16px !important;
+        padding-left: 12px;
+      }
+    }
+    .twitterBtn {
+      span {
+        font-size: 16px !important;
+        padding-left: 12px;
+      }
+    }
+    .facebookBtn {
+      span {
+        font-size: 16px !important;
+        padding-left: 12px;
+      }
+    }
+  }
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: $white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: $secondary-blue;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $secondary-blue;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.SocialNapaForm {
+  background: #91a5a61a;
+  margin-top: 32px;
+  padding: 32px 40px;
+}
+.HadFormNapa {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.HadFormNapa h5 {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 140%;
+  color: #ffffff;
+}
+.HadFormNapa {
+  margin-bottom: 27px;
+}
+.HadFormNapa button {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+.LogInButton {
+  font-family: 'Neuropolitical';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 110%;
+  color: #16e6ef;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+@media screen and (max-width: 736px) {
+  .SocialNapaForm {
+    margin-top: 20px;
+    padding: 27px 20px;
+  }
+  .HadFormNapa {
+    margin-bottom: 22px;
+  }
+  .LogInButton {
+    font-size: 18px;
+    line-height: 110%;
+  }
+  .HadFormNapa h5 {
+    font-size: 18px;
+    line-height: 140%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .SocialNapaForm {
+    margin-top: 16px;
+    padding: 12px;
+  }
+  .HadFormNapa {
+    margin-bottom: 10px;
+  }
+  .LogInButton {
+    font-size: 18px;
+    line-height: 110%;
+  }
+  .HadFormNapa h5 {
+    font-size: 18px;
+    line-height: 140%;
+  }
+}
+.Avtar {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  .AvtarBox {
+    position: relative;
+    margin-right: 48px;
+    .AvarCircle {
+      height: 140px;
+      width: 140px;
+      background: #000000;
+      border-radius: 50%;
+    }
+    input {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      opacity: 0;
+    }
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 140px;
+      width: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+  .AvtarAction {
+    display: flex;
+    align-items: center;
+    .ChangeBtn {
+      position: relative;
+      @include font-3xl-neuropolitical-normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 110%;
+      color: #16e6ef;
+      margin-right: 54px;
+      input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        opacity: 0;
+      }
+    }
+    .RemoveBtn {
+      @include font-3xl-neuropolitical-normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 110%;
+      color: #91a5a6;
+      border: none !important;
+      background: transparent !important;
+      cursor: pointer;
+    }
+  }
+  @media screen and (max-width: 736px) {
+    .AvtarBox {
+      position: relative;
+      margin-right: 32px;
+      .AvarCircle {
+        height: 100px;
+        width: 100px;
+      }
+      img {
+        height: 100px;
+        width: 100px;
+      }
+    }
+    .AvtarAction {
+      .ChangeBtn {
+        font-size: 14px;
+        margin-right: 32px;
+      }
+      .RemoveBtn {
+        font-size: 14px;
+      }
+    }
+  }
+  @media screen and (max-width: 360px) {
+    .AvtarBox {
+      position: relative;
+      margin-right: 15px;
+      .AvarCircle {
+        height: 80px;
+        width: 80px;
+      }
+      img {
+        height: 80px;
+        width: 80px;
+      }
+    }
+    .AvtarAction {
+      .ChangeBtn {
+        font-size: 14px;
+        margin-right: 15px;
+      }
+      .RemoveBtn {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.NewAddressBox {
+  padding: 32px 40px 0 40px;
+  .NewAddreBtnSpbt {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    cursor: pointer;
+    h3 {
+      @include font-3xl-neuropolitical-normal;
+      font-style: normal;
+      font-size: 32px;
+      line-height: 110%;
+      color: #ffffff;
+    }
+  }
+}
+.NewAddressBoxMin {
+  position: fixed;
+  right: 0;
+  top: 0;
+  max-width: 480px;
+  z-index: 99999;
+  background: #1d3031;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease-out;
+  &.Active {
+    opacity: 1;
+    pointer-events: visible;
+  }
+}
+.NewAddrBtnCnlSve {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  .Cancel {
+    @include font-3xl-neuropolitical-normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    text-align: center;
+    color: #91a5a6;
+    height: 72px;
+    border-radius: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      background: rgba(255, 255, 255, 0);
+      color: #91a5a6;
+    }
+  }
+  .Save {
+    width: 100%;
+    background: #16e6ef;
+    border-radius: 0;
+    height: 72px;
+    border: 2px solid #16e6ef;
+    @include font-3xl-neuropolitical-normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    text-align: center;
+    color: #102324;
+    &:hover {
+      background: #fff;
+      color: #102324;
+      border: none;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .NewAddressBoxMin {
+    left: 0;
+    max-width: 100%;
+  }
+  .NewAddressBox {
+    padding: 56px 40px 0 40px;
+  }
+}
+@media screen and (max-width: 736px) {
+  .NewAddressBox {
+    padding: 56px 20px 0 20px;
+    .NewAddreBtnSpbt {
+      h3 {
+        font-size: 24px;
+      }
+    }
+  }
+  .NewAddrBtnCnlSve {
+    button {
+      height: 82px !important;
+    }
+  }
+}

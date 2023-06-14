@@ -1,0 +1,8 @@
+@import '../abstracts/variable.module';
+@import '../abstracts/mixins.module';
+
+.settingsContainer {
+  height: 100vh;
+  background-color: $black;
+  overflow-y: auto;
+}

@@ -1,0 +1,123 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.GridprntAbOvrliy{
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    min-height: 286px;
+    background: linear-gradient(180deg, rgba(16, 35, 36, 0) 0%, #102324 100%);
+    z-index: 2;
+    width: 100%;
+    pointer-events: none;
+  }
+}
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    .settings {
+      padding-top: 113px;
+      color: $white;
+      text-align: left;
+      @include font-6xl-neuropolitical-normal;
+      font-size: 76px;
+      line-height: 110%;
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .container {
+    .settingsContainer {
+      .settings {
+        padding-top: 108px;
+        font-size: 32px;
+        line-height: 110%;
+      }
+    }
+  }
+}
+
+.tipandtotolmain{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+.buttonperntAj{
+  display: flex;
+  align-items: center;
+  button{
+    background: transparent;
+    border: none;
+    padding: 0;
+    height: auto;
+  }
+  .marginPrnt{
+    margin: 0 23px 0 60px;
+  }
+}
+.CustomGridContainer {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(4, minmax(0px, 1fr));
+}
+.boxinnrcont{
+  position: relative;
+  .apernt{
+    text-decoration: none;
+    display: flex;
+    width: 100% !important;
+    height: 372px;
+    >span{
+      width: 100% !important;
+    }
+    img{
+      width: 100% !important;
+      object-fit: cover;
+    }
+  }
+}
+
+
+
+
+.buttocreateBtn{
+  a{
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    text-align: right;
+    color: #16E6EF;
+    text-decoration: none;
+  }
+}
+.GridprntAb{
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
+  overflow-y: auto;
+  height: 687px;
+}
+@media screen and (max-width: 736px) {
+  .GridprntAb{
+    display: contents;
+    .GridprntAbPaading{
+      margin-bottom: 20px;
+    }
+  }
+}

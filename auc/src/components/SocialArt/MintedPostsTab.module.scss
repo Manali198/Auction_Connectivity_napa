@@ -1,0 +1,177 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.MintedHead {
+  color: #fff;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
+  .LeftHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .RightTableSc {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .dateStart{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100px;
+    cursor: pointer;
+    color: white !important;
+    
+  }
+  .dateStart::placeholder{
+    color: white;
+  }
+  .datepickerBox{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    cursor: pointer;
+    
+  }
+  
+  .RightHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .RightThreeBtn {
+      display: flex;
+      align-items: center;
+      button {
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+        padding: 0;
+        height: auto;
+        min-height: inherit;
+        display: flex;
+        align-items: center;
+        transition: all 0.2s ease-out;
+        &:hover {
+          transform: scale(1.1);
+        }
+        &.active {
+          transform: scale(1.1) !important;
+        }
+      }
+      
+      .SearchButton {
+        display: flex;
+        align-items: center;
+        transition: all 0.2s ease-out;
+        transform: scale(1);
+      }
+      .GridBtn {
+        margin: 0 23px 0 60px;
+      }
+    }
+  }
+}
+.RangePrnt{
+  display: flex;
+  align-items: center;
+  span{
+    @include font-md-avenir-regular;
+    margin-right: 24px;
+    font-size: 18px;
+    line-height: 140%;
+    color: #91A5A6;
+  }
+}
+.RangeSlider {
+  width: 184px;
+}
+.AnyObjects {
+  display: none;
+  margin-right: 48px;
+  .FilterButton {
+    @include font-md-avenir-regular;
+    font-size: 18px;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin-bottom: 0;
+    background: transparent !important;
+    border: none !important;
+    padding: 0;
+  }
+}
+.FilterBox {
+  position: fixed;
+  bottom: -300px;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 30px;
+  background: #1D3031;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 245px;
+  box-shadow: 0 0 50px 0 rgb(0 0 0 / 0%);
+  transition: all 0.2s ease-out;
+  &.active {
+    bottom: 0;
+    box-shadow: 0 0 50px 0 rgb(0 0 0 / 47%);
+  }
+  .MobileDatpcker {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+  }
+  .RangePrnt {
+    margin-top: 35px;
+    span {
+      min-width: 125px;
+    }
+  }
+  .ExitButton {
+    background: transparent;
+    border: none;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .MintedHead {
+    padding-bottom: 20px;
+  }
+  .RangeSlider {
+    width: 100px;
+  }
+  .RangeNone {
+    display: none;
+  }
+  .RightHeader {
+    justify-content: flex-end !important;
+    align-items: center !important;
+  }
+  .AnyObjects {
+    display: block;
+  }
+}
+@media screen and (max-width: 736px) {
+  .MintedHead {
+    grid-gap: 30px;
+    grid-template-columns: repeat(1, minmax(0px, 1fr));
+    padding-bottom: 32px;
+    .LeftHeader {
+      display: none;
+    }
+    .RightHeader {
+      justify-content: space-between !important;
+    }
+  }
+}

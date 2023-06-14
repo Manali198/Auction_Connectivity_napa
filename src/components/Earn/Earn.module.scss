@@ -1,0 +1,515 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 3.5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 2.5rem;
+    }
+    @media screen and (max-width: 736px) {
+      margin-bottom: 1.5rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    .settings {
+      padding-top: 113px;
+      color: $white;
+      text-align: left;
+      @include font-6xl-neuropolitical-normal;
+      font-size: 76px;
+      line-height: 110%;
+    }
+  }
+}
+.notFound {
+    @include font-md-neuropolitical-normal;
+    color: $gray;
+}
+@media screen and (max-width: 1024px) {
+  .tabsContainer {
+    height: calc(100vh - 359.59px);
+    overflow-y: scroll;
+  }
+}
+.tabsContainer {
+  padding-top: 15px;
+  @media screen and (max-width: 991px) {
+    padding-top: 42px;
+    margin: 0 -40px;
+  }
+}
+.max540 {
+  max-width: 540px;
+  width: 100%;
+  @media screen and (min-width: 1441px) {
+    max-width: 90%;
+  }
+  @media screen and (max-width: 991px) {
+    max-width: 100%;
+  }
+}
+.TopLogo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  > span {
+    margin-right: 20px !important;
+  }
+  h4 {
+    @include font-md-avenir-medium;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0;
+    color: #fff;
+    span {
+      color: #91a5a6;
+      margin-left: 5px;
+      display: inline-flex;
+    }
+  }
+}
+.MiddleCont {
+  padding-top: 36px;
+  padding-bottom: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  label {
+    @include font-md-avenir-regular;
+    font-size: 14px;
+    line-height: 140%;
+    color: #91a5a6;
+    margin-bottom: 15px;
+  }
+  .MiddleContInn {
+    display: flex;
+    align-items: center;
+    h3,
+    input {
+      @include font-6xl-neuropolitical-normal;
+      font-size: 44px;
+      line-height: 110%;
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 0;
+      background: transparent;
+      border: none;
+      width: 300px;
+      margin-left: -133px;
+      outline: none;
+      text-align: right;
+    }
+    span {
+      height: 50px;
+      width: 2px;
+      background: #91a5a6;
+      margin: 0 30px 0 2px;
+    }
+    p {
+      position: relative;
+      @include font-md-avenir-regular;
+      font-size: 18px;
+      line-height: 25px;
+      color: #91a5a6;
+      margin-bottom: 0px;
+      top: 12px;
+    }
+  }
+}
+.BottomCont {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 48px;
+  label {
+    @include font-md-avenir-regular;
+    font-size: 14px;
+    line-height: 140%;
+    color: #91a5a6;
+    margin-bottom: 14px;
+  }
+  ul {
+    display: grid;
+    grid-gap: 8px;
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    li {
+      position: relative;
+      list-style: none;
+      input {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: 1;
+        cursor: pointer;
+      }
+      p {
+        @include font-md-avenir-medium;
+        font-size: 18px;
+        line-height: 25px;
+        border: 1px solid #16e6ef;
+        height: 40px;
+        color: #16e6ef;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0;
+      }
+      input:checked + p {
+        background: #16e6ef;
+        color: #102324;
+      }
+    }
+  }
+}
+.BottomAction {
+  button {
+    width: 100%;
+    font-size: 18px;
+    line-height: 110%;
+    height: 72px;
+    transition: all 0.2s ease-out;
+    &:hover {
+      background: #16e6ef;
+      color: #102324;
+    }
+  }
+}
+.EarnRightBox {
+  background: linear-gradient(
+    180deg,
+    rgb(145 163 166 / 10%) 0%,
+    rgba(145, 165, 166, 0) 100%
+  );
+  padding: 35px 40px 26px 40px;
+  margin-left: auto;
+  @media screen and (max-width: 991px) {
+    margin-top: 60px;
+  }
+  @media screen and (max-width: 736px) {
+    padding: 35px 20px 26px 20px;
+  }
+  h4 {
+    @include font-6xl-neuropolitical-normal;
+    font-size: 24px;
+    line-height: 110%;
+    color: #ffffff;
+    margin-bottom: 23px;
+    text-align: left;
+  }
+  .EarnRightBoxInner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    p {
+      @include font-md-avenir-regular;
+      font-size: 18px;
+      line-height: 140%;
+      color: #91a5a6;
+      margin: 0;
+    }
+    span {
+      @include font-md-avenir-medium;
+      font-size: 18px;
+      line-height: 140%;
+      text-align: right;
+      color: #ffffff;
+    }
+    .EarnRightBoxSpan {
+      > span {
+        margin-right: 9px !important;
+      }
+    }
+  }
+}
+
+.MainTable {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 75px;
+  h4 {
+    @include font-6xl-neuropolitical-normal;
+    font-size: 24px;
+    line-height: 110%;
+    color: #ffffff;
+  }
+  .RightTableSc {
+    display: flex;
+    align-items: center;
+    .SearchButton {
+      background: transparent !important;
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+      padding: 0;
+      height: auto;
+      min-height: inherit;
+      display: flex;
+      align-items: center;
+      transition: all 0.2s ease-out;
+      transform: scale(1);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.MainTableTable {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    // background: linear-gradient(180deg, #fff0 78%, #102324fc 100%);
+    z-index: 1;
+  }
+  .TableHead {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    h4 {
+      display: flex;
+      flex-basis: 14.28%;
+      text-align: right;
+      align-items: flex-end;
+      justify-content: flex-end;
+      @include font-md-avenir-regular;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #91a5a6;
+
+      &:first-child {
+        text-align: left;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+    }
+  }
+  .TableRowMain {
+    position: relative;
+    // margin-bottom: 30px;
+    overflow-y: auto;
+    max-height: 340px;
+
+    .TableRow {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      width: 100%;
+      border-top: 1px solid rgb(145 165 166 / 30%);
+      h4 {
+        display: flex;
+        flex-basis: 12.5%;
+        text-align: left;
+        align-items: flex-end;
+        justify-content: flex-end;
+        @include font-md-avenir-medium;
+        font-size: 18px;
+        line-height: 140%;
+        color: #fff;
+        margin-bottom: 0;
+        label {
+          @include font-md-avenir-regular;
+          font-size: 18px;
+          line-height: 140%;
+          color: #91a5a6;
+        }
+        @media screen and (min-width: 992px) {
+          label {
+            display: none !important;
+          }
+          flex-direction: column;
+        }
+        > span {
+          margin-right: 8px !important;
+        }
+        &:first-child {
+          text-align: left;
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
+        .ClaimBtn {
+          border: none !important;
+          background: transparent !important;
+          outline: none !important;
+          box-shadow: none !important;
+          @include font-6xl-neuropolitical-normal;
+          font-size: 18px;
+          line-height: 110%;
+          text-align: right;
+          color: #16e6ef;
+          transition: all 0.2s ease-out;
+          &:hover {
+            color: #12b7b2;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 991px) {
+  .MainTable {
+    padding: 0 40px;
+  }
+  .MainTableTable {
+    // margin: 0 -40px;
+    .TableHead {
+      display: none !important;
+    }
+    .TableRowMain {
+      max-height: 550px;
+      .TableRow {
+        flex-wrap: wrap;
+        padding: 30px 40px 10px 40px;
+        border-top: none;
+        border-bottom: 1px solid rgb(145 165 166 / 30%);
+        h4 {
+          flex-direction: column;
+          flex-basis: 25%;
+          text-align: left;
+          align-items: flex-start;
+          justify-content: flex-start;
+          padding-bottom: 25px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 736px) {
+  .container {
+    .settingsContainer {
+      .settings {
+        font-size: 32px;
+        margin-bottom: 0;
+      }
+    }
+  }
+  .tabsContainer {
+    margin: 0 -20px;
+    padding-top: 27px;
+  }
+  .TopLogo {
+    > span {
+      margin-right: 16px !important;
+      height: 32px !important;
+      width: 32px !important;
+    }
+    h4 {
+      font-size: 16px;
+    }
+  }
+
+  .MiddleCont {
+    padding-top: 32px;
+    padding-bottom: 29px;
+    label {
+      margin-bottom: 7px;
+    }
+    .MiddleContInn {
+      p {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  .BottomCont {
+    margin-bottom: 32px;
+    ul {
+      grid-gap: 9px;
+      grid-template-columns: repeat(2, minmax(0px, 1fr));
+      li {
+        p {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+
+  .BottomAction {
+    button {
+      height: 56px;
+    }
+  }
+
+  .EarnRightBox {
+    padding: 35px 20px 16px 20px;
+    margin-top: 40px;
+    h4 {
+      margin-bottom: 20px;
+    }
+    .EarnRightBoxInner {
+      margin-bottom: 18px;
+      p {
+        font-size: 16px;
+      }
+      span {
+        font-size: 16px;
+      }
+      .EarnRightBoxSpan {
+        > span {
+          margin-right: 8px !important;
+          height: 12px !important;
+          width: 15px !important;
+        }
+      }
+    }
+  }
+
+  .MainTable {
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 35px;
+    flex-direction: column;
+    h4 {
+      margin-bottom: 24px;
+    }
+    .RightTableSc {
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+  .MainTableTable {
+    margin: 0 -20px;
+    .TableHead {
+      display: none !important;
+    }
+    .TableRowMain {
+      max-height: 810px;
+      .TableRow {
+        flex-wrap: wrap;
+        padding: 30px 40px 0px 40px;
+        border-top: none;
+        border-bottom: 1px solid rgb(145 165 166 / 30%);
+        h4 {
+          flex-basis: 50%;
+          font-size: 16px;
+          padding-bottom: 19px;
+          label {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

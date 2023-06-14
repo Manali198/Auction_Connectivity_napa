@@ -1,0 +1,490 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+
+  .settingsContainer {
+    height: 100%;
+
+    .backBtn {
+      display: flex;
+      align-items: center;
+      @include font-sm-avenir-regular;
+      color: $gray;
+      padding-top: 113px;
+      cursor: pointer;
+
+      img {
+        margin-right: 0.5rem;
+      }
+    }
+
+    .settings {
+      padding-top: 0.5rem;
+      color: $white;
+      text-align: left;
+      @include font-8xl-neuropolitical-normal;
+      line-height: 110%;
+
+      h1 {
+        font-size: 76px;
+      }
+    }
+  }
+
+  .walletSettings {
+    // position: absolute;
+    // display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    grid-gap: 6rem;
+
+
+
+
+    .walletSettingContainer {
+      flex-basis: 50%;
+
+      .walletSetting {
+        .line {
+          border: 1px solid #91a5a6;
+          margin-bottom: 1rem;
+          // width: 588px;
+        }
+
+        .accountContainer {
+          display: flex;
+          align-items: center;
+          // width: 588px;
+          padding: 16px;
+          margin-bottom: 10px;
+
+          .accountImage {
+            padding: 1rem;
+            border-radius: 50%;
+          }
+
+          .accountImageBorder {
+            padding: 1rem;
+            border-radius: 50%;
+            border: 1px solid #1e2929;
+            cursor: pointer;
+          }
+
+          .accountImageEth {
+            padding: 1rem;
+            background-color: #192020;
+            border-radius: 50%;
+            cursor: pointer;
+          }
+
+          .currencyTypeContainer {
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            align-items: flex-start;
+            // justify-content: center;
+          }
+
+          .accountName {
+            font-family: 'Avenir';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 140%;
+            color: #ffffff;
+            padding-left: 20px;
+            cursor: pointer;
+          }
+
+          .currencyType {
+            font-family: 'Avenir';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 140%;
+            color: #677778;
+            padding-left: 20px;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .accountContainer2 {
+        display: flex;
+        align-items: center;
+        padding: 16px;
+        background-color: #192020;
+        // width: 588px;
+        margin-bottom: 10px;
+
+        .accountImage2 {
+          padding: 1rem;
+          background-color: #16e6ef;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        .accountName2 {
+          font-family: 'Avenir';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 140%;
+          color: #ffffff;
+          padding-left: 20px;
+        }
+
+        .accountImportName2 {
+          font-family: 'Avenir';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 140%;
+          color: #677778;
+        }
+      }
+
+      .accountDeleteContainer {
+        display: flex;
+        align-items: center;
+        // width: 588px;
+        padding: 16px;
+        margin-bottom: 10px;
+
+        .accountDeleteImage {
+          padding: 1rem;
+          background-color: #6c2a2c;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+
+        .accountDeleteName {
+          font-family: 'Avenir';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 140%;
+          color: #ff4e51;
+          padding-left: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .modalContainer {
+      position: relative;
+      flex-basis: 50%;
+
+      .addAccount {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $white;
+
+        h1 {
+          @include font-lg-neuropolitical-normal;
+        }
+
+        button {
+          cursor: pointer;
+          background: none;
+          outline: none;
+          border: none;
+          font-size: 25px;
+          color: $gray;
+
+          &:hover {
+            color: $white;
+          }
+        }
+
+        .accountDetailsDate {
+          font-family: Avenir;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          letter-spacing: 0em;
+          text-align: right;
+          color: #91A5A6;
+          // margin-top: 10px;
+        }
+      }
+
+      .accountDetailsContainer {
+        display: flex;
+        width: 100%;
+        padding-right: 5px;
+        // justify-content: space-between;
+        .accountDetailsContainer {
+          .accountDetailsTokens {
+            border: 1px solid #91A5A6;
+            padding: 20px;
+            border-radius: 16px;
+            width: 50%;
+            margin-right: 12px;
+
+            .accountDetailTexContainer {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+
+
+            }
+
+            .textContainer {
+              font-family: Avenir;
+              font-size: 14px;
+              font-weight: 400;
+              line-height: 20px;
+              letter-spacing: 0em;
+              text-align: left;
+              color: #91A5A6;
+
+            }
+
+            .accountDetailTexContainer1 {
+              display: flex;
+              align-items: flex-end;
+
+              .accountNumber {
+                color: #FFFFFF;
+                font-family: Neuropolitical;
+                font-size: 32px;
+                font-weight: 400;
+                line-height: 35px;
+                letter-spacing: 0em;
+                text-align: left;
+                padding-right: 10px;
+
+              }
+
+              .textAccount {
+                font-family: Avenir;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: #91A5A6;
+
+              }
+            }
+          }
+          
+        }
+      }
+
+      .actionBtn {
+        margin-top: 2.5rem;
+        color: $hover-links;
+        background-color: transparent;
+        border: 1px solid $hover-links;
+        width: 100%;
+        @include font-md-neuropolitical-normal;
+        padding: 1.5rem;
+        border-radius: 5rem;
+        outline: none;
+        transition: all 0.2s ease-out;
+
+        &:hover {
+          color: $black;
+          background-color: $hover-links;
+        }
+      }
+    }
+
+    .pvtKeyContainer {
+      position: relative;
+
+      .eyeBtn {
+        position: absolute;
+        top: 1.5rem;
+        right: 0.8rem;
+        cursor: pointer;
+      }
+    }
+
+    .currencySerchContainer {
+      display: flex;
+      padding-top: 20px;
+
+      .currencySerchText {
+        padding-left: 20px;
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        color: #91A5A6;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        width: 100%;
+      }
+    }
+
+    .currencyScrollContainer {
+      margin-top: 20px;
+      height: 40vh;
+      overflow: scroll;
+      overflow-x: hidden;
+
+      .currencyTextIconContainer {
+        display: flex;
+        margin-bottom: 10px;
+        padding: 20px;
+
+        .currencyImg {
+          padding: 15px;
+          border-radius: 50%;
+          background-color: #141C1C;
+          cursor: pointer;
+        }
+      }
+
+      .currencyNameTextContainer {
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .currencyName {
+          font-family: 'Avenir';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 140%;
+          color: #FFFFFF;
+        }
+
+        .currencyTxt {
+          font-family: 'Avenir';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 140%;
+          color: #677778;
+        }
+      }
+
+      .currencyTextIconContainer1 {
+        display: flex;
+        margin-bottom: 10px;
+        background-color: #0A1313;
+        padding: 20px;
+
+        .currencyImg1 {
+          padding: 15px;
+          border-radius: 50%;
+          background-color: red;
+          background-color: #16E6EF;
+          cursor: pointer;
+        }
+      }
+
+      .currencyNameTextContainer1 {
+        padding-left: 10px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        .currencyName1 {
+          font-family: 'Avenir';
+          font-style: normal;
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 140%;
+          color: #FFFFFF;
+        }
+
+        .currencyTxt1 {
+          font-family: 'Avenir';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 140%;
+          color: #677778;
+          margin-left: -3.2rem;
+        }
+      }
+    }
+  }
+}
+
+.loaderContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 9999999;
+  inset: 0;
+  backdrop-filter: blur(15px);
+  color: white;
+
+  .deleteAccountContainer {
+    .deleteAccountheading {
+      font-family: 'Neuropolitical';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 44px;
+      line-height: 110%;
+      text-align: center;
+      color: #FFFFFF;
+
+    }
+
+    .deleteAccountText {
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 140%;
+      text-align: center;
+      color: #FFFFFF;
+      padding-top: 1rem;
+    }
+
+    .deleteAccountBtnContainer {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 48px;
+    }
+
+    .deleteAccountCancel {
+      font-family: 'Neuropolitical';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 110%;
+      color: #FFFFFF;
+      border: none;
+      background-color: transparent;
+    }
+
+    .deleteAccountDelete {
+      font-family: 'Neuropolitical';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 110%;
+      color: #FF4E51;
+      border: none;
+      background-color: transparent;
+    }
+  }
+}

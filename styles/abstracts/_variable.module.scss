@@ -1,0 +1,49 @@
+@font-face {
+  font-family: Neuropolitical;
+  src: url('/assets/fonts/Neuropolitical/Neuropolitical-Regular.ttf');
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url('/assets/fonts/Avenir/Avenir-Regular.ttf');
+}
+
+$light-blue: #16e6ef !default;
+$secondary-blue: #10c6ce !default;
+$blue: #1877f2 !default;
+$white: #fff !default;
+$light-gray: #e4e5e8 !default;
+$gray: #91a5a6 !default;
+$dark-gray: #606467 !default;
+$black: #102324 !default;
+$teritary-blue: #1d9bf0 !default;
+$links: #12B7B2 !default;
+$hover-links : #16e6ef !default;
+
+
+$text-avenir: Avenir !default;
+$text-neuropolitical: Neuropolitical !default;
+
+$text-9xl: 10.5rem !default;
+$text-8xl: 8.25rem !default;
+$text-7xl: 7rem !default;
+$text-6xl: 5.625rem !default;
+$text-5xl: 4.75rem !default;
+$text-4xl: 4rem !default;
+$text-3xl: 2.75rem !default;
+$text-2xl: 2.25rem !default;
+$text-xl: 2rem !default;
+$text-lg: 1.5rem !default;
+$text-md: 1.125rem !default;
+$text-base: 1rem !default;
+$text-sm: 0.875rem !default;
+$text-xs: 0.75rem !default;
+$text-xxs: 0.5rem !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px,
+);

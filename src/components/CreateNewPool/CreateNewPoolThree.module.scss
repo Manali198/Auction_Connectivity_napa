@@ -1,0 +1,246 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    .settings {
+      padding-top: 113px;
+      color: $white;
+      text-align: left;
+      @include font-6xl-neuropolitical-normal;
+      font-size: 76px;
+      line-height: 110%;
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .container {
+    .settingsContainer {
+      .settings {
+        padding-top: 108px;
+        font-size: 32px;
+        line-height: 110%;
+      }
+    }
+  }
+}
+.AnyObjects {
+  display: none;
+  margin-right: 48px;
+  .FilterButton {
+    @include font-md-avenir-regular;
+    font-size: 18px;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin-bottom: 0;
+    background: transparent !important;
+    border: none !important;
+    padding: 0;
+  }
+}
+@media screen and (max-width:1200px) {
+  .AnyObjects {
+    display: block;
+  }
+}
+.FilterBox {
+  position: fixed;
+  bottom: -390px;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  padding: 30px;
+  background: #1D3031;
+  @include flex-start;
+  align-items: self-start;
+  height: 390px;
+  box-shadow: 0 0 50px 0 rgb(0 0 0 / 0%);
+  transition: all 0.2s ease-out;
+  &.active {
+    bottom: 0;
+    box-shadow: 0 0 50px 0 rgb(0 0 0 / 47%);
+  }
+  .MobileDatpcker {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    justify-content: center;
+    width: 100%;
+  }
+  .RangePrnt {
+    margin-top: 35px;
+    span {
+      min-width: 125px;
+    }
+  }
+  .ExitButton {
+    background: transparent;
+    border: none;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+.tipandtotolmain{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 40px;
+}
+.buttonperntAj{
+  display: flex;
+  align-items: center;
+  button{
+    background: transparent;
+    border: none;
+    padding: 0;
+    height: auto;
+  }
+  .marginPrnt{
+    margin: 0 23px 0 60px;
+  }
+}
+.CustomGridContainer {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(4, minmax(0px, 1fr));
+}
+
+
+
+
+.InviteBoxprnt{
+  .Invitep{
+    @include font-lg-neuropolitical-normal;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    color: #FFFFFF;
+    text-align: left;
+    margin-bottom: 24px;
+  }
+}
+.InviteiputBox{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 540px;
+  .InviteiputEmail{
+    @include font-md-avenir-medium;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #91A5A6;
+    margin-bottom: 0;
+
+  }
+}
+.Inviteiputlink{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 2px solid #FFFFFF;
+  padding: 0 20px 0 9px;
+  margin-top: 15px;
+  >div{
+    margin: 0 !important;
+    label{
+      top: -7px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    input{
+      padding: 16px 12px 15px 12px !important;
+    }
+  }
+  input{
+    @include font-md-avenir-medium;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: #FFFFFF !important;
+    background: transparent;
+    border: none;
+    max-width: 330px;
+    width: 100%;
+    outline: none !important;
+    box-shadow: none !important;   
+    border: none !important;
+    margin: 0;
+    width: 250px !important;
+    &::placeholder{
+      color: #FFFFFF !important;      
+    }
+  }
+  button{
+    @include font-lg-neuropolitical-normal;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110%;
+    text-align: right;
+    color: #16E6EF;
+    background: transparent;
+    border: none;
+  }
+}
+.BtmPartBox{
+  max-width: 540px;
+  width: 100%;
+  margin-top: 60px;
+  .BtmPartBtnm{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    .BtmImgPbox{
+      display: flex;
+      align-items: center;
+      p{
+        margin: 0;
+        @include font-md-avenir-medium;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 140%;
+        color: #FFFFFF;
+        margin-left: 20px;
+      }
+    }
+  }
+}
+.CreatePool{
+  margin-top: 55px;
+  padding-left: 20px;
+  a{
+    @include font-lg-neuropolitical-normal;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    color: #16E6EF;
+    margin-right: auto;
+    display: flex;
+    text-decoration: none;
+  }
+}
+.lftscroBtm{
+  background: transparent;
+  border: none;
+}

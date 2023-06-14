@@ -1,0 +1,150 @@
+@import '../../../../styles/abstracts/mixins.module';
+@import '../../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    // .settings {
+    //   padding-top: 113px;
+    //   color: $white;
+    //   text-align: left;
+    //   @include font-6xl-neuropolitical-normal;
+    //   font-size: 76px;
+    //   line-height: 110%;
+    // }
+  }
+}
+.CustomGridContainer {
+  display: grid;
+  grid-gap: 120px;
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
+}
+.imgPerntScone{
+  >span{
+    width: 100% !important;
+  }
+}
+.ScOneLeftCont{
+  h1{
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 76px;
+    line-height: 110%;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: start;
+  }
+  p{
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin: 22px 0 33px 0;
+    text-align: start;
+  }
+}
+.imgAndperaFlex{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  p{
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin: 0 0 0 16px;
+  }
+}
+.thrBtnPrnt{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 80px;
+  .linkPernt{
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    text-align: center;
+    color: #FFFFFF;
+    border: 2px solid #91A5A6;
+    text-decoration: none;
+    padding: 26px 0;
+    width: 100%;
+    margin-right: 16px;
+    &:hover{
+      border: 2px solid #16E6EF;
+      color: #16E6EF;
+    }
+  }
+}
+.butnPernt{
+  min-width: 72px;
+  button{
+    background: transparent;
+    border: 2px solid #91A5A6;
+    padding: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  a{
+    padding: 0 !important;
+  }
+  ul{
+    width: 214px;
+  }
+}
+
+
+.CurrentBitBox{
+  padding-top: 35px;
+  display: flex;
+  align-items: center;
+  .CurrentBitBoxInrr{
+    margin-right: 60px;
+    &:last-child{
+      margin-right: 0;
+    }
+    p{
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 140%;
+      color: #FFFFFF;
+      margin: 0 0 5px 0;
+    }
+    .imgAdnHH{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      >span{
+        margin-right: 16px !important;
+      }
+    }
+    h3{
+      font-family: 'Neuropolitical';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 110%;
+      color: #FFFFFF;
+      margin: 0;
+    }
+  }
+}

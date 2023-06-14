@@ -1,0 +1,237 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.backgroundImage {
+  background-image: url('/assets/images/leaderbaord-background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  padding-bottom: 10px !important;
+  @include flex-column-between;
+  .leaderboardContainer {
+    height: 100%;
+    @include flex-between;
+    @include flex-col;
+    .leaderboard {
+      @include font-4xl-neuropolitical-normal;
+      text-align: left;
+      -webkit-text-stroke: 2px white;
+      animation: glow 1s ease-in-out infinite alternate;
+      color: transparent;
+      margin-bottom: 0;
+      font-size: 132px !important;
+      line-height: 110% !important;
+      @media (max-width: 1300px) {
+        font-size: 76px !important;
+      }
+      @media (max-width: 768px) {
+        padding-top: 80px !important;
+      }
+      @media (max-width: 736px) {
+        font-size: 36px !important;
+      }
+      @media (max-width: 600px) {
+        font-size: $text-2xl;
+      }
+    }
+  }
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 20px #fff, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px,
+        0 0 70px, 0 0 10px;
+    }
+    to {
+      text-shadow: 0 0 1px #fff, 0 0 20px #ffffff, 0 0 30px, 0 0 40px, 0 0 50px,
+        0 0 60px, 0 0 100px;
+    }
+  }
+
+  .leaderboardContainer {
+    .projectCardContainer {
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 2.5rem;
+    }
+  }
+
+  .tabsContainer {
+    @include flex-column-start;
+    margin-bottom: 0.5rem;
+    max-width: 100%;
+    .tabsInnerContainer {
+      @include flex-row-center;
+      overflow-x: scroll;
+      max-width: 100%;
+      @media screen and (max-width: 1023px) {
+        margin-top: 30px !important;
+        margin-bottom: 35px !important;
+      }
+      @media screen and (max-width: 736px) {
+        margin-top: 20px !important;
+        margin-bottom: 25px !important;
+      }
+      .tab {
+        display: flex;
+        flex-wrap: nowrap;
+        border-bottom: 0;
+        padding-left: 0;
+        list-style-type: none;
+        margin-bottom: 0;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  @media (min-width: 280px) {
+    .leaderboardContainer {
+      padding-top: 4rem;
+      .projectCardContainer {
+        padding-top: 1rem;
+      }
+    }
+
+    .leaderboard {
+      padding-top: 0.2rem;
+      @include font-base-neuropolitical-normal;
+    }
+  }
+
+  @media (min-width: 320px) {
+    .leaderboardContainer {
+      padding-top: 4.5rem;
+    }
+    .leaderboard {
+      @include font-lg-neuropolitical-normal;
+    }
+  }
+
+  @media (min-width: 400px) {
+    .leaderboardContainer {
+      padding-top: 6rem;
+    }
+    .leaderboard {
+      @include font-lg-neuropolitical-normal;
+    }
+  }
+
+  @media (min-width: 520px) {
+    .leaderboardContainer {
+      padding-top: 4rem;
+    }
+    .leaderboard {
+      @include font-xl-neuropolitical-normal;
+    }
+  }
+
+  @media (min-width: 768px) {
+    background-image: url('/assets/images/marketplace-background-tablet.png');
+    .leaderboard {
+      text-align: left;
+      padding-top: 2rem;
+      @include font-3xl-neuropolitical-normal;
+    }
+    .leaderboardContainer {
+      padding-top: 4rem;
+    }
+    .tabsContainer {
+      @include flex-column-start;
+      .tabsInnerContainer {
+        @include flex-row-center;
+        .tab {
+          flex-wrap: nowrap;
+        }
+      }
+    }
+  }
+  @media (min-width: 1171px) {
+    padding-top: 2rem;
+    .leaderboard {
+      @include font-4xl-neuropolitical-normal;
+      padding-top: 3rem;
+    }
+    .tabsContainer {
+      @include flex-row-between;
+      @include flex-align-center;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    background-image: url('/assets/images/leaderbaord-background.png');
+    .leaderboardContainer {
+      .leaderboard {
+        padding-top: 1rem;
+        @include font-6xl-neuropolitical-normal;
+      }
+      .tabsContainer {
+        padding-top: 1rem;
+      }
+      .leaderboardContainer {
+        padding-top: 4rem;
+        .projectCardContainer {
+          padding-top: 1.5rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .leaderboardContainer {
+      .leaderboard {
+        padding-top: 3rem;
+        @include font-7xl-neuropolitical-normal;
+      }
+      .tabsContainer {
+        padding-top: 2rem;
+      }
+      .leaderboardContainer {
+        .projectCardContainer {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 2.5rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .leaderboardContainer {
+      .leaderboard {
+        padding-top: 4rem;
+        @include font-6xl-neuropolitical-normal;
+      }
+      .tabsContainer {
+        padding-top: 2rem;
+      }
+      .leaderboardContainer {
+        .projectCardContainer {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 2.5rem;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 2560px) {
+    .leaderboardContainer {
+      .leaderboard {
+        padding-top: 6rem;
+      }
+      .tabsContainer {
+        padding-top: 2rem;
+        .tabsInnerContainer {
+        }
+      }
+      .leaderboardContainer {
+        .projectCardContainer {
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 2.5rem;
+        }
+      }
+    }
+  }
+}

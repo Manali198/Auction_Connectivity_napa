@@ -1,0 +1,854 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.previewVideoContainer {
+  display: flex;
+  flex-direction: column;
+  // padding-left: 2rem;
+  // align-self: flex-start;
+  // // height: 650px;
+  // padding: 1rem;
+  height: 650px;
+  padding: 1rem 0;
+  position: relative;
+  left: 5rem;
+  justify-content: space-between;
+  .inputContainer {
+    display: flex;
+    flex-direction: column;
+    .videoInput {
+      background-color: transparent;
+      outline: none;
+      border: none;
+      color: $gray;
+
+      @include font-lg-neuropolitical-normal;
+    }
+    .caption {
+      margin-top: 1rem;
+      @include font-md-avenir-medium;
+      background-color: transparent;
+      outline: none;
+      border: none;
+      color: $gray;
+    }
+    .errormsg {
+      margin-top: 0.5rem;
+      color: red;
+      @include font-sm-neuropolitical-normal;
+    }
+  }
+
+  .loaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .actionContainer {
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    .uploadNew {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      span {
+        @include font-sm-avenir-regular;
+        padding-left: 1.5rem;
+      }
+    }
+    .publishBtn {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      span {
+        @include font-sm-avenir-regular;
+        padding-left: 0.5rem;
+        color: $links;
+      }
+    }
+  }
+  .videoPreview {
+    width: 100%;
+    height: 400px;
+    margin: 1rem 0;
+    // margin-top: 5rem;
+    // background-color: #16e6ef;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    video {
+      max-height: 100%;
+    }
+  }
+}
+.commentsloaderContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+  @media screen and (max-width: 768px) {
+    .commentsloaderContainer {
+      height: 330px;
+    }
+  }
+  @media screen and (max-width: 736px) {
+    .commentsloaderContainer {
+      height: 352px;
+    }
+  }
+}
+.banner {
+  height: 650px;
+  position: relative;
+  left: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 566px
+  // padding: 10rem 0;
+}
+.dragAndDropText {
+  @include font-md-avenir-medium;
+  margin-top: 0.7rem;
+  margin-bottom: 0.5rem;
+  color: $white;
+  @media (max-width: 576px) {
+    @include font-xs-avenir-regular;
+  }
+  span {
+    color: $links;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    &:hover {
+      color: $hover-links;
+    }
+  }
+}
+.recomendedText {
+  @include font-sm-avenir-regular;
+  text-align: center;
+  color: $gray;
+  @media (max-width: 576px) {
+    @include font-xs-avenir-regular;
+  }
+}
+.MainListBox {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 65%,
+      rgb(16 35 36 / 90%) 87%
+    );
+    z-index: 1;
+    margin: 0 -7.9vw;
+    display: none;
+  }
+  .parent {
+    position: absolute;
+    left: 0rem;
+    padding-bottom: 14px;
+    top: -4.2rem;
+    width: 62%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 0;
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+    @media (max-width: 800px) {
+      justify-content: start;
+      position: static;
+    }
+  }
+  .newPostContainer {
+    width: auto;
+  }
+  .loadingContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+  }
+  .loadingMoreData {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(145, 165, 166, 0.03);
+  }
+  .noMoreData {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(145, 165, 166, 0.03);
+    p {
+      @include font-md-neuropolitical-normal;
+      color: $gray;
+    }
+  }
+}
+.MainScrollBox {
+  position: relative;
+  text-align: left;
+  color: #fff;
+  margin: 0 -7.9vw;
+  padding: 0 7.9vw;
+  margin-bottom: -30px;
+  overflow-y: auto;
+  // height: 900px;
+  height: calc(100vh - 280px);
+
+  .NotFoundMessageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+
+    p {
+      @include font-md-neuropolitical-normal;
+      color: $gray;
+    }
+  }
+}
+.MainTabBox {
+  margin: 0 -7.9vw;
+  padding: 0 7.9vw;
+  background: transparent;
+  transition: all 0.2s ease-out;
+  display: flex;
+  position: relative;
+  height: 650px;
+  &.active {
+    background: rgba(145, 165, 166, 0.03);
+  }
+  .leftBox {
+    display: flex;
+    flex-basis: 62.9%;
+    padding: 30px 30px 30px 0;
+    flex-direction: column;
+    .HadUserText {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 12px;
+      a,
+      .HadUserImage {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+
+        img {
+          border-radius: 50%;
+        }
+      }
+      .messageContainer {
+        @include font-md-avenir-regular;
+        max-height: 30px;
+        overflow: auto;
+        white-space: nowrap;
+        text-align: center;
+      }
+      .UserRightTxt {
+        text-align: right;
+        .notLive {
+          color: $links;
+          @include font-md-avenir-medium;
+          font-size: 14px;
+        }
+      }
+      .UserNameTxt {
+        margin-left: 10px;
+      }
+      h4 {
+        @include font-md-avenir-medium;
+        font-size: 14px;
+        line-height: 140%;
+        color: #ffffff;
+        margin: 0px 0 1px 0;
+      }
+      p {
+        @include font-md-avenir-regular;
+        font-size: 12px;
+        line-height: 140%;
+        color: #ffffff;
+        margin: 0;
+      }
+    }
+    .MdlImage {
+      > span {
+        width: 100% !important;
+        height: auto !important;
+        video {
+          object-fit: cover;
+        }
+      }
+      padding: 0 2rem;
+    }
+    .BotomTxt {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 12px;
+      .BotomLikes {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        background: transparent !important;
+        border: none !important;
+        outline: none !important;
+        padding: 0;
+        span {
+          &:first-child {
+            filter: invert(1) brightness(100);
+          }
+        }
+        span {
+          margin-left: 12px;
+          font-size: 14px;
+          line-height: 140%;
+          color: #ffffff;
+          b {
+            font-weight: 400;
+          }
+        }
+        &:hover,
+        &.active {
+          span {
+            &:first-child {
+              filter: invert(0) brightness(1);
+            }
+          }
+          span {
+            color: #16e6ef !important;
+          }
+        }
+      }
+      .disableBtn {
+        pointer-events: none;
+        span {
+          color: gray !important;
+        }
+        img {
+          opacity: 0.3;
+        }
+      }
+    }
+    .videoInfoContainer {
+      padding: 1rem 0;
+      @media (max-width: 768px) {
+        padding-left: 30px;
+      }
+      h3 {
+        @include font-lg-neuropolitical-normal;
+      }
+      p {
+        @include font-sm-avenir-regular;
+      }
+    }
+  }
+  .ForShadow {
+    position: relative;
+    padding: 0 1rem;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 30%,
+        rgb(20 39 40 / 89%) 100%
+      );
+      z-index: 1;
+    }
+    .replyBox {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 11111;
+      right: 0;
+      width: 100%;
+      background-color: #1d3031;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      .replyUserName {
+        p {
+          font-size: 12px;
+          margin: 0;
+          color: #91a5a6;
+        }
+      }
+    }
+  }
+  .rightBox {
+    position: relative;
+    flex-basis: 37.1%;
+    // max-width: 37.1%;
+    padding: 10px 40px 30px 16px;
+    transition: all 0.2s ease-out;
+    opacity: 0;
+    pointer-events: none;
+    &.active {
+      opacity: 1;
+      pointer-events: visible;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      left: 30px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: #91a5a6;
+      opacity: 0.08;
+    }
+    .ExitButton {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      // top: calc(50% - 30px);
+      top: 20rem;
+      background: #142728 !important;
+      border: 1px solid rgb(145 165 166 / 8%);
+      outline: none !important;
+      height: 60px;
+      width: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease-out;
+      &:hover {
+        border: 1px solid rgb(145 165 166 / 100%);
+      }
+    }
+    h1 {
+      font-family: 'Neuropolitical';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 110%;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .commentsContainer {
+      padding: 1rem 0;
+      position: relative;
+      left: 5rem;
+    }
+    .UserComment {
+      position: relative;
+      overflow-y: auto;
+      height: 500px;
+      .FisrtComBox {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-top: 23px;
+        width: 100%;
+        .HadComment {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          .leftIcontxt {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            h4 {
+              font-size: 14px !important;
+              line-height: 140% !important;
+              color: #ffffff;
+              margin-left: 10px;
+              margin-bottom: 0;
+              @include font-md-avenir-medium;
+            }
+          }
+          p {
+            font-size: 12px !important;
+            line-height: 140% !important;
+            text-align: right;
+            color: #91a5a6;
+            @include font-md-avenir-regular;
+            margin-bottom: 0;
+          }
+          img {
+            border-radius: 50%;
+          }
+        }
+        .btmcomment {
+          padding-left: 40px;
+          p {
+            font-size: 15px !important;
+            line-height: 140% !important;
+            color: #ffffff;
+            margin-top: 6px;
+            margin-bottom: 8px;
+            @include font-md-avenir-regular;
+          }
+          .LikeReplyTxt {
+            a {
+              cursor: pointer;
+              text-decoration: none;
+              font-size: 12px;
+              line-height: 140%;
+              color: #91a5a6;
+              margin-right: 20px;
+              transition: all 0.2s ease-out;
+              &:hover {
+                color: #16e6ef;
+              }
+              &:last-child {
+                margin-right: 0;
+              }
+            }
+          }
+        }
+      }
+      .commentNotFound {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+      }
+    }
+    .BtmCommentBtn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 31px;
+      input {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        outline: none;
+        @include font-md-avenir-regular;
+        font-size: 16px;
+        line-height: 140%;
+        color: #fff;
+        width: 85%;
+        &::placeholder {
+          @include font-md-avenir-regular;
+          font-size: 14px;
+          line-height: 140%;
+          color: #91a5a6;
+        }
+      }
+      button {
+        font-family: 'Neuropolitical';
+        background: transparent;
+        border: none;
+        outline: none;
+        box-shadow: none;
+        font-size: 14px;
+        line-height: 140%;
+        color: #ffffff;
+        transition: all 0.2s ease-out;
+        &:hover {
+          color: #16e6ef;
+        }
+      }
+    }
+    .mintPostContainer {
+      padding: 1rem 0;
+      position: relative;
+      left: 5rem;
+      .mintDetails {
+        margin: 1rem 0;
+        overflow: scroll;
+        height: 32rem;
+        .descriptionContainer {
+          margin-top: -0.4rem;
+          p {
+            color: $gray;
+            @include font-xs-avenir-regular;
+            padding-left: 1rem;
+          }
+          .description {
+            width: 100%;
+            resize: none;
+            background-color: transparent;
+            border: 1px solid $white !important;
+            color: $white;
+            @include font-md-avenir-medium;
+            padding: 1rem;
+            outline: none;
+          }
+        }
+        .tagContainer {
+          margin-bottom: 1.5rem;
+          .headline {
+            color: $gray;
+            @include font-xs-avenir-regular;
+            padding-left: 1rem;
+            text-align: left;
+            width: 100%;
+            margin-bottom: 1rem;
+            display: inline-block;
+          }
+          .tagDescription {
+            color: $gray;
+            text-align: left;
+            display: inline-block;
+            margin-left: 1rem;
+            @include font-sm-avenir-regular;
+            margin-bottom: 1rem;
+            width: 100%;
+          }
+          .remainingTag {
+            color: $gray;
+            text-align: left;
+            display: inline-block;
+            margin-left: 1rem;
+            @include font-sm-avenir-regular;
+            margin-top: 1rem;
+            width: 100%;
+          }
+        }
+      }
+      .actionContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 1rem;
+        .cancelBtn {
+          color: $gray;
+          cursor: pointer;
+          @include font-sm-avenir-regular;
+          &:hover {
+            color: $white;
+          }
+        }
+        .mintBtn {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+          color: $links;
+          span {
+            @include font-sm-avenir-regular;
+            padding-left: 0.5rem;
+          }
+          &:hover {
+            color: $hover-links;
+          }
+        }
+      }
+      .errmsg {
+        padding-left: 1rem;
+        margin-top: 0.5rem;
+        color: red;
+        @include font-sm-neuropolitical-normal;
+      }
+      .loaderContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .thumbnailContainer {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 120px;
+        margin-bottom: 1rem;
+        p {
+          padding-left: 1rem;
+          margin: 0;
+          cursor: pointer;
+          color: $light-blue;
+          margin-right: 1.5rem;
+          @include font-sm-neuropolitical-normal;
+          &:hover {
+            color: $hover-links;
+          }
+        }
+      }
+    }
+  }
+}
+.btnContainer{
+  position: relative;
+  .ExitButton {
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    // top: calc(50% - 30px);
+    top: 20rem;
+    background: #142728 !important;
+    border: 1px solid rgb(145 165 166 / 8%);
+    outline: none !important;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease-out;
+    &:hover {
+      border: 1px solid rgb(145 165 166 / 100%);
+    }
+  }
+}
+
+
+@media screen and (max-width: 1200px) {
+  .mintPostContainer {
+    left: 0 !important;
+  }
+  .commentsContainer {
+    left: 0rem !important;
+  }
+  .banner {
+    left: 0;
+  }
+  .previewVideoContainer {
+    left: 0;
+  }
+  .MainTabBox {
+    // margin: 0;
+    height: auto;
+    flex-direction: column;
+    .leftBox {
+      padding-bottom: 0;
+      padding-right: 0 !important;
+      flex-basis: 100%;
+    }
+  }
+  .rightBox {
+    padding: 0 !important;
+    display: none;
+    flex-basis: 100%;
+    &.active {
+      display: block;
+    }
+    &::before {
+      position: inherit !important;
+    }
+    .ExitButton {
+      left: inherit !important;
+      right: 0 !important;
+      top: 0px !important;
+      background: transparent !important;
+      border: none !important;
+      height: 24px !important;
+      width: 24px !important;
+    }
+  }
+  .BtmCommentBtn {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .MainScrollBox {
+    margin: 0 -40px;
+    padding: 0 0px;
+    // height: 900px;
+    margin-bottom: -20px;
+  }
+  .MainTabBox {
+    margin: 0px;
+    padding: 0px;
+    .leftBox {
+      .HadUserText {
+        padding: 0 40px;
+        .messageContainer {
+          @include font-md-avenir-regular;
+          width: auto;
+          max-height: 30px;
+          overflow: auto;
+          white-space: nowrap;
+          text-align: center;
+          margin-left: 0rem;
+        }
+      }
+      .BotomTxt {
+        padding: 0 40px;
+      }
+    }
+    .rightBox {
+      padding: 10px 40px 30px 40px !important;
+      .ExitButton {
+        right: 35px !important;
+        top: 13px !important;
+      }
+      .UserComment {
+        height: 330px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 736px) {
+  // .MainScrollBox {
+  //   height: 625px;
+  // }
+  .MainTabBox {
+    .leftBox {
+      .BotomTxt {
+        .BotomLikes {
+          span {
+            &:first-child {
+              filter: invert(1) brightness(100);
+            }
+          }
+          span {
+            b {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    .rightBox {
+      .UserComment {
+        height: 352px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 450px) {
+  .MainTabBox {
+    .leftBox {
+      .HadUserText {
+        .messageContainer {
+          width: 180px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .banner{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .leftBox{
+    flex-basis: 56% !important;
+  }
+  .rightBox{
+    padding: 0px !important;
+  }
+}

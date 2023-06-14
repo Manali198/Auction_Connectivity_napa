@@ -1,0 +1,506 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+}
+.CreatePoolThree {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 80%;
+  border-right: 1px solid #ffffff26;
+}
+.CustomGridContainer {
+  display: flex;
+  align-items: flex-start;
+  margin-right: 60px;
+}
+.TipsTulsOverlay {
+  position: relative;
+  margin: 17px 60px 0 0;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    min-height: 320px;
+    background: linear-gradient(180deg, rgba(12, 27, 34, 0) 0%, rgba(12, 27, 34, 0.9) 100%);
+    z-index: 1;
+    width: 360px;
+  }
+  &::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    min-height: 170px;
+    background: linear-gradient(180deg, rgba(12, 27, 34, 0) 0%, rgba(12, 27, 34, 0.9) 200px);
+    transform: matrix(1, 0, 0, -1, 0, 0);
+    // z-index: 1;
+    width: 360px;
+  }
+}
+.scrollPernt{
+  overflow-y: auto;
+  height: 768px;
+}
+.BoxInnrCont{
+  position: relative;
+  .apernt{
+    text-decoration: none;
+    display: flex;
+    // width: 100% !important;
+    height: 490px;
+    width: 360px;
+    >span{
+      // width: 100% !important;
+    }
+    img{
+      // width: 100% !important;
+      object-fit: cover;
+    }
+  }
+}
+.upCont{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 32px;
+  left: 32px;
+  z-index: 1;
+  p{
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #FFFFFF;
+    margin: 0 0 0 10px;
+  }
+}
+.downCont{
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  right: 40px;
+  z-index: 1;
+  h3{
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    color: #FFFFFF;
+    max-width: 296px;
+    margin: 0 0 24px 0;
+    text-align: start;
+  }
+}
+
+.flexPernt{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .currentBit{
+    text-align: start;
+    h5{
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      color: #FFFFFF;
+      margin: 0 0 12px 0;
+    }
+    .txtimgFlex{
+      display: flex;
+      align-items: center;
+      p{
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 140%;
+        color: #FFFFFF;
+        margin: 0 0 0 12px;
+      }
+    }
+  }
+  .endingIn{
+    p{
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      margin: 0 0 12px 0;
+      color: #FFFFFF;
+    }
+    h3{
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 140%;
+      color: #FFFFFF;
+      margin: 0;
+    }
+  }
+}
+
+.RightEllutions {
+  h1 {
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 76px;
+    line-height: 110%;
+    color: #FFFFFF;
+    margin-bottom: 0;
+    text-align: left;
+   
+  }
+  .timeContainer {
+    display: flex;
+    align-items: center;
+    margin: 17px 0 29px 0 !important;
+    img {
+      margin-right: 0.5rem;
+    }
+    span {
+      padding-left: 10px;
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 140%;
+      color: #FFFFFF;
+    }
+  }
+  .AmounttoContributeBx {
+    max-width: 260px;
+    width: 100%;
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    p {
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 140%;
+      color: #ffffff80;
+      margin-bottom: 2px;
+    }
+    h6 {
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 140%;
+      color: #FFFFFF;
+      margin-bottom: 0;
+    }
+    .Amounttext {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      .Img25Mx {
+        display: flex;
+        align-items: center;
+        margin-right: auto;
+        >span {
+          margin-right: 8px !important;
+        }
+      }
+    }
+  }
+  .AmounttoContributeBxSecnd {
+    margin-top: 22px;
+    max-width: 364px;
+    width: 100%;
+    h6 {
+      text-align: start;
+    }
+    .Img25Mx {
+        display: flex;
+        align-items: flex-start !important;
+        text-align: start !important;
+    }
+  }
+}
+
+.progressContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+  .innerProgressParentContainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .innerProgressContainer {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      >p {
+        margin-bottom: 2px;
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;    
+        color: #ffffff80;
+      }
+      >span {
+        margin-right: 8px !important;
+        img {
+          margin-right: 10px;
+          filter: invert(1%) sepia(0%) saturate(0%) hue-rotate(230deg) brightness(200%) contrast(100%);
+        }          
+      }
+      span {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px !important;
+        line-height: 140% !important;
+        color: #FFFFFF;       
+      }
+      .NapaIcontxt {
+        >span {
+          margin-right: 8px !important;
+        }
+      }
+    }
+    .innerProgressContainerv2 {
+      display: flex;
+      align-items: flex-end;
+      .NapaIcontxt {
+        >span{
+          margin-right: 8px !important;
+        }
+        .SpanDefltMrgn {
+          margin-right: 0px !important;
+        }
+      }
+    }
+  }
+  .progressBarContainer {
+    margin-top: 0.5rem;
+    .progressBarParent {
+      background-color: gray;
+      height: 0.3rem;
+      .progressBarChild {
+        background-color: $light-blue;
+        height: 0.3rem;
+        width: 65%;
+      }
+    }
+  }
+} 
+.btnAndimg{
+  padding-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  button{
+    background: transparent;
+    border: 1px solid #16E6EF;
+    height: auto;
+    padding: 12px 39px;
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 110%;
+    text-align: center;
+    color: #16E6EF;
+    transition: all 0.3s ease-out;
+    &:hover {
+      color: #000;
+      background: #16E6EF;
+      border: 1px solid transparent;
+    }
+  }
+  .rightDotBtn {
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    &:hover {
+      background: transparent;
+      border: none;
+    }
+  }
+}
+.hedSrchic{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  h1{
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    color: #FFFFFF;
+    margin: 0;
+  }
+  button{
+    background: transparent;
+    height: auto;
+    padding: 0;
+    border: none;
+  }
+}
+
+
+.ContributionHistoryTable {
+  margin-right: 60px;
+  margin-top: 55px;
+  .TableHistory {
+    margin-top: 25px;
+    .TableHad {
+      display: flex;
+      align-items: flex-start;
+      width: 100%;
+      border-bottom: 1px solid #91a5a64d;
+      padding-bottom: 15px;
+      padding-left: 20px;
+      padding-right: 20px;
+      h6 {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: #91A5A6;
+        margin-bottom: 0;
+      }
+      .TableOne {
+        flex-basis: 35%;
+        text-align: start;
+      }
+      .TableTwo {
+        flex-basis: 35%;
+        text-align: start;
+      }
+      .TableThree {
+        flex-basis: 15%;
+        text-align: end;
+      }
+      .TableFour {
+        flex-basis: 15%;
+        text-align: end;
+      }
+    }
+    .TableBody {
+      margin-top: 15px;
+      display: flex;
+      align-items: center;
+      h4 {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 140%;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        >span {
+          margin-right: 12px !important;
+        }
+      }
+      .TableThree, .TableFour {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+
+.TableInnerPool {
+  // position: relative;
+  overflow-y: auto;
+  height: 235px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    min-height: 235px;
+    // background: linear-gradient(180deg, rgba(16, 35, 36, 0) 0%, #102324 100%);
+    z-index: 2;
+    width: 100%;
+  }
+}
+
+
+
+.ParticipantsBx {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 20%;
+  margin-top: 15px;
+  .FrstPartnerH1 {
+    h1 {
+      font-family: 'Neuropolitical';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 110%;
+      color: #FFFFFF;
+      margin: 0 32px;
+      text-align: left;
+      span {
+        color: #ffffff80;
+        margin-left: 8px;
+      }
+    }
+  }
+  .RightImgLines {
+    .RigthImgBx {
+      margin-left: 38px;
+      margin-top: 28px;
+      .RigthImgh4 {
+        font-family: 'Avenir';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        color: #FFFFFF;
+        display: flex;
+        align-items: center;
+        margin-top: 16px;
+        &:first-child {
+          margin-top: 0;
+        }
+        >span {
+          margin-right: 16px !important;
+        }
+      }
+      .RigthImgLastH4 {
+        margin-top: 15px !important ;
+        h4 {
+          color: #91A5A6;
+        }
+      }
+      .AllH4ImgRight {
+        overflow-y: auto;
+        height: 435px;
+      }
+    }
+  }
+}

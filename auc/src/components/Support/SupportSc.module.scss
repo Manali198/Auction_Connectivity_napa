@@ -1,0 +1,475 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+
+.MainContact {
+  // min-height: 100vh;
+  padding-top: 112px;
+}
+.WidthFull {
+  width: 100%;
+}
+.MainTextHelp h1 {
+  font-family: 'Neuropolitical';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 110%;
+  text-align: start;
+  color: #FFFFFF;
+  margin-bottom: 43px;
+}
+.ContactUsMain {
+  display: grid;
+  grid-gap: 120px;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: start;
+  padding-bottom: 76px;
+}
+
+.StaylinkFrst{
+  padding-top: 0px !important;
+  display: flex;
+  text-align: start;
+  a{
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    &:hover {
+      color: #16E6EF;
+      >span {
+        img {filter: invert(1%) sepia(162%) saturate(1057%) hue-rotate(143deg) brightness(100%) contrast(85%)}
+      }
+    }
+    >span {
+      margin-right: 7px !important;
+    }
+    @media screen and (max-width:736px) {margin-bottom: 5px !important;}
+  }
+}
+.InputContact {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  text-align: start;
+  width: 100%;
+}
+.InputContact input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin-bottom: 35px;
+  border-bottom: 2px solid #FFFFFF;
+  padding-left: 20px;
+}
+.FrstInput {
+  width: 100%;
+}
+.FrstInput p {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  margin-bottom: 5px;
+  color: #91A5A6;
+  margin: 0;
+  padding-left: 20px;
+}
+.FrstInput input {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  color: #ffffff;
+  padding-bottom: 15px;
+}
+.FrstInput input::placeholder {
+  color: #fff;
+}
+.TextArea {
+  width: 100%;
+}
+.TextArea p {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #91A5A6;
+  margin-bottom: 14px;
+  padding-left: 20px;
+}
+
+.FrstInput input::placeholder {
+  color: #fff;
+}
+.FrstInput input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin-bottom: 34px;
+  border-bottom: 2px solid #FFFFFF;
+  padding: 16px 12px 0 20px !important;
+}
+.FrstInput {
+  width: 100%;
+  >div {
+    margin: 0 !important;
+  }
+}
+.FrstInput input {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  color: #ffffff;
+  padding-bottom: 0px;
+}
+.FrstInput input::placeholder {
+  color: #fff !important;
+}
+.FrstInput {
+  .Input_inputField {
+    margin: 0 !important;
+  }
+}
+
+.FrstInput label {
+  padding: 0 0 0px 20px;
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #91A5A6;
+}
+.TextArea textarea{
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  border: 2px solid #FFFFFF;
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  color: #fff;
+}
+
+@media screen and (max-width: 1280px) {
+  .ContactUsMain {
+    grid-gap: 72px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .RightContact p {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 736px) {
+  .MainContact {
+    padding-top: 108px;
+  }
+  .MainTextHelp h1 {
+    font-size: 32px;
+    line-height: 110%;
+    margin-bottom: 24px;
+  }
+  .FrstInput p {
+    font-size: 12px;
+  }
+  .FrstInput input {
+    font-size: 14px;
+    padding-bottom: 16px;
+    margin-bottom: 30px;
+  }
+  .ContactUsMain {
+    grid-gap: 52px;
+  }
+  .SendBtnn button {
+    font-size: 18px;
+  }
+  .ContactUsMain {
+    padding-bottom: 60px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .FrstInput p {
+    padding-left: 10px;
+  }
+  .FrstInput input {
+    padding-left: 10px;
+  }
+}
+
+
+
+.SendBtnn button {
+  font-family: 'Neuropolitical';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 110%;
+  color: #16E6EF;
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  margin: 55px 0 0 20px;
+  transition: all 0.2s ease-out;
+}
+.SendBtnn button:hover {
+  color: #fff;
+}
+.ChatBtnFix {
+  position: relative;
+}
+.ChatBtnFix button {
+  background: #16E6EF;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  right: 10px;
+  z-index: 9;
+  transition: all 0.5s ease-out;
+}
+.ChatBoxMainpstn.active{
+  opacity: 1;
+  pointer-events: visible;
+  display: block;
+}
+.MinusPlusBtnn button{
+  bottom: auto !important;
+  top: 5px !important;
+  &.Minus_icon {
+    margin-right: 24px;
+  }
+}
+.ChatBoxMain {
+  max-width: 360px;
+  width: 100%;
+  background: #1d3031;
+}
+.ChatBox {
+  padding: 24px 32px 0px 32px;
+}
+.ChatBox .ChatHad {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+}
+.MinusPlusBtnn button {
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+.MinusPlusBtnn .Minus_icon>span {
+  margin-right: 24px !important;
+}
+.ChatBox .ChatHad h6 {
+  font-family: 'Neuropolitical';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 110%;
+  color: #FFFFFF;
+  margin-bottom: 0;
+}
+
+
+.ChatInText {
+  position: relative;
+  overflow-y: auto;
+  height: 350px;
+}
+.ChatInText .ChatFrstImgMain {
+  display: flex;
+  align-items: center;
+  margin-top: 19px;
+}
+.ChatInText .ChatFrstImgMain:first-child {
+  margin-top: 0 ;
+}
+.ChatTxtOne {
+  margin-left: 12px;
+}
+.ChatInText h6 {
+  background: #91a5a61a;
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  color: #FFFFFF;
+  padding: 9px 16px;
+  text-align: start;
+  margin-bottom: 5px;
+}
+.ChatInText span {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 140%;
+  color: #91A5A6;
+}
+.ChatTxtRight h6{
+  background: #102324;
+}
+.ChatTxtRight {
+  text-align: end;
+  margin-top: 15px;
+}
+
+
+.LastMessageInpt {
+  padding: 19px 32px 19px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #91a5a680;
+  margin-top: 16px;
+  button {
+    bottom: 20px;
+    right: 32px;
+  }
+}
+.LastMessageInpt input {
+  border: none;
+  background: transparent;
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #fff;
+  width: 95%;
+  outline: none;
+  box-shadow: none;
+  margin-right: 12px;
+}
+.LastMessageInpt button {
+  background: transparent;
+  border: none;
+  font-family: 'Neuropolitical';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 110%;
+  text-align: right;
+  width: 46px;
+  height: 15px;
+  color: #16E6EF;
+  transition: all 0.2s ease-out;
+}
+.LastMessageInpt button:hover {
+  color: #fff;
+}
+.ChatBoxMainpstn {
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  z-index: 9;
+}
+.ChatBoxMainpstn{
+  display: none;
+} 
+
+
+
+
+@media screen and (max-width: 1280px) {
+  .ChatBtnFix {
+    padding-top: 95px;
+  }
+  .SendBtnn button {
+    font-size: 18px;
+  }
+  .ChatBtn {
+    width: 56px !important;
+    height: 56px !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .SendBtnn button {
+    font-size: 18px;
+  }
+ 
+}
+@media screen and (max-width: 736px) {
+  .ChatBox {
+    padding: 14px;
+  }
+  
+  .ChatInText {
+    height: 834px;
+  }
+  .ChatBtnFix {
+    padding-top: 0px;
+    top: -35px;
+  }
+  .LastMessageInpt {
+    padding: 18px;
+  }
+  .ChatBoxMainpstn {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    min-height: auto;
+    right: 0;
+    left: 0;
+  }
+  .ChatBoxMain {
+    max-width: 100%;
+  }
+  .ChatInText .ChatFrstImgMain {
+    margin-top: 12px;
+  }
+  
+  .LastMessageInpt {
+    margin-top: 0px;
+  }
+  .MinusPlusBtnn button{
+    top: 0px !important;
+  }
+}
+@media screen and (max-width: 375px) {
+  .ChatBoxMainpstn {
+    right: 0;
+  }
+  .ChatBoxMain {
+    max-width: 100%;
+  }
+  .ChatInText h6 {
+    padding: 8px;
+  }
+
+}
+
+// popupcss//
+
+
+
+
+
+

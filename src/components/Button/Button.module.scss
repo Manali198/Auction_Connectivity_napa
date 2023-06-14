@@ -1,0 +1,170 @@
+@import '../../../styles/abstracts/variable.module';
+@import '../../../styles/abstracts/mixins.module';
+
+.btnOutlined {
+  color: $light-blue;
+  margin-right: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: transparent;
+  cursor: pointer;
+  width: 50%;
+  @include justify-center;
+  @include align-center;
+  background-color: transparent;
+  border: 1px solid $light-blue;
+  .icon {
+    padding-right: 1.5rem !important;
+    margin-top: 0.2rem !important;
+  }
+}
+
+.btn {
+  background-color: $light-blue;
+  color: $black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  cursor: pointer;
+  border: transparent;
+  border: 1px solid $light-blue;
+  width: 50%;
+  @include justify-center;
+  @include align-center;
+  .icon {
+    padding-right: 1.5rem !important;
+    margin-top: 0.3rem !important;
+  }
+}
+
+@media screen and (min-width: 280px) {
+  .btn {
+    display: none;
+    @include font-sm-neuropolitical-normal;
+    margin-top: 1rem;
+  }
+  .btnOutlined {
+    @include font-sm-neuropolitical-normal;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .btn {
+    @include font-base-neuropolitical-normal;
+    margin-top: 1rem;
+  }
+  .btnOutlined {
+    @include font-base-neuropolitical-normal;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .btn {
+    @include font-md-neuropolitical-normal;
+    margin-top: 1rem;
+  }
+  .btnOutlined {
+    @include font-md-neuropolitical-normal;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .btn {
+    @include font-md-neuropolitical-normal;
+    margin-top: 2rem;
+  }
+  .btnOutlined {
+    @include font-md-neuropolitical-normal;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .btn {
+    @include font-md-neuropolitical-normal;
+    margin-top: 0;
+  }
+  .btnOutlined {
+    @include font-md-neuropolitical-normal;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .btn {
+    display: block;
+    @include font-lg-neuropolitical-normal;
+  }
+  .btnOutlined {
+    display: block;
+    @include font-lg-neuropolitical-normal;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .btn {
+    display: block;
+    @include font-lg-neuropolitical-normal;
+  }
+  .btnOutlined {
+    display: block;
+    @include font-lg-neuropolitical-normal;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .btn {
+    @include font-lg-neuropolitical-normal;
+  }
+  .btnOutlined {
+    @include font-lg-neuropolitical-normal;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  .btn {
+    @include font-xl-neuropolitical-normal;
+    .icon {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+  .btnOutlined {
+    @include font-xl-neuropolitical-normal;
+    .icon {
+      width: 3.5rem;
+      height: 3.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 2560px) {
+  .btn {
+    @include font-2xl-neuropolitical-normal;
+    .icon {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+  .btnOutlined {
+    @include font-2xl-neuropolitical-normal;
+    .icon {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}
+
+@media screen and (min-width: 3340px) {
+  .btn {
+    @include font-4xl-neuropolitical-normal;
+    .icon {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+  .btnOutlined {
+    @include font-4xl-neuropolitical-normal;
+    .icon {
+      width: 5rem;
+      height: 5rem;
+    }
+  }
+}

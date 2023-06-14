@@ -1,0 +1,179 @@
+@import '../../../../styles/abstracts/mixins.module';
+@import '../../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    // .settings {
+    //   padding-top: 113px;
+    //   color: $white;
+    //   text-align: left;
+    //   @include font-6xl-neuropolitical-normal;
+    //   font-size: 76px;
+    //   line-height: 110%;
+    // }
+  }
+}
+// .SectionThree{
+//   padding-top: 68px;  
+// }
+.MainTable {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+  h4 {
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    color: #FFFFFF;
+  }
+  .RightTableSc {
+    display: flex;
+    align-items: center;
+    .SearchButton {
+      background: transparent !important;
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+      padding: 0;
+      height: auto;
+      min-height: inherit;
+      display: flex;
+      align-items: center;
+      transition: all 0.2s ease-out;
+      transform: scale(1);
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+.MainTableTable {
+  position: relative;
+  // &::before {
+  //   content: '';
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   pointer-events: none;
+  //   background: linear-gradient(180deg, #fff0 30%, #102324fc 100%);
+  //   z-index: 1;
+  // }
+  .TableHead {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    h4 {
+      display: flex;
+      flex-basis: 20%;
+      text-align: right;
+      align-items: flex-end;
+      justify-content: flex-end;
+      @include font-md-avenir-regular;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #91a5a6;
+
+      &:first-child {
+        text-align: left;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+    }
+  }
+  .TableRowMain {
+    position: relative;
+    margin-bottom: 30px;
+    // overflow-y: auto;
+    // height: 170px;
+
+    .TableRow {
+      display: flex;
+      align-items: center;
+      padding: 15px 20px;
+      width: 100%;
+      border-top: 1px solid rgb(145 165 166 / 30%);
+      h4 {
+        display: flex;
+        flex-basis: 20%;
+        text-align: left;
+        align-items: flex-end;
+        justify-content: flex-end;
+        @include font-md-avenir-medium;
+        font-size: 18px;
+        line-height: 140%;
+        color: #fff;
+        margin-bottom: 0;
+        label {
+          @include font-md-avenir-regular;
+          font-size: 18px;
+          line-height: 140%;
+          color: #91a5a6;
+        }
+        @media screen and (min-width: 992px) {
+          label {
+            display: none !important;
+          }
+          flex-direction: column;
+        }
+        > span {
+          margin-right: 8px !important;
+        }
+        &:first-child {
+          text-align: left;
+          align-items: flex-start;
+          justify-content: flex-start;
+        }
+        .ClaimBtn {
+          border: none !important;
+          background: transparent !important;
+          outline: none !important;
+          box-shadow: none !important;
+          @include font-6xl-neuropolitical-normal;
+          font-size: 18px;
+          line-height: 110%;
+          text-align: right;
+          color: #91A5A6;
+          transition: all 0.2s ease-out;
+          &:hover {
+            color: #16E6EF;
+          }
+        }
+      }
+    }
+  }
+}
+// .centrContnt{
+//   display: flex !important;
+//   align-items: center !important;
+//   justify-content: center !important;
+// }
+.flexPrntnap{
+  display: flex !important;
+  align-items: center !important;
+  .marginPernt{
+    margin: 0 8px;
+  }
+  >span{
+    color: #91A5A6;
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+  }
+}

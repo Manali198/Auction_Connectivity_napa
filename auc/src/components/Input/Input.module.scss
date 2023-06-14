@@ -1,0 +1,29 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+.inputField {
+  input {
+    width: 100%;
+    color: $white;
+    @include font-md-avenir-medium;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid $white;
+    border-radius: 0;
+    &:focus {
+      border-bottom: 1px solid $white;
+      box-shadow: none;
+      background-color: transparent;
+      color: $white;
+    }
+    &:disabled {
+      background: transparent;
+    }
+  }
+  &:last-child {
+    margin: 2rem 0rem;
+  }
+  label {
+    color: $white;
+    @include font-sm-avenir-regular;
+  }
+}

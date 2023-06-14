@@ -1,0 +1,17 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.btnLeftSide {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  span {
+    color: $white;
+    @include font-lg-avenir-medium;
+    padding-left: 2rem;
+  }
+}
+.connect {
+  color: $light-blue;
+  @include font-md-neuropolitical-normal;
+}

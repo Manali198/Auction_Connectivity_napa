@@ -1,0 +1,265 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    .settings {
+      padding-top: 113px;
+      color: $white;
+      text-align: left;
+      @include font-6xl-neuropolitical-normal;
+      font-size: 76px;
+      line-height: 110%;
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .container {
+    .settingsContainer {
+      .settings {
+        padding-top: 108px;
+        font-size: 32px;
+        line-height: 110%;
+      }
+    }
+  }
+}
+
+
+
+
+.CreateNewNFT {
+  margin-top: 42px;
+  display: grid;
+  grid-gap: 120px;
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
+}
+
+
+.DefultPoolh5 {
+  font-family: 'Neuropolitical';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 110%;
+  color: #FFFFFF;
+  margin-bottom: 24px;
+  text-align: left;
+}
+.FrstInput input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin-bottom: 35px;
+  border-bottom: 2px solid #FFFFFF;
+  padding: 16px 20px 6px 20px !important;
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  padding-bottom: 0px;
+  &::placeholder {
+    color: #fff !important;
+  }
+}
+.FrstInput {
+  >div {
+    margin: 0 !important;
+  }
+}
+.FrstInput input::placeholder {
+  color: #fff !important;
+}
+.FrstInput label {
+  padding: 0 0 0px 20px;
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #91A5A6 !important;
+}
+.TextArea p {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #91A5A6;
+  margin-bottom: 14px;
+  text-align: left;
+  padding-left: 20px;
+}
+.TextArea textarea{
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  border: 2px solid #FFFFFF;
+  width: 100%;
+  min-height: 120px;
+  padding: 12px;
+  color: #fff;
+  margin-bottom: 35px;
+}
+.DefultNfth4 {
+  font-family: 'Neuropolitical';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 110%;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+  text-align: start;
+}
+.TwoInptNft {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
+  margin-bottom: 5px;
+}
+.AddMoreBtn {
+  margin-bottom: 55px;
+  button {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: #FFFFFF;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    transition: all 0.3s ease-out;
+    &:hover {
+      color: #16E6EF;
+    }
+    >span {
+      margin-right: 12px !important;
+    }
+  }
+}
+.DefultPNft {
+  font-family: "Avenir";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #91A5A6;
+  text-align: left;
+  max-width: 475px;
+  margin-bottom: 24px;
+}
+.StartInpt {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
+  margin-bottom: 5px;
+}
+.RightStartInpt {
+  display: flex;
+  align-items: center;
+  span {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    color: #91A5A6;
+    margin: 0px 10px 26px 10px;
+  }
+}
+.DefltBtn {
+  a {
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    color: #16E6EF;
+    text-decoration: none;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease-out;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+
+
+.RightNftMain {
+  h1 {
+    color: #fff;
+    font-size: 50px;
+  }
+}
+.RightNftMain {
+  .RightVideoNft {
+    
+    p {
+      font-family: 'Avenir';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+      color: #91A5A6;
+      margin-bottom: 26px;
+      text-align: left;
+    }
+  }
+}
+.RightVideo {
+  position: relative;
+  width: 100%;
+  border: 1px dashed #91a5a633;
+  min-height: 416px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 55px;
+  h4 {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 16px;
+    margin-bottom: 5px;
+    span {
+      color: #16E6EF;
+    }
+  }
+  p {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: center;
+    color: #91A5A6;
+  }
+}

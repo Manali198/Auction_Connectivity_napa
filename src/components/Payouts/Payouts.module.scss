@@ -1,0 +1,415 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.backgroundImage {
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 2.5rem;
+    }
+  }
+  background-size: cover;
+  padding-top: 8rem;
+  position: relative;
+  height: 100vh;
+  z-index: 10;
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .payoutsContainer {
+    .payoutsBodyContainer {
+      // @include align-center;
+      @include justify-center;
+      // background-color: teal;
+      // --bs-gutter-x: 0rem;
+      .tabsContainer {
+        @include flex-row-between;
+        // background-color: teal;
+        margin-bottom: 0.5rem;
+        height: '20vh' !important;
+        align-items: stretch;
+
+        width: 100%;
+        // margin-top: 2rem;
+        // .tabsInnerContainer {
+        //   @include flex-row-center;
+        //   .tab {
+        //     display: flex;
+        //     flex-wrap: nowrap;
+        //     border-bottom: 0;
+        //     padding-left: 0;
+        //     list-style-type: none;
+        //     margin-bottom: 0;
+        //     margin-top: 2rem;
+        //   }
+        // }
+      }
+      .socialMediaReviewContainer {
+        // height: calc(100vh - 485px);
+        // overflow-y: auto;
+        margin-bottom: 2rem;
+        overflow-y: auto;
+        height: 512px;
+      }
+      .tableContainer {
+        max-width: 100vw;
+        overflow-x: scroll;
+      }
+    }
+    // .napaPayoutsText {
+    //   font-size: 60px;
+    //   font-family: $text-neuropolitical;
+    // }
+    .payoutsMetaHuman {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+    .payoutUserDetail {
+      padding-top: 1rem;
+    }
+    .napaTokenPriceContainer {
+      padding-left: 4px;
+      padding-top: 6px;
+      padding-right: 4px;
+    }
+    .payoutsCharisImag {
+      width: '100%';
+      height: '100%';
+      position: 'relative';
+    }
+    .payoutsText {
+      font-family: $text-neuropolitical;
+      font-weight: 400;
+      line-height: 110%;
+      font-style: normal;
+      color: #91a5a6;
+      font-size: 18px;
+    }
+    .payoutsSubText {
+      font-family: $text-neuropolitical;
+      font-weight: 400;
+      line-height: 110%;
+      font-style: normal;
+      font-size: 18px;
+      color: #91a5a6;
+    }
+    .payoutsSubTextValue {
+      font-family: $text-neuropolitical;
+      font-weight: 400;
+      line-height: 70.4px;
+      font-style: normal;
+      font-size: 64px;
+      color: #91a5a6;
+    }
+    .payoutsTableHead {
+      font-family: $text-avenir;
+      font-weight: 400;
+      line-height: 19.6px;
+      font-style: normal;
+      font-size: 14px;
+      color: #91a5a6;
+    }
+    .payoutsTableRow {
+      font-family: $text-avenir;
+      font-weight: 500;
+      line-height: 25.2px;
+      font-style: normal;
+      font-size: 18px;
+      color: #ffffff;
+    }
+    .textColor {
+      color: #16e6ef;
+    }
+    .payouts {
+      @include font-6xl-neuropolitical-normal;
+      text-align: left;
+      color: $white;
+      span {
+        color: transparent;
+        -webkit-text-stroke: 2px white;
+        animation: glow 1s ease-in-out infinite alternate;
+      }
+      @keyframes glow {
+        from {
+          text-shadow: 0 0 20px #fff, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px,
+            0 0 70px, 0 0 10px;
+        }
+        to {
+          text-shadow: 0 0 1px #fff, 0 0 20px #ffffff, 0 0 30px, 0 0 40px,
+            0 0 50px, 0 0 60px, 0 0 100px;
+        }
+      }
+      @-webkit-keyframes glow {
+        from {
+          text-shadow: 0 0 20px #fff, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px,
+            0 0 70px, 0 0 10px;
+        }
+        to {
+          text-shadow: 0 0 1px #fff, 0 0 20px #ffffff, 0 0 30px, 0 0 40px,
+            0 0 50px, 0 0 60px, 0 0 100px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    .mousePointer {
+      display: none;
+    }
+    .payoutsSubTextValue {
+      font-size: 34px !important;
+    }
+  }
+  @media (max-width: 768px) {
+    .napaTokenPriceContainer {
+      padding-left: 1px !important;
+      padding-right: 1px !important;
+    }
+    .payoutsMetaHuman {
+      margin-left: 0.75rem;
+      margin-right: 0.75rem;
+    }
+    .payoutUserDetail {
+      padding-top: 0.75rem !important;
+    }
+    .payoutsSubTextValue {
+      font-size: 24px !important;
+    }
+    .payoutsText {
+      font-family: $text-neuropolitical;
+      font-weight: 400;
+      line-height: 110%;
+      font-style: normal;
+      color: #91a5a6;
+      font-size: 14px !important;
+    }
+    .payoutsSubText {
+      font-family: $text-neuropolitical;
+      font-weight: 400;
+      line-height: 110%;
+      font-style: normal;
+      font-size: 14px !important;
+      color: #91a5a6;
+    }
+    // .napaPayoutsText {
+    //   font-size: 40px !important;
+    // }
+    .payoutsTableHead {
+      font-family: $text-avenir;
+      font-weight: 400;
+      line-height: 19.6px;
+      font-style: normal;
+      font-size: 10px !important;
+      color: #91a5a6;
+    }
+    .payoutsTableRow {
+      font-family: $text-avenir;
+      font-weight: 500;
+      line-height: 25.2px;
+      font-style: normal;
+      font-size: 12px !important;
+      color: #ffffff;
+    }
+  }
+  @media (max-width: 600px) {
+    .payoutsMetaHuman {
+      margin-left: 0.75rem;
+      margin-right: 0.75rem;
+      height: 80px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .payoutsContainer {
+      .payoutsBodyContainer {
+        height: 84%;
+        .payouts {
+          @include font-4xl-neuropolitical-normal;
+        }
+      }
+      .rightSideContainer {
+        padding-left: 3.4rem;
+        padding-top: 10rem;
+        // mask-image: linear-gradient(
+        //   to bottom,
+        //   transparent,
+        //   black 70%,
+        //   black 80%,
+        //   black 100%
+        // );
+        // -webkit-mask-image: linear-gradient(
+        //   to bottom,
+        //   transparent,
+        //   black 60%,
+        //   black 100%,
+        //   black 100%
+        // );
+      }
+    }
+  }
+  @media (max-width: 1420px) {
+    .payoutsContainer {
+      .rightSideContainer {
+        padding-left: 1rem;
+        width: 25%;
+      }
+    }
+    .payouts {
+      @include font-5xl-neuropolitical-normal;
+    }
+  }
+  @media (max-width: 1280px) {
+    .payoutsContainer {
+      .rightSideContainer {
+        padding-left: 1rem;
+        width: 25%;
+      }
+      .payouts {
+        @include font-4xl-neuropolitical-normal;
+      }
+    }
+  }
+  @media (max-width: 1200px) {
+    .payoutsContainer {
+      .rightSideContainer {
+        padding-left: 0rem;
+        width: 100%;
+        height: 40px;
+        overflow: hidden;
+        position: relative;
+        padding-top: 40px;
+        transition: all 0.3s ease;
+      }
+      .payouts {
+        @include font-4xl-neuropolitical-normal;
+        max-width: 100%;
+        @media (max-width: 600px) {
+          font-size: $text-3xl;
+        }
+      }
+      .rightSideContainer:before {
+        position: absolute;
+        width: 100%;
+        height: 44px;
+        top: 0;
+        z-index: 2;
+        color: #fff;
+        font-size: 19px;
+        left: 0;
+        font-style: normal;
+        font-family: Neuropolitical;
+        padding: 6px 0;
+        content: 'Chat ↑';
+        text-align: center;
+        background: rgb(255 255 255 / 10%);
+      }
+      .rightSideContainer:hover {
+        top: -42%;
+        width: 100%;
+        overflow: visible;
+        height: 100%;
+        background: #000;
+        padding: 30px;
+        position: relative;
+      }
+    }
+    .payouts {
+      @include font-4xl-neuropolitical-normal;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .payoutsContainer {
+    .rightSideContainer {
+      top: -13px;
+      padding-left: 0rem;
+      width: 100%;
+      height: 40px;
+      overflow: hidden;
+      position: relative;
+      padding-top: 40px;
+      transition: all 0.3s ease;
+    }
+    .payouts {
+      @include font-4xl-neuropolitical-normal;
+      max-width: 100px;
+      @media (max-width: 600px) {
+        font-size: $text-3xl;
+      }
+    }
+    .rightSideContainer:before {
+      position: absolute;
+      width: 100%;
+      height: 44px;
+      top: 0;
+      z-index: 2;
+      color: #fff;
+      font-size: 19px;
+      left: 0;
+      font-style: normal;
+      font-family: Neuropolitical;
+      padding: 6px 0;
+      content: 'Chat ↑';
+      text-align: center;
+      background: rgb(255 255 255 / 10%);
+    }
+    .rightSideContainer:hover {
+      top: -42%;
+      width: 100%;
+      overflow: visible;
+      height: 100%;
+      background: #000;
+      padding: 30px;
+      position: relative;
+    }
+  }
+}
+@media (min-width: 1920px) {
+  .payoutsContainer {
+    .rightSideContainer {
+      padding-top: 12rem;
+    }
+    .payouts {
+      padding-top: 8rem;
+    }
+  }
+  .backgroundImage {
+    padding-top: 2rem !important;
+  }
+}
+@media (min-width: 1536px) {
+  .payoutsContainer {
+    .payoutsBodyContainer {
+      height: 90%;
+      .payouts {
+        @include font-5xl-neuropolitical-normal;
+      }
+    }
+  }
+}
+
+@media (min-width: 2560px) {
+  .payoutsContainer {
+    .payoutsBodyContainer {
+      .payouts {
+        @include font-8xl-neuropolitical-normal;
+      }
+    }
+    .rightSideContainer {
+      padding-top: 5rem;
+    }
+  }
+}
+.TrendingTitle {
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 110%;
+  font-style: normal;
+  font-family: 'Neuropolitical';
+  color: #fff;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 8px;
+}

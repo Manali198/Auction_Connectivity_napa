@@ -1,0 +1,156 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 20px 70px rgba(16, 35, 36, 0.2);
+  backdrop-filter: blur(60px);
+  color: $white;
+  padding: 26px 40px 26px 40px !important;
+  height: 290px !important;
+  @media screen and (max-width: 736px) {
+    height: 276px !important;
+  }
+  @media screen and (max-width: 300px) {
+    height: 254px !important;
+    padding: 16px 20px 16px 20px !important;
+  }
+  .innerCardContainer {
+    display: flex;
+    height: 164px !important;
+    @media screen and (max-width: 736px) {
+      height: inherit !important;
+    }
+    .leftSide {
+      >span {
+        img {
+          width: 164px !important;
+          height: 164px !important;
+          @media screen and (max-width: 736px) {
+            width: 90px !important;
+            height: 90px !important;
+          }
+        }
+      }
+    }
+    .rightSide {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-left: 32px !important;
+      @media screen and (max-width: 736px) {
+        padding-left: 20px !important;
+        justify-content: flex-start;
+      }
+      @media screen and (max-width: 300px) {
+        padding-left: 10px !important;
+      }
+      .title {
+        @include font-xl-neuropolitical-normal;
+        margin-bottom: 15px !important;
+        text-align: left;
+        font-size: 32px !important;
+        line-height: 110% !important;
+        padding-top: 0 !important;
+        @media screen and (max-width: 736px) {
+          font-size: 18px !important;
+          margin-bottom: 10px !important;
+        }
+        @media screen and (max-width: 300px) {
+          font-size: 12px !important;
+        }
+      }
+      .innerRightSideContainer {
+        display: flex;
+        align-items: center;
+          >span {
+            img {
+              @media screen and (max-width: 736px) {
+                display: none !important;
+              }
+            }
+          }
+        .subtitle {
+          @include font-md-avenir-medium;
+          padding-left: 12px !important;
+          font-size: 18px;
+          line-height: 140% !important;
+          @media screen and (max-width: 736px) {
+            font-size: 14px !important;
+            padding-left: 0px !important;
+          }
+          span {
+            opacity: 0.5;
+            font-size: 18px;
+            @media screen and (max-width: 768px) {
+              font-size: 12px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .dateContainer {
+    display: flex;
+    text-align: left;
+    width: 100%;
+    margin-top: 29px !important;
+    margin-bottom: 10px !important;
+    flex-wrap: wrap;
+    @media screen and (max-width: 736px) {
+      margin-top: 0 !important;
+    }
+    .dateInnerContainer {
+      display: flex;
+      flex-direction: column;
+      padding-right: 32px !important;
+      @media screen and (max-width: 1420px) {
+        padding-right: 18px !important;
+      }
+      @media screen and (max-width: 736px) {
+        flex-basis: 50%;
+        padding-right: 0px !important;
+        margin-top: 20px;
+      }
+      @media screen and (max-width: 300px) {
+        margin-top: 10px;
+      }
+      &:last-child {
+        padding-left: 0px !important;
+      }
+      .dateTitle {
+        @include font-xs-avenir-regular;
+        font-size: 12px !important;
+        line-height: 140% !important;
+        color: rgba(255, 255, 255, 0.5) !important;
+      }
+      .date {
+        @include font-sm-avenir-regular;
+        font-size: 14px !important;
+        line-height: 140% !important;
+        @media screen and (max-width: 300px) {
+          font-size: 14px !important;
+        }
+      }
+    }
+  }
+  // @media (max-width: 1400px) {
+  //   width: 32rem;
+  // }
+  @media (min-width: 2560px) {
+    width: 50rem;
+    padding: 4rem;
+    .dateContainer {
+      .dateInnerContainer {
+        .dateTitle {
+          @include font-base-avenir-regular;
+        }
+        .date {
+          @include font-md-avenir-regular;
+        }
+      }
+    }
+  }
+}

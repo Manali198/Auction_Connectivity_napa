@@ -1,0 +1,471 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.LederBordBg {
+  background: url('/assets/images/snftbg.webp') no-repeat center top;
+  background-size: cover;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.SliderMain {
+  width: 100%;
+}
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    .settings {
+      padding-top: 113px;
+      color: $white;
+      text-align: left;
+      @include font-6xl-neuropolitical-normal;
+      font-size: 76px;
+      line-height: 110%;
+    }
+  }
+}
+.tabsContainer {
+  padding-top: 15px;
+  @media screen and (max-width: 991px) {
+    padding-top: 42px;
+    margin: 0 -40px;
+  }
+}
+@media screen and (max-width: 736px) {
+  .tabsContainer {
+    margin: 0 -20px;
+    padding-top: 27px;
+  }
+  .container {
+    .settingsContainer {
+      .settings {
+        padding-top: 108px;
+        font-size: 32px;
+        line-height: 110%;
+      }
+    }
+  }
+}
+.TabLinks {
+  ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 31px 0 0 0;
+    @media screen and (max-width: 991px) {
+      overflow-x: auto !important;
+      padding-bottom: 15px;
+      margin: 22px 0 0 0;
+    }
+    @media screen and (max-width: 736px) {
+      padding-bottom: 12px;
+    }
+    li {
+      list-style: none;
+      padding-right: 48px;
+      &:last-child {
+        padding-right: 0;
+      }
+      @media screen and (max-width: 991px) {
+        width: 100% !important;
+        white-space: nowrap;
+      }
+      button {
+        background: transparent !important;
+        min-height: inherit;
+        padding: 0;
+        margin: 0;
+        border: none;
+        @include font-base-avenir-regular;
+        font-size: 18px;
+        line-height: 140%;
+        color: rgba(255, 255, 255, 0.5);
+        transition: all 0.2s ease-out;
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -15px;
+          width: 0%;
+          height: 2px;
+          background: #fff;
+          transition: all 0.2s ease-out;
+        }
+        &:hover,
+        &.active {
+          color: #fff;
+          &::before {
+            width: 48px;
+          }
+        }
+      }
+    }
+  }
+}
+.cardBoxContainer {
+  .CardBox {
+    display: flex;
+    align-items: flex-end;
+    color: #fff;
+    width: 100%;
+    margin-top: 51px;
+    overflow-x: hidden;
+    // overflow-y: scroll;
+    padding-top: 50px;
+    .CardBoxFirst {
+      flex-basis: 30%;
+      margin-right: auto;
+      .Overlay {
+        position: relative;
+        max-width: 100%;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        > span {
+          display: block !important;
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: -1px;
+          min-height: 199px;
+          background: linear-gradient(
+            180deg,
+            rgba(12, 27, 34, 0) 0%,
+            rgba(12, 27, 34, 0.9) 100%
+          );
+          z-index: 1;
+          width: 100%;
+        }
+        > span {
+          width: 100% !important;
+          // img {object-fit: cover !important;}
+        }
+        .FristContent {
+          position: absolute;
+          top: 24px;
+          left: 32px;
+          h4 {
+            @include font-lg-neuropolitical-normal;
+            font-size: 32px;
+            line-height: 110%;
+            color: #ffffff !important;
+            margin-bottom: 0px !important;
+            span {
+              @include font-base-avenir-regular;
+              font-size: 18px;
+              line-height: 19.2px;
+              margin-left: 8px;
+              color: #ffffff;
+            }
+          }
+        }
+        .SecondContent {
+          position: absolute;
+          bottom: 29px;
+          left: 32px;
+          z-index: 2;
+          h2 {
+            @include font-lg-neuropolitical-normal;
+            font-size: 90px;
+            line-height: 110%;
+            color: transparent;
+            -webkit-text-stroke: 2px #fff;
+            background: transparent !important;
+            margin-bottom: 7px !important;
+            text-align: left;
+          }
+          p {
+            @include font-base-avenir-regular;
+            font-size: 18px !important;
+            line-height: 110% !important;
+            color: #ffffff;
+            margin-bottom: 0 !important;
+            text-align: left;
+            @media screen and (max-width: 736px) {
+              font-size: 16px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 300px);
+    @include font-md-neuropolitical-normal;
+    color: $gray;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .cardBoxContainer {
+    margin-top: 2rem;
+    @include flex-column;
+    overflow-y: scroll;
+    // height: calc(100vh - 430px);
+  }
+}
+@media screen and (max-width: 991px) {
+  .CardBox {
+    flex-direction: column;
+    margin-top: 36px;
+    .CardBoxFirst {
+      flex-basis: 100%;
+      width: 100%;
+      order: 2;
+      .Overlay {
+        max-width: 100% !important;
+        width: 100%;
+        margin-bottom: 20px;
+        > span {
+          width: 100% !important;
+          height: 400px !important;
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .CardBox {
+    .CardBoxFirst {
+      .Overlay {
+        .FristContent {
+          top: 29px;
+          left: 40px;
+        }
+        .SecondContent {
+          bottom: 36px;
+          left: 40px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 736px) {
+  .TabLinks {
+    ul {
+      li {
+        padding-right: 32px;
+        button {
+          font-size: 16px;
+          line-height: 22.4px;
+          &::before {
+            bottom: -12px;
+          }
+          &:hover,
+          &.active {
+            &::before {
+              width: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .CardBox {
+    margin-top: 36px;
+    .CardBoxFirst {
+      .Overlay {
+        > span {
+          height: 240px !important;
+        }
+        &::before {
+          bottom: 5px;
+          min-height: 120px;
+        }
+        .FristContent {
+          top: 24px;
+          left: 24px;
+          h4 {
+            font-size: 24px !important;
+            span {
+              font-size: 14px;
+              line-height: 22.4px;
+            }
+          }
+        }
+        .SecondContent {
+          bottom: 29px;
+          left: 24px;
+          h2 {
+            font-size: 44px;
+            margin-bottom: 7px !important;
+          }
+        }
+      }
+    }
+    .CardBoxSecond {
+      .Overlay {
+        > span {
+          height: 240px !important;
+        }
+        &::before {
+          min-height: 120px;
+        }
+        .FristContent {
+          top: 24px;
+          left: 32px;
+          h4 {
+            font-size: 32px;
+            span {
+              font-size: 16px;
+              line-height: 22.4px;
+            }
+          }
+        }
+        .SecondContent {
+          bottom: 29px;
+          left: 32px;
+          h2 {
+            font-size: 90px;
+            margin-bottom: 7px !important;
+          }
+        }
+      }
+    }
+    .CardBoxThird {
+      .Overlay {
+        > span {
+          height: 240px !important;
+        }
+        &::before {
+          min-height: 120px;
+        }
+        .FristContent {
+          top: 24px;
+          left: 32px;
+          h4 {
+            font-size: 32px;
+            span {
+              font-size: 16px;
+              line-height: 22.4px;
+            }
+          }
+        }
+        .SecondContent {
+          bottom: 29px;
+          left: 32px;
+          z-index: 2;
+          h2 {
+            font-size: 90px;
+            margin-bottom: 7px !important;
+          }
+        }
+      }
+    }
+  }
+}
+.LdrbrdListOverlay {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 268px;
+    background: linear-gradient(180deg, rgba(16, 35, 36, 0) 0%, #102324 100%);
+    z-index: 1;
+    width: 100%;
+    pointer-events: none;
+    @media screen and (max-width: 768px) {
+      background: linear-gradient(
+        180deg,
+        rgba(16, 35, 36, 0) 0%,
+        #102324a8 100%
+      );
+    }
+  }
+}
+.LdrbrdList {
+  margin-top: 66px;
+  overflow-y: auto;
+  height: 408px;
+}
+.LdrbrdItems {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(145, 165, 166, 0.1);
+  margin-top: 2px;
+}
+.LdrbrdItemsRaigt {
+  display: flex;
+  align-items: center;
+  h4 {
+    @include font-md-avenir-medium;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    color: #ffffff;
+    width: 85px;
+    margin-bottom: 0;
+  }
+  p {
+    @include font-md-avenir-medium;
+    font-size: 18px;
+    line-height: 140%;
+    color: #ffffff;
+    margin-left: 32px !important;
+    margin-bottom: 0;
+  }
+}
+.LdrbrdItemsLeft {
+  padding-right: 23px;
+  h6 {
+    @include font-md-avenir-medium;
+    font-size: 24px;
+    line-height: 140%;
+    text-align: right;
+    color: #16e6ef;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .LdrbrdList {
+    margin: 68px -40px 2px -40px;
+  }
+}
+@media screen and (max-width: 736px) {
+  .LdrbrdList {
+    margin: 40px -20px 2px -20px;
+  }
+  .LdrbrdItemsRaigt {
+    h4 {
+      font-size: 16px;
+      line-height: 22.4px;
+      width: 58px;
+    }
+    > span {
+      width: 56px !important;
+      height: 56px !important;
+    }
+    p {
+      font-size: 16px;
+      line-height: 22.4px;
+      margin-left: 20px !important;
+    }
+  }
+  .LdrbrdItemsLeft {
+    h6 {
+      font-size: 18px;
+      line-height: 25.2px;
+    }
+  }
+}

@@ -1,0 +1,753 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+@font-face {
+  font-family: Neuropolitical;
+  src: url('/assets/fonts/Neuropolitical/Neuropolitical-Regular.ttf');
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url('/assets/fonts/Avenir/Avenir-Regular.ttf');
+}
+
+.backgroundImage {
+  background-image: url('/assets/images/npg.png');
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .societyContainer {
+    height: 100%;
+    @media only screen and (max-width: 736px) {
+      padding: 0 20px;
+    }
+  }
+  .societyContainerBody {
+    height: 100%;
+    @include flex-row-between;
+    align-items: flex-start;
+    padding-top: 145px;
+    @media screen and (max-width: 768px) {
+      padding-top: 110px;
+    }
+  }
+  .headingNapa {
+    @include font-8xl-neuropolitical-normal;
+    color: transparent;
+    -webkit-text-stroke: 2px $white;
+    animation: glow 1s ease-in-out infinite alternate;
+    line-height: 1.1em;
+    margin-bottom: 0.3em;
+    font-size: 132px;
+    @media screen and (max-width: 768px) {
+      font-size: 132px !important;
+    }
+    @media screen and (max-width: 375px) {
+      font-size: 44px !important;
+    }
+  }
+  @keyframes glow {
+    from {
+      text-shadow: 0 0 20px #fff, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px,
+        0 0 70px, 0 0 10px;
+    }
+    to {
+      text-shadow: 0 0 1px #fff, 0 0 20px #ffffff, 0 0 30px, 0 0 40px, 0 0 50px,
+        0 0 60px, 0 0 100px;
+    }
+  }
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 20px #fff, 0 0 30px, 0 0 40px, 0 0 50px, 0 0 60px,
+        0 0 70px, 0 0 10px;
+    }
+    to {
+      text-shadow: 0 0 1px #fff, 0 0 20px #ffffff, 0 0 30px, 0 0 40px, 0 0 50px,
+        0 0 60px, 0 0 100px;
+    }
+  }
+  .societyLeftDescription {
+    text-align: left;
+    // padding-right: 20rem;
+    // padding-left: 0.5rem;
+    padding-top: 13px;
+    color: $white;
+    @include font-base-avenir-regular;
+    max-width: 49rem;
+    font-size: 18px !important;
+    @media screen and (max-width: 736px) {
+      font-size: 16px !important;
+    }
+  }
+  .headingSlider {
+    @include font-9xl-neuropolitical-normal;
+    margin-bottom: 0.1rem;
+    color: transparent;
+    -webkit-text-stroke: 2px $white;
+    line-height: 1.1em;
+    text-align: center;
+    @include flex-column-center;
+  }
+  .sliderText {
+    @include flex-row-center;
+    @include align-center;
+  }
+  .sliderCounterText {
+    @include font-7xl-neuropolitical-normal;
+    padding-left: 0rem;
+    padding-right: 0.5rem;
+    color: $white;
+    line-height: 2.1rem;
+    margin-bottom: 0;
+    font-size: 132px !important;
+    @media screen and (max-width: 736px) {
+      font-size: 44px !important;
+      bottom: -4px;
+    }
+  }
+  .sliderSlashtext {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: $white;
+    margin-bottom: 0;
+    -webkit-text-stroke: 1px #fff;
+    font-size: 2.8rem;
+    font-family: Neuropolitical;
+    position: relative;
+    bottom: -27px;
+    color: transparent;
+    font-size: 44px !important;
+    @media screen and (max-width: 736px) {
+      font-size: 24px !important;
+      bottom: -4px;
+    }
+  }
+  .sliderArrows {
+    display: flex;
+    width: 60px;
+    justify-content: space-between;
+    margin-top: 54px;
+    position: relative;
+    top: 6px;
+    @media screen and (max-width: 1536px) {
+      top: 0px;
+    }
+    @media screen and (max-width: 736px) {
+      top: -19px;
+    }
+  }
+  .sliderArrows div img {
+    opacity: 0.7;
+  }
+  .sliderArrows div:hover img {
+    opacity: 1;
+  }
+
+  .slideImages {
+    margin-bottom: 2rem;
+    img {
+      width: 470px;
+      height: 344px;
+      object-fit: cover;
+      object-position: -610px center;
+    }
+  }
+  .sliderContainer {
+    padding-bottom: 3rem;
+    @include flex-row-between;
+  }
+  .innerSocietyContainer {
+    width: 70%;
+    @include flex-column-start;
+    margin-top: -25px;
+  }
+  .headingSociety {
+    @include font-8xl-neuropolitical-normal;
+    line-height: 1rem;
+    color: $white;
+    margin-bottom: 0.5em;
+    font-size: 132px !important;
+    line-height: 145px !important;
+  }
+
+  .community {
+    @include font-3xl-neuropolitical-normal;
+    color: $white;
+    padding-bottom: 1.2rem;
+    font-size: 44px !important;
+    @media screen and (max-width: 736px) {
+      font-size: 24px !important;
+      padding: 0 !important;
+    }
+  }
+
+  .innerSocietyContainerRightSide {
+    width: 470px;
+    text-align: left;
+    .description {
+      @include font-md-avenir-regular;
+      color: $white;
+    }
+    .joinSociety {
+      cursor: pointer;
+    }
+  }
+  .joinSocietyBtn {
+    @include font-lg-neuropolitical-normal;
+    color: $light-blue;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-right: 1.5rem;
+    cursor: pointer;
+  }
+  .mousePointer {
+    display: flex;
+    justify-content: center;
+    img {
+      cursor: pointer;
+    }
+  }
+  .trend_row {
+    ul {
+      display: inline-block;
+      list-style: none;
+      padding: 0;
+      li {
+        width: 100%;
+        float: left;
+        margin-bottom: 8px;
+        display: flex;
+        @media screen and (max-width: 768px) {
+          margin-bottom: 20px;
+        }
+        @media screen and (max-width: 736px) {
+          margin-bottom: 16px;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        img {
+          width: 80px;
+          height: 80px;
+          float: left;
+          margin-right: 20px;
+          aspect-ratio: 16/9;
+        }
+        p {
+          font-size: 12px;
+          color: #fff;
+          margin-bottom: 3px;
+          @media screen and (max-width: 736px) {
+            margin-bottom: 0px;
+            font-size: 10px;
+          }
+        }
+        h4 {
+          @include font-lg-neuropolitical-normal;
+          font-size: 18px;
+          color: #fff;
+          margin-bottom: 0 !important;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+          -webkit-box-orient: vertical;
+          @media screen and (max-width: 736px) {
+            font-size: 14px !important;
+          }
+        }
+      }
+    }
+  }
+  .leaders_row {
+    ul {
+      width: 100%;
+      display: inline-block;
+      list-style: none;
+      padding: 0;
+      li {
+        width: 100%;
+        float: left;
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 768px) {
+          margin-bottom: 20px;
+        }
+        @media screen and (max-width: 736px) {
+          margin-bottom: 16px;
+        }
+        img {
+          width: 80px;
+          height: 80px;
+          float: left;
+          margin-right: 20px;
+          aspect-ratio: 16/9;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 100%;
+        }
+        p {
+          @include font-sm-neuropolitical-normal;
+          font-size: 24px !important;
+          -webkit-text-stroke: 1px #fff;
+          margin-bottom: 0px;
+          color: transparent;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 7px !important;
+          @media screen and (max-width: 736px) {
+            margin-bottom: 5px !important;
+            font-size: 18px !important;
+          }
+          strong {
+            margin-left: 40px;
+            font-weight: normal;
+            position: relative;
+            top: 18px;
+            @media screen and (max-width: 1024px) {
+              top: 0px;
+            }
+            @media screen and (max-width: 736px) {
+              top: 12px;
+            }
+            i {
+              color: #16e6ef;
+              -webkit-text-stroke: 0;
+              font-style: normal;
+              font-size: 24px;
+              @media screen and (max-width: 736px) {
+                font-size: 18px !important;
+              }
+            }
+            u {
+              font-size: 12px;
+              -webkit-text-stroke: 0;
+              color: #fff;
+              text-decoration: none;
+              font-weight: 100;
+              font-family: Avenir;
+            }
+          }
+        }
+        h4 {
+          @include font-lg-neuropolitical-normal;
+          font-size: 18px;
+          color: #fff;
+          line-height: 1em;
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+    .postNotFound {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      color: $gray;
+      @include font-md-neuropolitical-normal;
+    }
+  }
+  @media only screen and (max-width: 1536px) {
+    .headingNapa {
+      @include font-8xl-neuropolitical-normal;
+      margin-bottom: 0;
+    }
+    .headingSociety {
+      @include font-8xl-neuropolitical-normal;
+      margin-bottom: 0;
+    }
+    .innerSocietyContainer {
+      margin-top: 37px;
+    }
+    .sliderCounterText {
+      @include font-6xl-neuropolitical-normal;
+    }
+    .community {
+      @include font-2xl-neuropolitical-normal;
+    }
+    .sliderContainer {
+      padding-bottom: 0.5rem;
+    }
+    // .sliderSlashtext {
+    //   bottom: -13px;
+    // }
+  }
+  @media only screen and (max-width: 1340px) {
+    .headingNapa {
+      @include font-7xl-neuropolitical-normal;
+      margin-bottom: 0;
+    }
+    .headingSociety {
+      @include font-6xl-neuropolitical-normal;
+      margin-bottom: 0;
+    }
+    .sliderCounterText {
+      @include font-5xl-neuropolitical-normal;
+    }
+    // .sliderSlashtext {
+    //   font-size: 2rem;
+    //   bottom: -17px;
+    // }
+    .sliderContainer {
+      padding-bottom: 1rem;
+    }
+    .societyLeftDescription {
+      padding-right: 7rem;
+    }
+    // .leaders_row,.trend_row{
+    //    ul li img{
+    //     width: 60px;
+    //     height: 60px;
+    //    }
+    // }
+    .slideImages {
+      margin-bottom: 2rem;
+      img {
+        width: 470px;
+        height: 344px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1280px) {
+    background-image: url('/assets/images/npg.png');
+    .societyContainer {
+      @include flex-column-center;
+      align-items: flex-start !important;
+
+      .societyContainerBody {
+        width: 100%;
+        @include flex-column-center;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        .headingNapa {
+          margin-bottom: 0;
+          text-align: left;
+          width: 100%;
+        }
+        .headingSociety {
+          margin-bottom: 0;
+          @include font-5xl-neuropolitical-normal;
+          line-height: 80%;
+          text-align: left;
+          width: 100%;
+        }
+        .societyLeftDescription {
+          padding-right: 6rem;
+          padding-top: 1rem;
+          padding-left: 0.3rem;
+          max-width: 580px;
+          @media screen and (max-width: 1280px) {
+            max-width: 100%;
+          }
+        }
+      }
+      .innerSocietyContainer {
+        width: 100%;
+      }
+
+      .innerSocietyContainerRightSide {
+        width: 100%;
+        @include flex-col;
+
+        .slider {
+          @include flex-between;
+          width: 100%;
+          .sliderRightSide {
+            padding-top: 0rem;
+            width: 100%;
+            .sliderContainer {
+              @include flex-row;
+              padding-bottom: 0;
+              padding-top: 0rem;
+              width: 100%;
+              justify-content: space-between;
+            }
+            .community {
+              padding-top: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+    .mousePointer {
+      display: none;
+    }
+    .slideImages {
+      margin-bottom: 2rem;
+      img {
+        width: 100%;
+        height: 185px;
+        object-position: center;
+      }
+    }
+    .leaders_row,
+    .trend_row {
+      li {
+        width: 50% !important;
+        padding-right: 30px;
+      }
+    }
+    .leaders_row ul li p strong {
+      font-size: 20px !important;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .societyContainer {
+      .societyContainerBody {
+        .headingNapa {
+          margin-bottom: 0;
+          @include font-4xl-neuropolitical-normal;
+          text-align: left;
+          width: 100%;
+        }
+        .innerSocietyContainerRightSide {
+          .slider {
+            .headingSlider {
+              @include font-5xl-neuropolitical-normal;
+            }
+            .sliderRightSide {
+              padding-top: 0.5rem;
+
+              .sliderContainer {
+                img {
+                  width: 0.6rem;
+                }
+              }
+            }
+            .community {
+              padding-top: 0.5rem;
+              // padding-bottom: 0;
+              @include font-3xl-neuropolitical-normal;
+            }
+          }
+        }
+        .headingSociety {
+          margin-bottom: 0;
+          @include font-4xl-neuropolitical-normal;
+          text-align: left;
+          width: 100%;
+        }
+        .societyLeftDescription {
+          padding-top: 1rem;
+          padding-right: 0rem !important;
+        }
+      }
+    }
+    .trend_row,
+    .leaders_row {
+      li {
+        width: 50%;
+      }
+    }
+  }
+  @media only screen and (max-width: 736px) {
+    .sliderCounterText {
+      @include font-3xl-neuropolitical-normal;
+    }
+    // .sliderSlashtext {
+    //   font-size: 1.5rem;    bottom: -5px;
+    // }
+    // .sliderArrows{
+    //   margin-top: 24px;
+    // }
+    .societyContainer {
+      .societyContainerBody {
+        .headingNapa {
+          @include font-3xl-neuropolitical-normal;
+        }
+        .headingSociety {
+          @include font-3xl-neuropolitical-normal;
+          font-size: 132px;
+        }
+      }
+    }
+    .leaders_row,
+    .trend_row {
+      ul li {
+        img {
+          width: 44px;
+          height: 44px;
+          margin-right: 16px;
+        }
+      }
+    }
+    .societyContainer {
+      .societyContainerBody {
+        .innerSocietyContainerRightSide {
+          .slider {
+            .headingSlider {
+              @include font-4xl-neuropolitical-normal;
+            }
+
+            .community {
+              @include font-2xl-neuropolitical-normal;
+              font-size: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+    .leaders_row,
+    .trend_row {
+      ul li {
+        h4 {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 740px) {
+    .leaders_row,
+    .trend_row {
+      ul {
+        padding: 0;
+        margin-bottom: 0;
+        li {
+          width: 100% !important;
+          padding-right: 0px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 576px) {
+    background-image: url(('/assets/images/napasociety-background-mobile.png'));
+    .societyContainer {
+      .societyContainerBody {
+        .headingNapa {
+          @include font-3xl-neuropolitical-normal;
+        }
+        .headingSociety {
+          @include font-3xl-neuropolitical-normal;
+        }
+        .innerSocietyContainerRightSide {
+          .slider {
+            .headingSlider {
+              @include font-5xl-neuropolitical-normal;
+            }
+            .sliderRightSide {
+              padding-top: 0rem;
+
+              .sliderContainer {
+                img {
+                  width: 0.6rem;
+                }
+              }
+            }
+            .community {
+              padding-top: 0.5rem;
+              padding-bottom: 0;
+              @include font-2xl-neuropolitical-normal;
+            }
+          }
+        }
+      }
+    }
+    .leaders_row,
+    .trend_row {
+      ul li {
+        h4 {
+          font-size: 15px;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 440px) {
+    .societyContainer {
+      .societyContainerBody {
+        .headingNapa {
+          @include font-2xl-neuropolitical-normal;
+        }
+        .headingSociety {
+          @include font-2xl-neuropolitical-normal;
+        }
+
+        .societyLeftDescription {
+          padding-right: 6rem;
+          padding-top: 1rem;
+          @include font-sm-avenir-regular;
+        }
+        .innerSocietyContainerRightSide {
+          .slider {
+            .community {
+              @include font-lg-neuropolitical-normal;
+              padding-bottom: 0;
+              padding-top: 0.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 340px) {
+    .societyContainer {
+      .societyContainerBody {
+        .innerSocietyContainerRightSide {
+          .slider {
+            .headingSlider {
+              @include font-4xl-neuropolitical-normal;
+            }
+
+            .community {
+              @include font-md-neuropolitical-normal;
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 280px) {
+    .societyContainer {
+      .societyContainerBody {
+        .innerSocietyContainerRightSide {
+          .slider {
+            .headingSlider {
+              @include font-3xl-neuropolitical-normal;
+            }
+
+            .community {
+              @include font-base-neuropolitical-normal;
+              padding-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .backgroundImage {
+    .societyContainerBody {
+      padding-top: 55px;
+    }
+  }
+}
+@media only screen and (max-width: 736px) {
+  .backgroundImage {
+    .societyContainer {
+      .societyContainerBody {
+        .headingNapa {
+          font-size: 44px !important;
+          line-height: 48px !important;
+        }
+        .headingSociety {
+          font-size: 44px !important;
+          line-height: 48px !important;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 575px) {
+}

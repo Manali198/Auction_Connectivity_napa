@@ -1,0 +1,120 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: $white;
+  height: 332px !important;
+  padding: 2rem;
+  width: 24rem;
+  text-align: start;
+  background-repeat: no-repeat;
+  background-position: initial;
+  position: relative;
+  @media screen and (max-width: 1199px) {
+    height: 332px !important;
+  }
+  @media screen and (max-width: 736px) {
+    height: 260px !important;
+    width: 100%;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(12, 27, 34, 0.9) 0%, transparent 41%,rgba(12, 27, 34, 0.9) 100%);
+    
+    pointer-events: none;
+  }
+  .time {
+    position: relative;
+    @include font-lg-neuropolitical-normal;
+    font-size: 24px !important;
+    @media screen and (max-width: 736px) {
+      font-size: 18px !important;
+    }
+  }
+  .cardInfo {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .title {
+      @include font-lg-neuropolitical-normal;
+      font-size: 24px !important;
+      @media screen and (max-width: 736px) {
+        font-size: 18px !important;
+      }
+      @media screen and (max-width: 300px) {
+        font-size: 11px !important;
+      }
+    }
+    .date {
+      @include font-sm-avenir-regular;
+      font-size: 14px !important;
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+      @media screen and (max-width: 300px) {
+        font-size: 11px !important;
+      }
+    }
+  }
+  @media (min-width: 1280px) {
+    width: 17rem;
+    height: 22rem;
+    .time {
+      @include font-md-neuropolitical-normal;
+    }
+    .cardInfo {
+      .title {
+        @include font-md-neuropolitical-normal;
+      }
+      .date {
+        @include font-sm-avenir-regular;
+      }
+    }
+  }
+
+  @media (min-width: 1536px) {
+    height: 24rem;
+    padding: 2rem;
+    width: 24rem;
+    .time {
+      @include font-lg-neuropolitical-normal;
+    }
+    .cardInfo {
+      .title {
+        @include font-lg-neuropolitical-normal;
+      }
+      .date {
+        @include font-sm-avenir-regular;
+      }
+    }
+  }
+
+  @media (min-width: 2560px) {
+    width: 32rem;
+    height: 34rem;
+    padding: 3rem;
+    .time {
+      @include font-xl-neuropolitical-normal;
+    }
+    .cardInfo {
+      .title {
+        @include font-xl-neuropolitical-normal;
+      }
+      .date {
+        @include font-md-avenir-regular;
+        font-size: $text-lg;
+      }
+    }
+  }
+  @media screen and (max-width: 300px) {
+    height: 190px !important;
+    padding: 1rem;
+  }
+}

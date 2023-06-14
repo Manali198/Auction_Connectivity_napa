@@ -1,0 +1,35 @@
+@import '../../../styles/abstracts/variable.module';
+@import '../../../styles/abstracts/mixins.module';
+
+.dropdownContainer {
+  margin-bottom: 2rem;
+  .selectContainer {
+    background-color: transparent;
+    width: 100%;
+    color: $white;
+    border: none;
+    border-bottom: 1px solid $white;
+    border-radius: 0;
+    outline: none;
+    background-image: url('/assets/images/arrow-down-icon.svg');
+    &:focus {
+      outline: none;
+      border-bottom: 1px solid $white;
+      box-shadow: none;
+    }
+    .option {
+      color: $white;
+      background-color: $black;
+      outline: none;
+      border: 1px solid $black;
+      box-shadow: none;
+    }
+  }
+
+  .selectLabel {
+    text-align: left;
+    color: $white;
+    top: -6px !important;
+    @include font-sm-avenir-regular;
+  }
+}

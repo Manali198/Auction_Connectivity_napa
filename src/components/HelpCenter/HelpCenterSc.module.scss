@@ -1,0 +1,127 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.MainContact {
+  min-height: 85vh;
+  padding-top: 112px;
+}
+.WidthFull {
+  width: 100%;
+}
+.MainTextHelp h1 {
+  font-family: 'Neuropolitical';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 76px;
+  line-height: 110%;
+  text-align: center;
+  color: #FFFFFF;
+  margin-bottom: 47px;
+}
+.MainTextHelp .InputInHelp {
+  width: 600px;
+  min-height: 48px;
+  margin: 0 auto;
+  background: rgba(145, 165, 166, 0.1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  padding: 13px 16px;
+  margin-bottom: 60px;
+}
+.MainTextHelp .InputInHelp input {
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin-left: 12px;
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 140%;
+  color: #fff;
+}
+.MainTextHelp .InputInHelp input::placeholder {
+  color: #91A5A6;
+}
+.ThreeLinks {
+  display: flex;
+  grid-gap: 40px;
+  margin-bottom: 70px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.ThreeLinks a {
+  border: 1px solid #16E6EF;
+  
+}
+.ThreeLinks .ArrowImg>span{
+  transition: all 0.2s ease-out;
+  position: relative;
+  left: 0;
+}
+.ThreeLinks a:hover .ArrowImg>span{
+  left: 8px !important;
+}
+.ThreeLinks .InrAThre {
+  display: flex;
+  align-items: center;
+  padding: 32px;
+  justify-content: space-between;
+  text-decoration: none;
+  flex-basis: calc(31.33% - 40px);
+}
+.MainImgTxtHlp {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.MainImgTxtHlp h6 {
+  font-family: 'Neuropolitical';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 110%;
+  color: #16E6EF;
+  margin-left: 20px;
+  text-decoration: none !important;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 1365px) {
+  .ThreeLinks .InrAThre {flex-basis: calc(50% - 40px);}
+}
+@media screen and (max-width: 1280px) {
+  .MainTextHelp .InputInHelp {
+    width: 100%;
+  }
+  .ThreeLinks {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .ThreeLinks .InrAThre {flex-basis: calc(100% - 40px);}
+}
+@media screen and (max-width: 736px) {
+  .MainContact {
+    padding-top: 108px;
+  }
+  .MainTextHelp h1 {
+    font-size: 32px;
+    line-height: 110%;
+    margin-bottom: 35px;
+  }
+  .MainTextHelp .InputInHelp {
+    margin-bottom: 40px;
+  }
+  .ThreeLinks .InrAThre {
+    padding: 20px;
+  }
+  .ThreeLinks {
+    grid-gap: 24px;
+    margin-bottom: 60px;
+  }
+  .MainImgTxtHlp h6 {
+    font-size: 18px;
+  }
+}
+

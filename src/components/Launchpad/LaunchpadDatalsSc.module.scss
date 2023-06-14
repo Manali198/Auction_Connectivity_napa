@@ -1,0 +1,212 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 2.5rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    .settings {
+      // padding-top: 113px;
+      padding-top: 8px;
+      color: $white;
+      text-align: left;
+      @include font-6xl-neuropolitical-normal;
+      font-size: 76px;
+      line-height: 110%;
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .container {
+    .settingsContainer {
+      .settings {
+        padding-top: 108px;
+        font-size: 32px;
+        line-height: 110%;
+      }
+    }
+  }
+}
+.ourlyPerntAj {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    min-height: 286px;
+    background: linear-gradient(180deg, rgba(16, 35, 36, 0) 0%, #102324 100%);
+    z-index: 2;
+    width: 100%;
+  }
+}
+.pdingTop {
+  padding-top: 132px;
+}
+.LncpadDtlUpCont {
+  display: flex;
+}
+.rightContnt {
+  margin-left: 60px;
+  flex-basis: 75%;
+  margin-top: -17px;
+  h1 {
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 76px;
+    line-height: 110%;
+    color: #ffffff;
+    text-align: start;
+    max-width: 775px;
+    margin: 0 0 22px 0;
+  }
+  p {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #ffffff;
+    text-align: start;
+    max-width: 600px;
+    margin: 0 0 35px 0;
+  }
+}
+.flxBlleinnr {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.upCont {
+  display: flex;
+  align-items: center;
+  p {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #ffffff;
+    margin: 0 0 0 10px;
+  }
+}
+.MianPentBasisBox {
+  padding: 53px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.CurrentBitBoxInrr {
+  flex-basis: 15%;
+  p {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #ffffff;
+    margin: 0 0 5px 0;
+    text-align: start;
+  }
+  h3 {
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 110%;
+    color: #ffffff;
+    margin: 0 0 0 0;
+  }
+  .imgAdnHH {
+    display: flex;
+    align-items: center;
+    > span {
+      margin-right: 16px !important;
+    }
+  }
+}
+.onlyImgBox {
+  flex-basis: 25%;
+  > span {
+    width: 100% !important;
+  }
+}
+.progsContnt {
+  flex-basis: 25%;
+  .LinkPrnt {
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    color: #16e6ef;
+    text-align: start;
+    margin: 9px 0 0 0;
+  }
+}
+.AllLinkFlex {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  button {
+    background: transparent;
+    border: none;
+    margin-right: 24px;
+    position: relative;
+    bottom: 0;
+    transition: all 0.3s ease-out;
+    &:hover {
+      bottom: 5px;
+    }
+  }
+  a {
+    margin-right: 24px;
+    position: relative;
+    bottom: 0;
+    transition: all 0.3s ease-out;
+    &:hover {
+      bottom: 5px;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.progressBarContainer {
+  margin-top: 0.5rem;
+  .progressBarParent {
+    background-color: gray;
+    height: 0.3rem;
+    .progressBarChild {
+      background-color: $light-blue;
+      height: 0.3rem;
+      width: 70%;
+    }
+  }
+}
+.progsContntUp {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 9px;
+  h6 {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 110%;
+    text-align: right;
+    color: #ffffff;
+    margin: 0;
+  }
+}

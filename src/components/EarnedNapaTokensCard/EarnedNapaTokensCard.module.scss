@@ -1,0 +1,156 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.cardContainer {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 20px 70px rgba(16, 35, 36, 0.2);
+  backdrop-filter: blur(60px);
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  padding: 36px 20px 36px 60px !important;
+  height: 320px !important;
+  @media screen and (max-width: 736px) {
+    height: 279px !important;
+    padding: 32px 32px 6px 40px !important;
+  }
+  @media screen and (max-width: 300px) {
+    padding: 18px 18px 6px 18px !important;
+    height: 248px !important;
+  }
+  .subtitle {
+    @include font-sm-avenir-regular;
+    text-align: left;
+    font-size: 16px !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    @media screen and (max-width: 736px) {
+      display: none !important;
+    }
+  }
+  .amountContainer {
+    display: flex;
+    align-items: baseline;
+    >span {
+      img {
+        @media screen and (max-width: 736px) {
+          height: 32px !important;
+          width: 32px !important;
+        }
+      }
+    }
+    .amount {
+      @include font-4xl-neuropolitical-normal;
+      font-size: 64px !important;
+      padding-left: 24px !important;
+      @media screen and (max-width: 736px) {
+        font-size: 32px !important;
+        padding-left: 16px !important;
+      }
+      @media screen and (max-width: 300px) {
+        font-size: 22px !important;
+      }
+    }
+    .napa {
+      @include font-sm-avenir-regular;
+      font-size: 18px !important;
+      color: rgba(255, 255, 255, 0.5) !important;
+      margin-left: 1rem;
+      @media screen and (max-width: 736px) {
+        font-size: 12px !important;
+      }
+    }
+  }
+  .lockDuratspan {
+    font-size: 14px !important;
+    color: rgba(255, 255, 255, 0.5) !important;
+    margin-bottom: 5px !important;
+    @media screen and (max-width: 736px) {
+      font-size: 12px !important;
+      margin-bottom: 0 !important;
+    }
+    @media screen and (max-width: 736px) {
+      font-size: 11px !important;
+    }
+  }
+  .lockDurationContainer {
+    display: flex;
+    width: 100%;
+    margin: 25px 0 !important;
+    @media screen and (max-width: 736px) {
+      margin: 29px 0 23px 0!important;
+      flex-wrap: wrap;
+    }
+    &:nth-child(4) {
+      margin-bottom: 0 !important;
+      margin-top: 0 !important;
+    }
+    .lockDurationInnerContainer {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 33.33%;
+      text-align: left;
+      font-size: 18px !important;
+      @media screen and (max-width: 736px) {
+        font-size: 14px !important;
+        flex-basis: 50%;
+      }
+      .title {
+        @include font-sm-avenir-regular;
+      }
+      .date {
+        @include font-md-avenir-medium;
+      }
+    }
+  }
+  @media (max-width: 1400px) {
+ 
+    .lockDurationContainer {
+      margin: 0.5rem 0;
+    }
+  }
+  @media (min-width: 2560px) {
+    width: 50rem;
+  }
+}
+@media screen and (min-width: 737px) {
+  .MobileGrid {
+    display: none;
+  }
+}
+@media (max-width: 736px) {
+  .lockDurationContainer {
+    display: none !important;
+  }
+  .MobileGrid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    .lockDurationInnerContainer {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 33.33%;
+      text-align: left;
+      font-size: 18px !important;
+      @media screen and (max-width: 736px) {
+        font-size: 14px !important;
+        flex-basis: 50%;
+        padding-bottom: 15px;
+      }
+      .title {
+        @include font-sm-avenir-regular;
+      }
+      .date {
+        @include font-md-avenir-medium;
+      }
+    }
+  }
+  
+}
+
+@media (max-width: 300px) {
+  .MobileGrid {
+    .lockDurationInnerContainer {
+        font-size: 12px !important;
+    }
+  }
+}

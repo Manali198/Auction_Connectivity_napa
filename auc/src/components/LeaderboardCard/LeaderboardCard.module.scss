@@ -1,0 +1,106 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.cardContainer {
+  @include flex-column-between;
+  align-items: flex-start;
+  background-repeat: no-repeat;
+  background-position: center;
+  object-fit: fill;
+
+  color: $white;
+  height: 400px;
+  padding: 20px 30px;
+  .likesContainer {
+    @include flex-row-center;
+    .likesCount {
+      @include font-3xl-neuropolitical-normal;
+    }
+    .likes {
+      @include font-md-avenir-regular;
+      align-self: flex-end;
+      margin-left: 1rem;
+    }
+  }
+  .titleContainer {
+    @include flex-column;
+    margin-bottom: 1rem;
+    .count {
+      @include font-8xl-neuropolitical-normal;
+      padding-top: 1rem;
+      text-align: left;
+      -webkit-text-stroke: 2px white;
+      color: transparent;
+      margin-bottom: 0;
+    }
+    .title {
+      @include font-lg-neuropolitical-normal;
+    }
+  }
+
+  @media (min-width: 1280px) {
+   
+    .likesContainer {
+      .likesCount {
+        @include font-xl-neuropolitical-normal;
+      }
+      .likes {
+        @include font-base-avenir-medium;
+      }
+    }
+    .titleContainer {
+      .count {
+        @include font-6xl-neuropolitical-normal;
+      }
+      .title {
+        @include font-md-neuropolitical-normal;
+      }
+    }
+  }
+  @media (min-width: 1400px) {
+    // height: 30rem;
+    padding: 1.2rem;
+    .likesContainer {
+      .likesCount {
+        @include font-xl-neuropolitical-normal;
+      }
+      .likes {
+        @include font-base-avenir-medium;
+      }
+    }
+    .titleContainer {
+      .count {
+        @include font-6xl-neuropolitical-normal;
+      }
+      .title {
+        @include font-md-neuropolitical-normal;
+      }
+    }
+  }
+  @media (min-width: 1536px) {
+    padding: 1.5rem;
+    height: 30rem;
+    // width: 23rem;
+    .likesContainer {
+      .likesCount {
+        @include font-3xl-neuropolitical-normal;
+      }
+      .likes {
+        @include font-md-avenir-regular;
+      }
+    }
+    .titleContainer {
+      .count {
+        @include font-8xl-neuropolitical-normal;
+      }
+      .title {
+        @include font-lg-neuropolitical-normal;
+      }
+    }
+  }
+  @media (min-width: 2560px) {
+    width: 31.25rem;
+    height: 50rem;
+    padding: 3.5rem;
+  }
+}

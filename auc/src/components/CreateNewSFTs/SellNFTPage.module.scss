@@ -1,0 +1,208 @@
+@import '../../../styles/abstracts/mixins.module';
+@import '../../../styles/abstracts/variable.module';
+
+.container {
+  width: 100%;
+  hr {
+    border: 0px solid $gray;
+    margin-bottom: 5rem;
+    @media screen and (max-width: 1200px) {
+      margin-bottom: 0rem;
+    }
+  }
+  .settingsContainer {
+    height: 100%;
+    .settings {
+      padding-top: 113px;
+      color: $white;
+      text-align: left;
+      @include font-6xl-neuropolitical-normal;
+      font-size: 76px;
+      line-height: 110%;
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .container {
+    .settingsContainer {
+      .settings {
+        padding-top: 108px;
+        font-size: 32px;
+        line-height: 110%;
+      }
+    }
+  }
+}
+.CustomGridContainer {
+  display: grid;
+  grid-gap: 120px;
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
+  padding-top: 42px;
+}
+.DefHed{
+  font-family: 'Neuropolitical';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 110%;
+  color: #FFFFFF;
+  text-align: start;
+  margin-bottom: 24px;
+}
+.typePrnt{
+  margin-bottom: 55px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  .switchpool{
+    padding: 0 !important;
+    border-top: none !important;
+  }
+  .linkPrnt{
+    font-family: 'Neuropolitical';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 110%;
+    color: #16E6EF;
+    text-decoration: none;
+    text-align: start;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 50px !important;
+  }
+}
+
+  .FrstInput input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    margin-bottom: 35px;
+    border-bottom: 2px solid #FFFFFF !important;
+    padding: 16px 20px 6px 20px !important;
+    color: #fff !important;
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    padding-bottom: 0px;
+    &::placeholder {
+      color: #fff !important;
+    }
+  }
+  .FrstInput {
+    padding-bottom: 10px !important; 
+    margin-left: 0px;
+    >div {
+      margin: 0 !important;
+    }
+  }
+  .FrstInput input::placeholder {
+    color: #fff !important;
+  }
+  .FrstInput label {
+    padding: 0 0 0px 20px;
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #91A5A6 !important;
+  }
+.MixInputPool {
+  display: grid;
+  grid-gap: 24px;
+  grid-template-columns: repeat(2, minmax(0px, 1fr));
+  align-items: center;
+  margin-bottom: 21px;
+}
+.dublBtn{
+  background: rgba(145, 165, 166, 0.1);
+  padding: 2px;
+  display: flex;
+  button{
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    text-align: center;
+    color: #91A5A6;
+    background: transparent;
+    border: none;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 17px 0;
+    >span{
+      margin-right: 8px !important;
+    }
+  }
+  .Active{
+    background: #102324;
+    color: #fff;
+  }
+}
+.flexBox{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  p{
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #91A5A6;
+    margin: 0 0 0 20px;
+  }
+}
+.flexFees{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 23px;
+  p{
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #91A5A6;
+    margin: 0;
+  }
+  h6{
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    text-align: right;
+    color: #FFFFFF;
+    margin: 0;
+  }
+}
+.imgPernt{
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    min-height: 100%;
+    background: linear-gradient(180deg, rgba(12, 27, 34, 0) 0%, rgba(12, 27, 34, 0.9) 100%) !important;
+    z-index: 1;
+    width: 100%;
+  }
+  
+  >span{
+    width: 100% !important;
+  }
+}
